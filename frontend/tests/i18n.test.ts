@@ -1,0 +1,1 @@
+import {describe,it,expect} from "vitest";import {dict} from "@/lib/i18n";describe("translations",()=>{it("contains complete navigation labels",()=>{expect(dict.ar.explore).toBeTruthy();expect(dict.en.explore).toBeTruthy();expect(dict.ar.tagline).not.toBe(dict.en.tagline)})})

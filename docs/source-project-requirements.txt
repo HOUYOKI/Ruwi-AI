@@ -1,0 +1,1427 @@
+You are a Senior Full-Stack AI Software Engineer, AI/ML Engineer, UI/UX Designer, Database Architect, DevOps Engineer, QA Engineer, and Solution Architect.
+
+Your task is to build the ENTIRE project described below from scratch and deliver it as a COMPLETE, runnable, production-ready application.
+
+# CRITICAL DELIVERY INSTRUCTIONS
+
+* Do NOT provide tutorials, explanations, pseudo-code, or isolated code snippets.
+* Do NOT only generate a project structure.
+* Do NOT stop after creating the frontend or backend.
+* Do NOT ask me to continue in another message.
+* Do NOT leave TODO comments.
+* Do NOT use placeholder functions.
+* Do NOT omit files because of response length.
+* Do NOT claim that a feature is implemented unless it is actually implemented.
+* Do NOT use fake AI responses when valid AI credentials are provided.
+* Actually create every required project file.
+* Test and verify the application before delivery.
+* Package the entire project into one downloadable ZIP archive.
+* Your final response must contain ONLY the downloadable ZIP file.
+
+---
+
+# PROJECT NAME
+
+Ruwi | رُوي
+
+Tagline:
+
+“Every Artifact Has a Story. Ruwi Brings It to Life.”
+
+---
+
+# PROJECT OVERVIEW
+
+Ruwi is an AI-powered interactive museum platform that transforms traditional museum visits into immersive, personalized learning experiences.
+
+Visitors capture or upload an image of a museum artifact. The platform analyzes the image using Vision AI, identifies the artifact, retrieves trusted historical and cultural information using Retrieval-Augmented Generation, and generates a personalized interactive experience.
+
+The generated experience may include:
+
+* Interactive storytelling
+* Historical timelines
+* Audio narration
+* Educational quizzes
+* Artifact hotspot exploration
+* Cultural and historical facts
+* Interactive visualizations
+* Follow-up conversations about the artifact
+
+Ruwi should initially focus on Saudi Arabian and regional cultural heritage while supporting additional cultures and museum collections through an extensible architecture.
+
+The system must support artifacts such as:
+
+* Archaeological objects
+* Ancient tools
+* Historical manuscripts
+* Traditional clothing
+* Traditional musical instruments
+* Paintings
+* Weapons displayed in historical collections
+* Coins
+* Pottery
+* Jewelry
+* Architectural objects
+* Cultural and historical items
+
+---
+
+# CORE USER FLOW
+
+1. The visitor opens the platform.
+2. The visitor chooses Arabic or English.
+3. The visitor uploads or captures an artifact image.
+4. The system validates and securely stores the image.
+5. Vision AI analyzes the image.
+6. The system identifies possible artifact information.
+7. The system displays the identification confidence level.
+8. The system retrieves relevant trusted knowledge using RAG.
+9. The Experience Planner selects appropriate interactive modules.
+10. The system generates a complete artifact experience.
+11. The visitor explores the story, timeline, facts, narration, quiz, and hotspots.
+12. The visitor asks follow-up questions.
+13. The visitor may save the experience to their account.
+14. Museum administrators can review, edit, approve, and publish artifact information.
+
+---
+
+# AI WORKFLOW
+
+Implement the following modular AI workflow:
+
+Visitor Image Upload
+
+↓
+
+Image Validation and Preprocessing
+
+↓
+
+Vision AI Artifact Analysis
+
+↓
+
+Artifact Candidate Identification
+
+↓
+
+Confidence Evaluation
+
+↓
+
+Metadata Extraction
+
+↓
+
+Knowledge Retrieval using RAG
+
+↓
+
+Source Ranking and Citation
+
+↓
+
+Experience Planner
+
+↓
+
+Interactive Template Selection
+
+↓
+
+Story, Timeline, Quiz, Hotspot, and Narration Generation
+
+↓
+
+User Interaction and Follow-up Questions
+
+The AI implementation must be modular and reusable.
+
+Keep AI prompts in separate prompt files and never hard-code large prompts inside API routes or business logic.
+
+---
+
+# AI SAFETY AND ACCURACY REQUIREMENTS
+
+The platform must never confidently invent historical information.
+
+Implement the following rules:
+
+* Clearly distinguish verified facts from AI interpretation.
+* Display source references for retrieved historical facts.
+* Display confidence levels for artifact identification.
+* Allow the result “Artifact could not be identified.”
+* Do not invent exact dates, creators, materials, locations, or historical events when the evidence is insufficient.
+* Use phrases such as “possibly,” “likely,” or “uncertain” when confidence is low.
+* Follow-up answers must be grounded in retrieved sources.
+* AI responses must include citations or source references.
+* Museum administrators must be able to correct or approve generated content.
+* Store AI model name, prompt version, generation date, and confidence score.
+* Validate structured AI output using Pydantic schemas.
+* Retry invalid structured outputs safely.
+* Log AI errors without exposing sensitive data.
+
+---
+
+# REQUIRED USER ROLES
+
+Implement role-based access control.
+
+## Visitor
+
+A visitor can:
+
+* Browse the public landing page
+* Upload or capture an artifact image
+* Analyze an artifact
+* View generated experiences
+* Change language
+* Listen to narration
+* Complete quizzes
+* Ask follow-up questions
+* Register or sign in
+* Save experiences
+* View previously saved experiences
+
+## Museum Curator
+
+A curator can:
+
+* Sign in securely
+* View submitted artifact analyses
+* Review generated artifact information
+* Edit artifact title and description
+* Edit stories and timelines
+* Edit quiz questions
+* Manage trusted sources
+* Approve or reject AI-generated content
+* Add verified museum information
+* Publish artifact experiences
+* View generation history
+
+## Administrator
+
+An administrator can:
+
+* Manage users
+* Manage roles
+* Manage museums
+* Manage artifact collections
+* Manage sources
+* Review system logs
+* Review AI usage statistics
+* Configure supported artifact categories
+* Manage published experiences
+* View system analytics
+
+---
+
+# REQUIRED PAGES
+
+## Public Pages
+
+Create:
+
+* Landing page
+* About Ruwi page
+* How It Works page
+* Explore Artifacts page
+* Published Artifact Details page
+* Upload Artifact page
+* Artifact Analysis Progress page
+* Generated Experience page
+* Login page
+* Registration page
+* Forgot Password page
+* Reset Password page
+* Privacy Policy page
+* Terms and Conditions page
+* 404 page
+* General Error page
+
+## Visitor Dashboard
+
+Create:
+
+* Dashboard overview
+* Saved experiences
+* Analysis history
+* Profile settings
+* Language preferences
+* Account settings
+
+## Curator Dashboard
+
+Create:
+
+* Curator overview
+* Pending reviews
+* Artifact review page
+* Artifact editor
+* Timeline editor
+* Story editor
+* Quiz editor
+* Source manager
+* Published artifacts
+* Rejected artifacts
+* Generation history
+
+## Administrator Dashboard
+
+Create:
+
+* Admin overview
+* User management
+* Role management
+* Museum management
+* Collection management
+* Artifact category management
+* Knowledge source management
+* AI usage dashboard
+* System analytics
+* Audit logs
+* System settings
+
+---
+
+# INTERACTIVE ARTIFACT EXPERIENCE
+
+The generated artifact experience must include:
+
+## Artifact Hero Section
+
+Display:
+
+* Artifact image
+* Artifact name
+* Arabic name
+* English name
+* Category
+* Historical period
+* Estimated date
+* Origin
+* Material
+* Confidence score
+* Verification status
+* Museum or collection
+* Source count
+
+## Interactive Story
+
+Generate an engaging educational story grounded in retrieved knowledge.
+
+Support content adapted for:
+
+* Children
+* General visitors
+* Students
+* Researchers
+
+Allow the visitor to switch the audience level.
+
+## Historical Timeline
+
+Display an interactive timeline containing:
+
+* Historical period
+* Important events
+* Artifact creation or estimated use
+* Cultural context
+* Discovery or museum acquisition when available
+
+## Quick Facts
+
+Display verified cultural and historical facts as cards.
+
+## Interactive Hotspots
+
+Allow hotspots to be placed over the artifact image.
+
+Each hotspot should contain:
+
+* Position coordinates
+* Label
+* Description
+* Related historical information
+* Optional image
+* Optional audio
+
+Curators must be able to create, edit, move, and delete hotspots.
+
+## Educational Quiz
+
+Generate multiple-choice questions based on retrieved information.
+
+Include:
+
+* Question
+* Four answer choices
+* Correct answer
+* Explanation
+* Difficulty level
+* Score
+* Progress
+* Final result
+
+## Audio Narration
+
+Provide audio narration for Arabic and English content.
+
+Include:
+
+* Play
+* Pause
+* Restart
+* Playback progress
+* Playback speed
+* Narration language
+* Graceful fallback when TTS is not configured
+
+## Follow-up Chat
+
+Visitors can ask questions about the artifact.
+
+The chat must:
+
+* Use the artifact context
+* Retrieve relevant knowledge
+* Provide grounded answers
+* Include source references
+* Refuse to invent unsupported historical facts
+* Store chat history for authenticated users
+* Support Arabic and English
+
+---
+
+# MULTILINGUAL SUPPORT
+
+The application must support:
+
+* Arabic
+* English
+
+Requirements:
+
+* Full RTL support for Arabic
+* LTR support for English
+* Language switcher
+* Translated navigation
+* Translated forms
+* Translated validation messages
+* Translated dashboards
+* Localized dates
+* Localized accessibility labels
+* Language preference saved to the user profile
+* AI output generated in the selected language
+
+Do not create an English-only interface with partially translated text.
+
+---
+
+# UI/UX REQUIREMENTS
+
+Create a premium museum-inspired interface.
+
+The design should feel:
+
+* Elegant
+* Cultural
+* Immersive
+* Modern
+* Trustworthy
+* Educational
+* Appropriate for Saudi cultural heritage
+
+Use a visual direction inspired by:
+
+* Museum exhibition spaces
+* Historical manuscripts
+* Saudi architectural patterns
+* Warm natural materials
+* Subtle geometric patterns
+* Modern digital storytelling
+
+Avoid using excessive decorations that reduce usability.
+
+Required UI features:
+
+* Fully responsive design
+* Mobile-first layouts
+* Desktop dashboard layouts
+* Dark mode
+* Light mode
+* Smooth animations
+* Page transitions
+* Skeleton loading states
+* Empty states
+* Error states
+* Toast notifications
+* Confirmation dialogs
+* Accessible forms
+* Keyboard navigation
+* Visible focus states
+* Clear typography
+* High contrast
+* Accessible color combinations
+* Reusable UI components
+
+Do not use generic default Tailwind styling.
+
+Create a consistent design system including:
+
+* Colors
+* Typography
+* Spacing
+* Buttons
+* Inputs
+* Cards
+* Badges
+* Modals
+* Tabs
+* Tables
+* Sidebars
+* Navigation
+* Alerts
+* Skeletons
+* Empty states
+* Icons
+
+---
+
+# FRONTEND TECHNOLOGY
+
+Use:
+
+* Next.js
+* React
+* TypeScript
+* Tailwind CSS
+* App Router
+* React Query or TanStack Query
+* React Hook Form
+* Zod
+* Accessible component primitives
+* Modern icon library
+* Internationalization library
+* Frontend testing tools
+
+Frontend requirements:
+
+* Strict TypeScript
+* Reusable components
+* Reusable API client
+* Protected routes
+* Authentication state
+* Role-based navigation
+* Image uploader with drag-and-drop
+* Camera capture on supported mobile devices
+* Upload progress
+* Analysis progress display
+* Responsive dashboards
+* Form validation
+* Error boundaries
+* API error handling
+* Loading states
+* Pagination
+* Search
+* Filters
+* Sorting
+* Accessible dialogs
+* Dark and light themes
+* RTL and LTR layouts
+
+---
+
+# BACKEND TECHNOLOGY
+
+Use:
+
+* FastAPI
+* Python
+* SQLAlchemy
+* Alembic
+* PostgreSQL
+* pgvector
+* Pydantic
+* JWT authentication
+* Password hashing
+* Structured logging
+* Background task support
+* REST APIs
+* Backend testing tools
+
+Backend requirements:
+
+* Layered architecture
+* API routers
+* Services
+* Repositories
+* Database models
+* Pydantic schemas
+* Dependency injection
+* Configuration management
+* Authentication
+* Authorization
+* File upload validation
+* Centralized exception handling
+* Structured logging
+* Health checks
+* Request validation
+* Pagination
+* Filtering
+* Sorting
+* Rate-limiting foundation
+* Audit logging
+* Secure CORS configuration
+* Database migrations
+* Seed data
+* API versioning
+
+Use a clear architecture such as:
+
+* API layer
+* Schema layer
+* Service layer
+* Repository layer
+* Domain or model layer
+* Infrastructure layer
+* AI services layer
+
+Do not place all backend code in one file.
+
+---
+
+# AUTHENTICATION
+
+Implement:
+
+* User registration
+* Login
+* Logout
+* Access tokens
+* Refresh tokens
+* Password hashing
+* Password reset request
+* Password reset confirmation
+* Current user endpoint
+* Profile updates
+* Role-based access control
+* Protected visitor routes
+* Protected curator routes
+* Protected administrator routes
+* Token expiration handling
+* Invalid token handling
+* Secure refresh-token storage strategy
+* Optional demo user accounts for local development
+
+Use secure defaults.
+
+Do not expose passwords, secrets, or tokens in logs.
+
+---
+
+# DATABASE
+
+Use PostgreSQL with pgvector.
+
+Create normalized database models for at least:
+
+* Users
+* Roles
+* User roles
+* Museums
+* Collections
+* Artifacts
+* Artifact images
+* Artifact categories
+* Artifact analyses
+* Artifact identification candidates
+* AI generations
+* Artifact stories
+* Artifact timelines
+* Timeline events
+* Artifact facts
+* Artifact hotspots
+* Quizzes
+* Quiz questions
+* Quiz attempts
+* Knowledge sources
+* Knowledge documents
+* Document chunks
+* Embeddings
+* Artifact source references
+* Conversations
+* Messages
+* Saved experiences
+* Narrations
+* Curator reviews
+* Publication records
+* Audit logs
+* System settings
+
+Include:
+
+* Primary keys
+* Foreign keys
+* Constraints
+* Indexes
+* Timestamps
+* Soft-delete support where appropriate
+* Approval status
+* Verification status
+* Language fields
+* Vector columns
+* Migration files
+* Seed data
+
+Seed data should include:
+
+* Administrator account
+* Curator account
+* Visitor account
+* Demo museum
+* Demo collection
+* Artifact categories
+* Trusted source examples
+* At least three demo artifact experiences
+
+Document demo credentials clearly in the README and make them configurable.
+
+---
+
+# AI PROVIDER ARCHITECTURE
+
+Create provider interfaces so AI services can be changed without rewriting the application.
+
+Implement reusable interfaces for:
+
+* Vision model provider
+* Text generation provider
+* Embedding provider
+* Text-to-speech provider
+
+Support environment-based provider selection.
+
+The application should be able to use a configured provider such as:
+
+* Google Gemini
+* OpenAI
+* Another compatible provider
+
+Do not require all providers simultaneously.
+
+When no external AI key is available:
+
+* The application must still start.
+* Demo experiences and seeded content must remain usable.
+* AI-dependent endpoints must return a clear configuration error.
+* The application must not crash.
+* Do not pretend that real artifact recognition occurred.
+
+---
+
+# VISION AI SERVICE
+
+Implement a vision analysis service that:
+
+* Accepts uploaded artifact images
+* Validates the image
+* Resizes or optimizes the image
+* Sends it to the configured Vision AI provider
+* Extracts structured artifact metadata
+* Returns multiple identification candidates when uncertain
+* Returns confidence scores
+* Returns visible characteristics
+* Returns uncertainty reasons
+* Avoids unsupported claims
+* Stores the analysis result
+* Handles provider errors
+* Handles invalid responses
+* Supports retries
+* Uses structured Pydantic output
+
+Expected fields should include:
+
+* Possible name
+* Alternative names
+* Category
+* Possible culture
+* Possible region
+* Possible historical period
+* Possible materials
+* Visible inscriptions
+* Visible symbols
+* Visual characteristics
+* Confidence score
+* Uncertainty notes
+* Search keywords
+
+---
+
+# RAG IMPLEMENTATION
+
+Build a complete Retrieval-Augmented Generation pipeline.
+
+The pipeline must include:
+
+* Knowledge document ingestion
+* Text extraction
+* Text cleaning
+* Chunking
+* Embedding generation
+* pgvector storage
+* Similarity search
+* Metadata filtering
+* Source ranking
+* Context assembly
+* Citation generation
+* Grounded generation
+
+Knowledge sources must support:
+
+* Museum descriptions
+* Curator documents
+* Historical reference text
+* Public-domain historical resources
+* Manually entered verified content
+* PDF documents
+* Text documents
+
+Create curator or admin APIs for:
+
+* Uploading knowledge documents
+* Listing documents
+* Processing documents
+* Viewing processing status
+* Deleting documents
+* Reprocessing documents
+* Searching chunks
+* Managing source metadata
+
+Each source must store:
+
+* Title
+* Author or organization
+* URL when applicable
+* Publication date
+* Language
+* Trust level
+* Verification status
+* Copyright or usage notes
+* File information
+* Processing status
+
+Do not scrape or include copyrighted external content without permission.
+
+Use seed knowledge written specifically for the demo application.
+
+---
+
+# EXPERIENCE PLANNER
+
+Implement an Experience Planner service.
+
+The planner receives:
+
+* Artifact metadata
+* Artifact category
+* Retrieved knowledge
+* Visitor language
+* Visitor audience level
+* Available interactive templates
+
+It returns a structured plan describing which components should be generated.
+
+Possible templates include:
+
+* Story
+* Timeline
+* Quick facts
+* Quiz
+* Hotspots
+* Narration
+* Tool demonstration description
+* Instrument exploration
+* Cultural context
+* Follow-up conversation
+
+The planner must not choose components that cannot be supported by the available information.
+
+---
+
+# FILE UPLOADS
+
+Implement secure file uploads for:
+
+* Artifact images
+* Knowledge documents
+* Curator attachments
+* Optional hotspot images
+
+Requirements:
+
+* File-type validation
+* File-size validation
+* Safe generated filenames
+* Image dimension validation
+* Image preprocessing
+* Secure storage abstraction
+* Local storage for development
+* Configurable production storage
+* File metadata in the database
+* Delete and cleanup handling
+* Clear user-facing upload errors
+
+Supported artifact image formats:
+
+* JPEG
+* PNG
+* WebP
+
+Supported knowledge document formats:
+
+* PDF
+* TXT
+* Markdown
+
+---
+
+# REQUIRED API MODULES
+
+Implement versioned REST APIs for:
+
+* Authentication
+* Users
+* Profiles
+* Museums
+* Collections
+* Artifact categories
+* Artifacts
+* Artifact uploads
+* Artifact analyses
+* AI generation
+* Experiences
+* Stories
+* Timelines
+* Facts
+* Hotspots
+* Quizzes
+* Quiz attempts
+* Narration
+* Conversations
+* Messages
+* Saved experiences
+* Knowledge sources
+* Knowledge documents
+* Document ingestion
+* Curator reviews
+* Publications
+* Analytics
+* Audit logs
+* System settings
+* Health checks
+
+Generate OpenAPI documentation automatically through FastAPI.
+
+Include realistic request and response schemas.
+
+---
+
+# ANALYSIS JOB STATUS
+
+Artifact analysis may take time.
+
+Implement a reliable analysis status workflow:
+
+* Queued
+* Validating image
+* Analyzing image
+* Identifying artifact
+* Retrieving knowledge
+* Planning experience
+* Generating story
+* Generating timeline
+* Generating quiz
+* Generating narration
+* Finalizing
+* Completed
+* Failed
+
+The frontend must display progress and status updates.
+
+The backend must store:
+
+* Current stage
+* Progress percentage
+* Started time
+* Completed time
+* Error message
+* Retry count
+
+Use a practical implementation suitable for local Docker development.
+
+---
+
+# CURATOR REVIEW WORKFLOW
+
+Implement:
+
+1. AI-generated artifact experience is created.
+2. Its status becomes Pending Review.
+3. A curator views the result.
+4. The curator reviews sources and confidence.
+5. The curator edits content if needed.
+6. The curator approves or rejects each section.
+7. The curator publishes the experience.
+8. Publication history is stored.
+9. All changes are recorded in audit logs.
+
+Statuses should include:
+
+* Draft
+* Pending Review
+* Changes Requested
+* Approved
+* Rejected
+* Published
+* Archived
+
+---
+
+# ANALYTICS
+
+Implement dashboard analytics such as:
+
+* Total artifact analyses
+* Successful analyses
+* Failed analyses
+* Published artifacts
+* Pending curator reviews
+* Saved experiences
+* Quiz completion count
+* Most explored artifacts
+* Most common artifact categories
+* AI provider usage
+* Token or request usage when available
+* Average analysis duration
+* User growth
+* Language usage
+
+Use actual database queries rather than hard-coded numbers.
+
+---
+
+# ERROR HANDLING
+
+Handle:
+
+* Invalid credentials
+* Expired tokens
+* Unauthorized access
+* Insufficient permissions
+* Missing resources
+* Duplicate records
+* Invalid images
+* Unsupported files
+* Oversized files
+* AI provider failures
+* AI rate limits
+* Invalid AI output
+* No artifact identified
+* No relevant knowledge found
+* Database errors
+* Storage errors
+* Network errors
+* Validation errors
+* Server errors
+
+Create:
+
+* Consistent API error responses
+* Global backend exception handlers
+* Frontend error boundaries
+* Friendly user messages
+* Retry actions where appropriate
+* Detailed logs for developers
+* Safe production error messages
+
+---
+
+# SECURITY
+
+Implement appropriate security practices:
+
+* Password hashing
+* JWT validation
+* Role-based authorization
+* Input validation
+* Output validation
+* Secure upload validation
+* Safe filenames
+* CORS configuration
+* Environment-based secrets
+* No hard-coded secrets
+* SQL injection protection
+* XSS-safe rendering
+* Secure headers where applicable
+* Rate-limit-ready architecture
+* Audit logs
+* Sensitive-value masking
+* Production debug mode disabled
+* Dependency separation
+
+---
+
+# TESTING
+
+Include backend tests for:
+
+* Authentication
+* Role permissions
+* Artifact creation
+* Image upload validation
+* Analysis status
+* Vision service output validation
+* RAG retrieval
+* Experience planner
+* Quiz submission
+* Curator approval
+* Publication
+* Health check
+* Error handling
+
+Include frontend tests for:
+
+* Authentication forms
+* Artifact uploader
+* Language switcher
+* Theme switcher
+* Analysis progress
+* Generated experience
+* Quiz interaction
+* Protected routes
+* Curator review actions
+
+Include:
+
+* Unit tests
+* Integration tests
+* Reusable fixtures
+* Test database configuration
+* Mocked AI provider for automated tests
+
+All tests must be runnable using documented commands.
+
+---
+
+# PROJECT STRUCTURE
+
+Create a professional structure similar to:
+
+ruwi/
+├── frontend/
+│   ├── app/
+│   ├── components/
+│   ├── features/
+│   ├── hooks/
+│   ├── lib/
+│   ├── services/
+│   ├── types/
+│   ├── public/
+│   ├── tests/
+│   ├── Dockerfile
+│   ├── package.json
+│   └── ...
+├── backend/
+│   ├── app/
+│   │   ├── api/
+│   │   ├── core/
+│   │   ├── models/
+│   │   ├── schemas/
+│   │   ├── repositories/
+│   │   ├── services/
+│   │   ├── ai/
+│   │   │   ├── providers/
+│   │   │   ├── prompts/
+│   │   │   ├── vision/
+│   │   │   ├── rag/
+│   │   │   ├── planner/
+│   │   │   └── generation/
+│   │   ├── storage/
+│   │   ├── workers/
+│   │   ├── utilities/
+│   │   └── main.py
+│   ├── alembic/
+│   ├── tests/
+│   ├── Dockerfile
+│   ├── requirements.txt
+│   └── ...
+├── database/
+│   ├── initialization/
+│   ├── seed/
+│   └── documentation/
+├── docs/
+│   ├── architecture.md
+│   ├── installation.md
+│   ├── api.md
+│   ├── deployment.md
+│   ├── ai-workflow.md
+│   ├── database.md
+│   ├── security.md
+│   └── testing.md
+├── assets/
+│   ├── demo/
+│   ├── branding/
+│   └── screenshots/
+├── scripts/
+├── .github/
+│   └── workflows/
+├── README.md
+├── docker-compose.yml
+├── .env.example
+├── .gitignore
+├── Makefile
+└── LICENSE
+
+You may improve this structure when necessary, but all major project areas must be separated clearly.
+
+---
+
+# DOCUMENTATION
+
+Include complete documentation.
+
+## README
+
+The README must contain:
+
+* Project introduction
+* Features
+* Screenshots or demo descriptions
+* Technology stack
+* Architecture overview
+* Prerequisites
+* Quick-start instructions
+* Docker instructions
+* Local development instructions
+* Environment variables
+* Database migrations
+* Seed data
+* Demo accounts
+* AI provider configuration
+* Testing instructions
+* API documentation location
+* Deployment notes
+* Troubleshooting
+* Folder structure
+
+## Additional Documentation
+
+Create:
+
+* Installation guide
+* Local development guide
+* Docker guide
+* API guide
+* Database schema guide
+* AI architecture guide
+* RAG ingestion guide
+* Curator workflow guide
+* Deployment guide
+* Testing guide
+* Security guide
+* Troubleshooting guide
+
+---
+
+# ENVIRONMENT VARIABLES
+
+Create a complete `.env.example`.
+
+Include variables for:
+
+* Application environment
+* Frontend URL
+* Backend URL
+* PostgreSQL connection
+* JWT secret
+* Access token expiration
+* Refresh token expiration
+* File upload limits
+* Local storage directory
+* AI provider
+* Vision model
+* Text model
+* Embedding model
+* TTS provider
+* AI API key
+* Logging level
+* CORS origins
+* Demo seed settings
+
+Never include real secret values.
+
+---
+
+# DOCKER AND DEPLOYMENT
+
+Provide:
+
+* Frontend Dockerfile
+* Backend Dockerfile
+* PostgreSQL service
+* pgvector support
+* docker-compose.yml
+* Health checks
+* Persistent database volume
+* Persistent upload volume
+* Environment configuration
+* Startup migration process
+* Seed process
+* Production-ready container commands
+
+The entire application must start with one documented command similar to:
+
+docker compose up --build
+
+After startup, the documentation must clearly state the local URLs for:
+
+* Frontend
+* Backend
+* API documentation
+* Health check
+
+---
+
+# DEVELOPER EXPERIENCE
+
+Include useful scripts or commands for:
+
+* Starting development
+* Building frontend
+* Starting backend
+* Running migrations
+* Seeding database
+* Running tests
+* Formatting code
+* Linting code
+* Type checking
+* Resetting local database
+
+Include a Makefile or equivalent command runner.
+
+---
+
+# CODE QUALITY
+
+Requirements:
+
+* Clean, readable code
+* Strict typing
+* Logical module separation
+* Reusable components
+* Reusable services
+* No duplicated business logic
+* Helpful comments only where needed
+* Descriptive function and variable names
+* Proper error handling
+* Proper logging
+* Valid imports
+* No dead code
+* No unresolved TODO comments
+* No placeholder implementations
+* No hard-coded secrets
+* No broken routes
+* No missing database relationships
+* No fake completed features
+
+---
+
+# DEMO MODE
+
+The application must remain demonstrable without paid AI credentials.
+
+Implement demo mode using seeded, clearly labeled experiences.
+
+Demo mode must:
+
+* Be explicitly labeled as demo content
+* Never present simulated output as a real AI analysis
+* Allow users to explore the interface
+* Include at least three complete artifact experiences
+* Include stories, timelines, facts, quizzes, and hotspots
+* Support Arabic and English
+* Allow login using seeded accounts
+
+Real image analysis should require a configured AI provider.
+
+---
+
+# REQUIRED VERIFICATION BEFORE DELIVERY
+
+Before creating the ZIP file, verify:
+
+## Backend
+
+* Python files compile.
+* All imports resolve.
+* Configuration loads.
+* Database models import correctly.
+* Alembic migrations are valid.
+* Backend tests run.
+* FastAPI application starts.
+* Health endpoint responds successfully.
+* OpenAPI schema generates successfully.
+
+## Frontend
+
+* Dependencies install successfully.
+* TypeScript type checking passes.
+* Linting passes.
+* Frontend tests run.
+* Production build succeeds.
+* All routes compile.
+* No missing assets exist.
+* No unresolved imports exist.
+
+## Docker
+
+* Docker Compose configuration is valid.
+* Frontend, backend, and PostgreSQL services are correctly connected.
+* Database migration command is included.
+* Required volumes are configured.
+* Health checks are configured.
+* Application URLs are documented.
+
+## Project Archive
+
+* The ZIP contains the entire root project.
+* No required files are missing.
+* `.env.example` is included.
+* Real `.env` secrets are not included.
+* Temporary build caches are excluded.
+* Dependency folders such as `node_modules` are excluded.
+* Python virtual environments are excluded.
+* The archive extracts into one clean `ruwi` directory.
+
+Create a verification report inside:
+
+docs/verification-report.md
+
+The report must contain the commands executed and their results.
+
+Do not falsely state that a command passed if it was not executed.
+
+---
+
+# FINAL OUTPUT RULE
+
+After completing and verifying the project:
+
+1. Package the complete application as:
+
+ruwi-complete-project.zip
+
+2. Return ONLY the downloadable ZIP archive.
+
+3. Do not include explanations, summaries, installation notes, code blocks, or additional messages outside the archive.

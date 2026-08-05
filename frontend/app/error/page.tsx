@@ -1,0 +1,1 @@
+export default function Page(){return <div className="container py-20"><div className="card mx-auto max-w-3xl p-10"><div className="eyebrow">Ruwi | رُوي</div><h1 className="mt-4 font-serif text-5xl font-bold">حدث خطأ | Error</h1><p className="mt-6 text-lg leading-9 text-[var(--muted)]">تعذر إكمال الطلب. راجع الاتصال أو حاول مرة أخرى دون فقد البيانات المدخلة.</p></div></div>}

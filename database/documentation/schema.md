@@ -1,0 +1,3 @@
+# Database schema
+
+The normalized SQLAlchemy schema includes users/roles, museums/collections, artifacts and media, analyses and candidates, AI generations, stories, timelines/events, facts, hotspots, quizzes/attempts, knowledge sources/documents/chunks/embeddings, citations, conversations/messages, saved experiences, narrations, curator reviews, publication records, audit logs, and system settings. PostgreSQL deployments initialize pgvector. JSON vectors remain as a portable fallback for SQLite tests; production retrieval can migrate embedding storage to a native `vector` column without changing service interfaces.

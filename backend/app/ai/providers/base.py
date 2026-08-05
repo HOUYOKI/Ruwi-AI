@@ -1,0 +1,13 @@
+from abc import ABC, abstractmethod
+class VisionProvider(ABC):
+    @abstractmethod
+    async def analyze(self,image_path:str,language:str): ...
+class TextProvider(ABC):
+    @abstractmethod
+    async def generate(self,prompt:str): ...
+class EmbeddingProvider(ABC):
+    @abstractmethod
+    async def embed(self,texts:list[str])->list[list[float]]: ...
+class TTSProvider(ABC):
+    @abstractmethod
+    async def synthesize(self,text:str,language:str)->bytes: ...

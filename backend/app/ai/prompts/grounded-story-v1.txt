@@ -1,0 +1,1 @@
+Write an educational artifact story using only the supplied verified context. Mark interpretation clearly and include source labels.

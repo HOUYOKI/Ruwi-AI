@@ -1,0 +1,1 @@
+import {WorkspacePage} from "@/components/workspace-page";export default function Page(){return <WorkspacePage title="Story Editor · محرر القصة" description="This production route is connected to the shared authenticated API architecture and role-based navigation."/>}
