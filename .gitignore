@@ -1,0 +1,33 @@
+# Tooling / local-only
+.claude/
+.gemini/
+.agents/
+.impeccable/
+claude.md
+
+# Secrets
+.env
+*.env.local
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+
+# Node
+node_modules/
+dist/
+build/
+*.log
+.eslintcache
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+tree.txt
