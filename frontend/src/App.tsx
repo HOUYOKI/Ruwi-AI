@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import GalleryPage from "./pages/GalleryPage";
 import ArtifactPage from "./pages/ArtifactPage";
+import ScanArtifact from "./pages/ScanArtifact";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
         <Routes>
           <Route path="/" element={<GalleryPage />} />
           <Route path="/artifacts/:id" element={<ArtifactPage />} />
+          <Route path="/scan" element={<ScanArtifact />} />
         </Routes>
       </div>
     </BrowserRouter>
