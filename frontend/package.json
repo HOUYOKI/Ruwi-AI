@@ -1,6 +1,6 @@
 {
   "name": "ruwi-touch-exhibition-final",
-  "version": "5.0.0",
+  "version": "6.0.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -11,15 +11,15 @@
   },
   "dependencies": {
     "@vitejs/plugin-react": "latest",
+    "three": "latest",
     "react": "latest",
-    "react-dom": "latest",
-    "three": "latest"
+    "react-dom": "latest"
   },
   "devDependencies": {
+    "typescript": "latest",
+    "vite": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
-    "@types/three": "latest",
-    "typescript": "latest",
-    "vite": "latest"
+    "@types/three": "latest"
   }
 }
