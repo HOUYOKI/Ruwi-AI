@@ -1,0 +1,762 @@
+[
+  {
+    "id": 1,
+    "name_ar": "إصبع بشري قديم",
+    "name_en": "Ancient Human Finger Bone",
+    "age": "85,000 قبل الميلاد",
+    "location": "تل الغادة، تيماء، منطقة تبوك",
+    "material": "عظم متحجر",
+    "description_ar": "بقايا عظم الإصبع الأوسط ليد بشرية عُثر عليها في بحيرة جافة في تيماء، وتمثل أقدم بقايا بشرية معروفة مباشرة التأريخ من المنطقة وفق بيانات المصدر.",
+    "story": "قطعة صغيرة تحمل سؤالًا كبيرًا: كيف وصل الإنسان الحديث إلى قلب الجزيرة العربية في زمن كان فيه مناخها مختلفًا؟",
+    "facts": [
+      "العمر: نحو 85,000 سنة",
+      "الموقع: تل الغادة، تيماء",
+      "المادة: عظم متحجر",
+      "يرتبط بسجل مبكر لوجود الإنسان الحديث في الجزيرة العربية"
+    ],
+    "timeline": [
+      [
+        "85,000 ق.م.",
+        "القطعة تنتمي إلى زمن الوجود البشري المبكر في الجزيرة العربية"
+      ],
+      [
+        "تيماء",
+        "عُثر عليها في قاع بحيرة جافة قديمة"
+      ],
+      [
+        "اليوم",
+        "تُستخدم القطعة كشاهد على تاريخ الاستيطان البشري المبكر"
+      ]
+    ],
+    "experience": "رحلة الإنسان عبر الزمن",
+    "experience_type": "human_timeline",
+    "prompt": "حرّك الخط الزمني وشاهد كيف تتغير البيئة حول الإنسان.",
+    "image": "/artifacts/1.png",
+    "model": "/models/1.glb",
+    "source": "https://raw.githubusercontent.com/HOUYOKI/Ruwi-AI/oxrdoxr-ruwi-mvp/assets/clean_artifacts/1.png",
+    "asset_status": "3D interactive reconstruction from the museum-reference image",
+    "provenance": "Grounded artifact record inherited from the Ruwi-AI museum explorer dataset; exact public catalog record should be matched before official exhibition publication."
+  },
+  {
+    "id": 2,
+    "name_ar": "وعاء مخروطي",
+    "name_en": "Conical Vessel",
+    "age": "5000 قبل الميلاد",
+    "location": "عين السيح، المنطقة الشرقية",
+    "material": "فخار وطين وقار",
+    "description_ar": "وعاء مخروطي من أقدم الأوعية المصنعة محليًا في المنطقة، وتوجد في داخله بقايا من القار يُرجح أنه جُلب من جنوب العراق، مع بقايا أصداف بحرية.",
+    "story": "داخل الوعاء تختبئ آثار التجارة والبيئة القديمة؛ بقايا القار والأصداف تحوّل إناءً يوميًا إلى دليل على حركة المواد والمياه.",
+    "facts": [
+      "التاريخ: نحو 5000 ق.م.",
+      "توجد بقايا قار داخل الوعاء",
+      "القار يُرجح أنه جُلب من جنوب العراق",
+      "وجود الأصداف يشير إلى بيئة مائية قديمة"
+    ],
+    "timeline": [
+      [
+        "5000 ق.م.",
+        "صناعة الوعاء واستخدامه"
+      ],
+      [
+        "بعد الاستخدام",
+        "تُرك في بيئة ذات مستوى ماء مرتفع"
+      ],
+      [
+        "اليوم",
+        "تقرأ آثاره المادية لفهم التجارة والبيئة"
+      ]
+    ],
+    "experience": "مخبر داخل الوعاء",
+    "experience_type": "residue_lab",
+    "prompt": "قرّب بإصبعك وافحص بقايا القار والأصداف، ثم اكتشف مسار التجارة المحتمل.",
+    "image": "/artifacts/2.png",
+    "model": "/models/2.glb",
+    "source": "https://raw.githubusercontent.com/HOUYOKI/Ruwi-AI/oxrdoxr-ruwi-mvp/assets/clean_artifacts/2.png",
+    "asset_status": "3D interactive reconstruction from the museum-reference image",
+    "provenance": "Grounded artifact record inherited from the Ruwi-AI museum explorer dataset; exact public catalog record should be matched before official exhibition publication."
+  },
+  {
+    "id": 3,
+    "name_ar": "الفك السفلي للماستودون",
+    "name_en": "Lower Jaw of a Mastodon",
+    "age": "العصر الميوسيني، نحو 17 مليون سنة",
+    "location": "الصرار، المنطقة الشرقية",
+    "material": "عظم متحجر",
+    "description_ar": "فك سفلي متحجر لحيوان الماستودون، يكشف عن بيئة الجزيرة العربية القديمة التي كانت أكثر خضرة ووفرة بالمياه والموارد الطبيعية.",
+    "story": "تخيل الجزيرة العربية قبل ملايين السنين: ليست صحراء كما نعرفها اليوم، بل بيئة مختلفة دعمت حيوانات ضخمة وأنظمة بيئية غنية.",
+    "facts": [
+      "العمر: نحو 17 مليون سنة",
+      "الموقع: الصرار، المنطقة الشرقية",
+      "الحيوان: ماستودون",
+      "السجل يشير إلى اختلاف كبير في المناخ والبيئة القديمة"
+    ],
+    "timeline": [
+      [
+        "17 مليون سنة",
+        "بيئة أكثر خضرة ورطوبة"
+      ],
+      [
+        "العصر الميوسيني",
+        "انتشار حيوانات كبيرة مثل الماستودون"
+      ],
+      [
+        "اليوم",
+        "تُقرأ البقايا المتحجرة لإعادة بناء البيئة القديمة"
+      ]
+    ],
+    "experience": "عالم ما قبل الصحراء",
+    "experience_type": "paleo_climate",
+    "prompt": "اسحب مؤشر المناخ وشاهد انتقال المشهد بين الجزيرة القديمة والبيئة الحالية.",
+    "image": "/artifacts/3.png",
+    "model": "/models/3.glb",
+    "source": "https://raw.githubusercontent.com/HOUYOKI/Ruwi-AI/oxrdoxr-ruwi-mvp/assets/clean_artifacts/3.png",
+    "asset_status": "3D interactive reconstruction from the museum-reference image",
+    "provenance": "Grounded artifact record inherited from the Ruwi-AI museum explorer dataset; exact public catalog record should be matched before official exhibition publication."
+  },
+  {
+    "id": 4,
+    "name_ar": "جذع شجرة متحجر",
+    "name_en": "Petrified Tree Trunk",
+    "age": "نحو 255 مليون سنة",
+    "location": "منطقة القصيم",
+    "material": "خشب متحجر",
+    "description_ar": "جذع شجرة متحجر يعود إلى نحو 255 مليون سنة، ويقدم سجلًا جيولوجيًا لبيئة الجزيرة العربية القديمة التي كانت أكثر رطوبة وغنى بالتنوع الحيوي.",
+    "story": "هذا ليس خشبًا عاديًا؛ إنه سجل جيولوجي يحفظ أثر نبات عاش في عالم مختلف جذريًا عن الجزيرة العربية الحالية.",
+    "facts": [
+      "العمر: نحو 255 مليون سنة",
+      "الموقع: القصيم",
+      "المادة: خشب متحجر",
+      "يشير إلى مناخ قديم أكثر رطوبة"
+    ],
+    "timeline": [
+      [
+        "255 مليون سنة",
+        "وجود الغابات والنباتات القديمة"
+      ],
+      [
+        "التحجر",
+        "تحولت المادة العضوية تدريجيًا إلى سجل صخري"
+      ],
+      [
+        "اليوم",
+        "تحفظ القطعة ذاكرة بيئية عميقة"
+      ]
+    ],
+    "experience": "بوابة الزمن العميق",
+    "experience_type": "deep_time",
+    "prompt": "مرّر عبر الزمن لرؤية مقياس 255 مليون سنة مقارنة بعمر الإنسان.",
+    "image": "/artifacts/4.png",
+    "model": "/models/4.glb",
+    "source": "https://raw.githubusercontent.com/HOUYOKI/Ruwi-AI/oxrdoxr-ruwi-mvp/assets/clean_artifacts/4.png",
+    "asset_status": "3D interactive reconstruction from the museum-reference image",
+    "provenance": "Grounded artifact record inherited from the Ruwi-AI museum explorer dataset; exact public catalog record should be matched before official exhibition publication."
+  },
+  {
+    "id": 5,
+    "name_ar": "قطعة فنية صخرية بأيدي وأذرع محفورة",
+    "name_en": "Rock Art Slab with Hand and Arm Engravings",
+    "age": "نحو 2000 قبل الميلاد",
+    "location": "عان حامضة، منطقة نجران",
+    "material": "حجر",
+    "description_ar": "لوح صخري يحمل رسومات لسبعة أذرع وأيدٍ ورموزًا قد تكون من أبجدية قديمة، مع نقوش ثمودية أضيفت لاحقًا، ما يكوّن طبقات زمنية متعددة من التعبير البشري.",
+    "story": "كل خط هنا هو أثر يد إنسان عاش قبل آلاف السنين. التفاعل يكشف الطبقات بدل قراءة الصخرة كصورة واحدة.",
+    "facts": [
+      "سبع أذرع وأيدٍ ظاهرة",
+      "رموز قد ترتبط بنص قديم",
+      "أضيفت نقوش ثمودية في فترة لاحقة",
+      "الموقع: منطقة نجران"
+    ],
+    "timeline": [
+      [
+        "نحو 2000 ق.م.",
+        "الرسوم والنقوش الأقدم"
+      ],
+      [
+        "فترة لاحقة",
+        "إضافة نقوش ثمودية"
+      ],
+      [
+        "اليوم",
+        "تُقرأ الصخرة كسجل متعدد الطبقات"
+      ]
+    ],
+    "experience": "تتبع النقش",
+    "experience_type": "trace_engraving",
+    "prompt": "مرّر إصبعك فوق الخطوط لتكشف طبقات النقش واحدة تلو الأخرى.",
+    "image": "/artifacts/5.png",
+    "model": "/models/5.glb",
+    "source": "https://raw.githubusercontent.com/HOUYOKI/Ruwi-AI/oxrdoxr-ruwi-mvp/assets/clean_artifacts/5.png",
+    "asset_status": "3D interactive reconstruction from the museum-reference image",
+    "provenance": "Grounded artifact record inherited from the Ruwi-AI museum explorer dataset; exact public catalog record should be matched before official exhibition publication."
+  },
+  {
+    "id": 6,
+    "name_ar": "جزء من نيزك",
+    "name_en": "Meteorite Fragment",
+    "age": "اصطدام مقدّر قبل نحو 400 سنة؛ اكتشاف 1932",
+    "location": "الربع الخالي، المملكة العربية السعودية",
+    "material": "حديد ونيكل",
+    "description_ar": "جزء كبير من نيزك من الحديد والنيكل، يُقدّر أن سقوطه حدث قبل نحو 400 عام، وتزن القطعة المستعادة نحو 2.75 طن، واكتُشفت في الربع الخالي عام 1932.",
+    "story": "قطعة من خارج الأرض أصبحت جزءًا من قصة الجزيرة العربية؛ تجربة التفاعل تحوّلها إلى رحلة من الفضاء إلى الربع الخالي.",
+    "facts": [
+      "المادة: الحديد والنيكل",
+      "الوزن المذكور للقطعة: نحو 2.75 طن",
+      "الاكتشاف: 1932",
+      "الموقع: الربع الخالي"
+    ],
+    "timeline": [
+      [
+        "قبل نحو 400 سنة",
+        "اصطدام النيزك بالأرض وفق التقدير العلمي الوارد في المصدر"
+      ],
+      [
+        "1932",
+        "اكتشاف القطعة في الربع الخالي"
+      ],
+      [
+        "اليوم",
+        "تُعرض كدليل على حدث كوني في تاريخ الأرض"
+      ]
+    ],
+    "experience": "رحلة النيزك",
+    "experience_type": "meteorite_path",
+    "prompt": "اسحب النيزك عبر مساره من الفضاء إلى صحراء الربع الخالي.",
+    "image": "/artifacts/6.png",
+    "model": "/models/6.glb",
+    "source": "https://raw.githubusercontent.com/HOUYOKI/Ruwi-AI/oxrdoxr-ruwi-mvp/assets/clean_artifacts/6.png",
+    "asset_status": "3D interactive reconstruction from the museum-reference image",
+    "provenance": "Grounded artifact record inherited from the Ruwi-AI museum explorer dataset; exact public catalog record should be matched before official exhibition publication."
+  },
+  {
+    "id": 7,
+    "name_ar": "جرة فخارية ملونة",
+    "name_en": "Painted Pottery Jar",
+    "age": "2200–2000 قبل الميلاد",
+    "location": "المنطقة الشرقية",
+    "material": "فخار",
+    "description_ar": "جرة فخارية مزينة بزخارف هندسية ونباتية باللون الأسود، وترتبط بتقاليد حضارة العُبيد، وتبرز مهارة الصناعة والتبادل الثقافي في المنطقة.",
+    "story": "الزخرفة ليست مجرد شكل؛ إنها لغة بصرية تكشف الذوق والحرفة والاتصال بين المجتمعات.",
+    "facts": [
+      "التاريخ: 2200–2000 ق.م.",
+      "زخارف هندسية ونباتية",
+      "صبغة سوداء على سطح الفخار",
+      "ترتبط بتقاليد العُبيد"
+    ],
+    "timeline": [
+      [
+        "2200–2000 ق.م.",
+        "صناعة الجرة وزخرفتها"
+      ],
+      [
+        "بعدها",
+        "انتقال التقنيات والزخارف بين المجتمعات"
+      ],
+      [
+        "اليوم",
+        "تُقرأ الزخرفة كأثر للحرفة والتبادل"
+      ]
+    ],
+    "experience": "استوديو الزخرفة",
+    "experience_type": "pattern_studio",
+    "prompt": "دوّر القطعة واكشف مناطق الزخرفة بالتكبير.",
+    "image": "/artifacts/7.png",
+    "model": "/models/7.glb",
+    "source": "https://raw.githubusercontent.com/HOUYOKI/Ruwi-AI/oxrdoxr-ruwi-mvp/assets/clean_artifacts/7.png",
+    "asset_status": "3D interactive reconstruction from the museum-reference image",
+    "provenance": "Grounded artifact record inherited from the Ruwi-AI museum explorer dataset; exact public catalog record should be matched before official exhibition publication."
+  },
+  {
+    "id": 8,
+    "name_ar": "شفرة من حجر السبح البركاني",
+    "name_en": "Obsidian Blade",
+    "age": "نحو 5000 قبل الميلاد",
+    "location": "الدوسرية، المنطقة الشرقية",
+    "material": "سبج، زجاج بركاني",
+    "description_ar": "شفرة من حجر بركاني زجاجي شديد الحدة، استخدمها البشر الأوائل كأداة للقطع والكشط، وتكشف عن مهارات التصنيع والتكيف مع الموارد.",
+    "story": "لم تكن التقنية بحاجة إلى معدن كي تكون متقدمة؛ حافة واحدة من حجر بركاني كانت أداة دقيقة.",
+    "facts": [
+      "التاريخ: نحو 5000 ق.م.",
+      "المادة: سبج، زجاج بركاني",
+      "استخدام محتمل: القطع والكشط",
+      "الموقع: الدوسرية"
+    ],
+    "timeline": [
+      [
+        "5000 ق.م.",
+        "صناعة الشفرة من السبج"
+      ],
+      [
+        "الاستخدام",
+        "القطع والكشط بأطراف حادة"
+      ],
+      [
+        "اليوم",
+        "تكشف عن تقنية العصر الحجري الحديث"
+      ]
+    ],
+    "experience": "مختبر الحافة",
+    "experience_type": "edge_lab",
+    "prompt": "حرّك الضوء على الحافة واكتشف لماذا كان السبج مناسبًا للأدوات الدقيقة.",
+    "image": "/artifacts/8.png",
+    "model": "/models/8.glb",
+    "source": "https://raw.githubusercontent.com/HOUYOKI/Ruwi-AI/oxrdoxr-ruwi-mvp/assets/clean_artifacts/8.png",
+    "asset_status": "3D interactive reconstruction from the museum-reference image",
+    "provenance": "Grounded artifact record inherited from the Ruwi-AI museum explorer dataset; exact public catalog record should be matched before official exhibition publication."
+  },
+  {
+    "id": 9,
+    "name_ar": "رأس سهم حجري",
+    "name_en": "Stone Arrowhead",
+    "age": "8000–4000 قبل الميلاد",
+    "location": "الثمامة، منطقة الرياض",
+    "material": "حجر",
+    "description_ar": "رأس سهم حجري بحواف مسننة، عُثر على آلاف من أمثاله وأدوات حجرية أخرى في موقع الثمامة، ويرتبط بأنماط الصيد وتقنيات تشذيب الحجر في العصر الحجري الحديث.",
+    "story": "تجربة بسيطة توضح كيف يتحول شكل الحافة إلى قرار عملي في الصيد.",
+    "facts": [
+      "التاريخ: 8000–4000 ق.م.",
+      "حواف مسننة",
+      "الموقع: الثمامة، الرياض",
+      "عُثر على آلاف الرؤوس والأدوات في الموقع"
+    ],
+    "timeline": [
+      [
+        "8000–4000 ق.م.",
+        "تصنيع رؤوس الأسهم"
+      ],
+      [
+        "الاستخدام",
+        "الصيد والأدوات الحجرية"
+      ],
+      [
+        "اليوم",
+        "دراسة التقنية من شكل الحواف"
+      ]
+    ],
+    "experience": "صمّم رأس السهم",
+    "experience_type": "arrow_builder",
+    "prompt": "غيّر زاوية الحافة وشاهد كيف يتغير شكل رأس السهم في المحاكاة.",
+    "image": "/artifacts/9.png",
+    "model": "/models/9.glb",
+    "source": "https://raw.githubusercontent.com/HOUYOKI/Ruwi-AI/oxrdoxr-ruwi-mvp/assets/clean_artifacts/9.png",
+    "asset_status": "3D interactive reconstruction from the museum-reference image",
+    "provenance": "Grounded artifact record inherited from the Ruwi-AI museum explorer dataset; exact public catalog record should be matched before official exhibition publication."
+  },
+  {
+    "id": 10,
+    "name_ar": "أسطوانة حجرية مجوفة لصهر المعادن",
+    "name_en": "Hollow Stone Tuyere",
+    "age": "القرن الرابع الهجري، القرن العاشر الميلادي",
+    "location": "المملكة العربية السعودية",
+    "material": "حجر",
+    "description_ar": "أداة حجرية مجوفة على شكل Y استُخدمت كفوهة لتوزيع وتنظيم الهواء داخل الأفران أثناء صهر المعادن، وكان ثبات تدفق الهواء مهمًا للحفاظ على شدة النار.",
+    "story": "هنا يصبح الهواء أداة صناعية. اسحب الهواء عبر الفوهة وشاهد كيف تتغير شدة النار في المحاكاة.",
+    "facts": [
+      "شكل Y مجوف",
+      "توزيع الهواء داخل الفرن",
+      "ارتبطت بصهر المعادن",
+      "القرن الرابع الهجري / العاشر الميلادي"
+    ],
+    "timeline": [
+      [
+        "القرن الرابع الهجري",
+        "استخدام الأداة في عمليات الصهر"
+      ],
+      [
+        "عملية الصهر",
+        "تنظيم الهواء للمحافظة على شدة النار"
+      ],
+      [
+        "اليوم",
+        "توضح القطعة معرفة مبكرة بالتحكم الحراري"
+      ]
+    ],
+    "experience": "محاكاة الصهر",
+    "experience_type": "smelting_air",
+    "prompt": "اسحب الهواء داخل الفوهة وارفع تدفق الأكسجين.",
+    "image": "/artifacts/10.png",
+    "model": "/models/10.glb",
+    "source": "https://raw.githubusercontent.com/HOUYOKI/Ruwi-AI/oxrdoxr-ruwi-mvp/assets/clean_artifacts/10.png",
+    "asset_status": "3D interactive reconstruction from the museum-reference image",
+    "provenance": "Grounded artifact record inherited from the Ruwi-AI museum explorer dataset; exact public catalog record should be matched before official exhibition publication."
+  },
+  {
+    "id": 11,
+    "name_ar": "وزن فضة",
+    "name_en": "Silver Weight",
+    "age": "القرن الثالث–السادس الهجري، التاسع–الثاني عشر الميلادي",
+    "location": "المبيات، العلا، منطقة المدينة المنورة",
+    "material": "فضة",
+    "description_ar": "وزن فضي مستطيل يحمل علامات ورموزًا هندسية وآثار ضربات نجمية، ويرجح أنه استُخدم كوزن معياري للتجارة والمعاملات.",
+    "story": "التجارة تحتاج إلى الثقة؛ الوزن المعياري يحوّل المعدن إلى وحدة قابلة للمقارنة بين البائع والمشتري.",
+    "facts": [
+      "المادة: فضة",
+      "علامات هندسية ورموز",
+      "الموقع: المبيات، العلا",
+      "يرجح استخدامه في التجارة"
+    ],
+    "timeline": [
+      [
+        "القرن 3–6 هـ",
+        "استخدام الأوزان في المعاملات"
+      ],
+      [
+        "المبيات",
+        "ارتباط القطعة بمركز تاريخي في العلا"
+      ],
+      [
+        "اليوم",
+        "تساعد في فهم التجارة والاقتصاد"
+      ]
+    ],
+    "experience": "ميزان السوق",
+    "experience_type": "trade_scale",
+    "prompt": "وازن الكتل الافتراضية واكتشف كيف يثبت الوزن قيمة الصفقة.",
+    "image": "/artifacts/11.png",
+    "model": "/models/11.glb",
+    "source": "https://raw.githubusercontent.com/HOUYOKI/Ruwi-AI/oxrdoxr-ruwi-mvp/assets/clean_artifacts/11.png",
+    "asset_status": "3D interactive reconstruction from the museum-reference image",
+    "provenance": "Grounded artifact record inherited from the Ruwi-AI museum explorer dataset; exact public catalog record should be matched before official exhibition publication."
+  },
+  {
+    "id": 12,
+    "name_ar": "أداة طبية",
+    "name_en": "Medical Instrument",
+    "age": "132–656 هـ، 750–1258 م",
+    "location": "العلا، منطقة المدينة المنورة",
+    "material": "نحاس",
+    "description_ar": "أداة طبية من النحاس، ربما كانت جزءًا من مجموعة أكبر، وتتميز بقضيب رفيع ووصلات هندسية ونهاية دائرية مسطحة.",
+    "story": "أداة صغيرة تفتح بابًا على تاريخ الطب والصناعة الدقيقة في العصر الإسلامي المبكر.",
+    "facts": [
+      "المادة: نحاس",
+      "الفترة: 750–1258 م",
+      "الموقع: العلا",
+      "ربما كانت جزءًا من مجموعة طبية"
+    ],
+    "timeline": [
+      [
+        "750–1258 م",
+        "الفترة العباسية وما بعدها"
+      ],
+      [
+        "العلا",
+        "العثور على الأداة ضمن السياق الأثري"
+      ],
+      [
+        "اليوم",
+        "دراسة الأدوات لفهم الممارسات الطبية"
+      ]
+    ],
+    "experience": "استكشف الأداة",
+    "experience_type": "medical_zoom",
+    "prompt": "المس أجزاء الأداة لتظهر وظيفة كل جزء كما تسمح به البيانات.",
+    "image": "/artifacts/12.png",
+    "model": "/models/12.glb",
+    "source": "https://raw.githubusercontent.com/HOUYOKI/Ruwi-AI/oxrdoxr-ruwi-mvp/assets/clean_artifacts/12.png",
+    "asset_status": "3D interactive reconstruction from the museum-reference image",
+    "provenance": "Grounded artifact record inherited from the Ruwi-AI museum explorer dataset; exact public catalog record should be matched before official exhibition publication."
+  },
+  {
+    "id": 13,
+    "name_ar": "قلادة برونزية بالخط الإسلامي",
+    "name_en": "Bronze Calligraphic Pendant",
+    "age": "القرن الثالث الهجري، التاسع الميلادي",
+    "location": "الربذة، درب زبيدة",
+    "material": "برونز",
+    "description_ar": "قلادة برونزية فاخرة منقوشة بالخط الإسلامي، عُثر عليها في الربذة على طريق درب زبيدة، وتظهر حدودًا زخرفية وحلقة تعليق.",
+    "story": "الكتابة هنا ليست نصًا فقط؛ إنها جزء من تصميم حُليّ يحمل هوية فنية على طريق الحج والتجارة.",
+    "facts": [
+      "المادة: برونز",
+      "منقوشة بالخط الإسلامي",
+      "الموقع: الربذة، درب زبيدة",
+      "التاريخ: القرن الثالث الهجري"
+    ],
+    "timeline": [
+      [
+        "القرن الثالث هـ",
+        "صناعة القلادة وزخرفتها"
+      ],
+      [
+        "درب زبيدة",
+        "سياق طريق الحج والتجارة"
+      ],
+      [
+        "اليوم",
+        "دراسة الخط والزخرفة والاتصال الثقافي"
+      ]
+    ],
+    "experience": "مختبر الخط",
+    "experience_type": "calligraphy_zoom",
+    "prompt": "كبّر النقش وتتبّع اتجاهات الخط.",
+    "image": "/artifacts/13.png",
+    "model": "/models/13.glb",
+    "source": "https://raw.githubusercontent.com/HOUYOKI/Ruwi-AI/oxrdoxr-ruwi-mvp/assets/clean_artifacts/13.png",
+    "asset_status": "3D interactive reconstruction from the museum-reference image",
+    "provenance": "Grounded artifact record inherited from the Ruwi-AI museum explorer dataset; exact public catalog record should be matched before official exhibition publication."
+  },
+  {
+    "id": 14,
+    "name_ar": "مذبح مكعب من الحجر الرملي",
+    "name_en": "Carved Sandstone Cube Altar",
+    "age": "القرن السادس–الرابع قبل الميلاد",
+    "location": "قصر الحمراء، تيماء، منطقة تبوك",
+    "material": "حجر رملي",
+    "description_ar": "مكعب حجري كبير يحمل مشاهد شعائرية؛ منها رأس ثور مع قرص شمسي وثيران وأقراص شمسية مجنحة وزخارف نباتية، وتظهر فيه تأثيرات دينية من مصر القديمة وبلاد الرافدين.",
+    "story": "دوران المكعب يكشف أن القطعة تحمل أكثر من وجه وأكثر من قصة، وتظهر كيف تلتقي الرموز بين الثقافات.",
+    "facts": [
+      "المادة: حجر رملي",
+      "الموقع: تيماء",
+      "رمز الثور والقرص الشمسي",
+      "تأثيرات مصرية ورافدية"
+    ],
+    "timeline": [
+      [
+        "القرن 6–4 ق.م.",
+        "صناعة القطعة واستخدامها الشعائري"
+      ],
+      [
+        "تيماء",
+        "ملتقى للتبادل الثقافي والتجاري"
+      ],
+      [
+        "اليوم",
+        "دراسة الرموز عبر أوجه المكعب"
+      ]
+    ],
+    "experience": "وجوه الرمز",
+    "experience_type": "cube_story",
+    "prompt": "دوّر المكعب واكتشف القصة المختلفة لكل وجه.",
+    "image": "/artifacts/14.png",
+    "model": "/models/14.glb",
+    "source": "https://raw.githubusercontent.com/HOUYOKI/Ruwi-AI/oxrdoxr-ruwi-mvp/assets/clean_artifacts/14.png",
+    "asset_status": "3D interactive reconstruction from the museum-reference image",
+    "provenance": "Grounded artifact record inherited from the Ruwi-AI museum explorer dataset; exact public catalog record should be matched before official exhibition publication."
+  },
+  {
+    "id": 15,
+    "name_ar": "بندقية طويلة الماسورة بمقبض على شكل فأس",
+    "name_en": "Long-Barreled Gun with Decorative Axe Handle",
+    "age": "القرن الثالث عشر الهجري، التاسع عشر الميلادي",
+    "location": "قاعة الدولتين السعودية الأولى والثانية، المتحف الوطني السعودي",
+    "material": "خشب وحديد ونحاس أصفر",
+    "description_ar": "بندقية طويلة الماسورة تتميز بملحق نحاسي على شكل فأس متصل بالمقبض، ويصف المصدر هذا العنصر بأنه تزييني بالأساس، مع زخارف حلزونية مطعمة على الجسم الخشبي.",
+    "story": "بدل تجربة إطلاق سلاح، تركز التجربة على التصميم والحرفة والزخرفة المرتبطة بالقطعة.",
+    "facts": [
+      "القرن 13 هـ / 19 م",
+      "خشب وحديد ونحاس أصفر",
+      "مقبض مزخرف على شكل فأس",
+      "زخارف حلزونية مطعمة"
+    ],
+    "timeline": [
+      [
+        "القرن 19 م",
+        "صناعة القطعة وزخرفتها"
+      ],
+      [
+        "الدولة السعودية الأولى والثانية",
+        "السياق التاريخي للقطعة"
+      ],
+      [
+        "اليوم",
+        "تُقرأ كقطعة تجمع الوظيفة والزينة"
+      ]
+    ],
+    "experience": "تفكيك الحرفة",
+    "experience_type": "craft_detail",
+    "prompt": "كبّر المقبض والملحق النحاسي لاكتشاف تفاصيل الصناعة.",
+    "image": "/artifacts/15.png",
+    "model": "/models/15.glb",
+    "source": "https://raw.githubusercontent.com/HOUYOKI/Ruwi-AI/oxrdoxr-ruwi-mvp/assets/clean_artifacts/15.png",
+    "asset_status": "3D interactive reconstruction from the museum-reference image",
+    "provenance": "Grounded artifact record inherited from the Ruwi-AI museum explorer dataset; exact public catalog record should be matched before official exhibition publication."
+  },
+  {
+    "id": 16,
+    "name_ar": "مصباح من الحجر الصابوني",
+    "name_en": "Soapstone Oil Lamp",
+    "age": "القرن الخامس الهجري، الحادي عشر الميلادي",
+    "location": "الطائف، منطقة مكة المكرمة",
+    "material": "حجر صابوني",
+    "description_ar": "مصباح زيتي من الحجر الصابوني يحمل أشكالًا هندسية. كان الحجر الصابوني مناسبًا للمصابيح والمباخر بسبب قدرته على امتصاص ونقل الحرارة جيدًا.",
+    "story": "اختبر فكرة الحرارة من خلال ضوء افتراضي يزداد تدريجيًا مع بقاء شكل القطعة ثابتًا.",
+    "facts": [
+      "المادة: حجر صابوني",
+      "القرن الخامس الهجري",
+      "الموقع: الطائف",
+      "مناسب للحرارة بحسب خصائص المادة الواردة في المصدر"
+    ],
+    "timeline": [
+      [
+        "القرن 5 هـ",
+        "صناعة المصباح"
+      ],
+      [
+        "الاستخدام",
+        "إضاءة الحياة اليومية"
+      ],
+      [
+        "اليوم",
+        "دراسة المواد وتقنيات الصناعة"
+      ]
+    ],
+    "experience": "مختبر الحرارة",
+    "experience_type": "lamp_heat",
+    "prompt": "ارفع شدة اللهب وشاهد تغير الإضاءة والحرارة المحاكاة.",
+    "image": "/artifacts/16.png",
+    "model": "/models/16.glb",
+    "source": "https://raw.githubusercontent.com/HOUYOKI/Ruwi-AI/oxrdoxr-ruwi-mvp/assets/clean_artifacts/16.png",
+    "asset_status": "3D interactive reconstruction from the museum-reference image",
+    "provenance": "Grounded artifact record inherited from the Ruwi-AI museum explorer dataset; exact public catalog record should be matched before official exhibition publication."
+  },
+  {
+    "id": 17,
+    "name_ar": "محبرة خشبية مزخرفة",
+    "name_en": "Decorated Wooden Inkwell",
+    "age": "القرن التاسع عشر–العشرين الميلادي",
+    "location": "المملكة العربية السعودية",
+    "material": "خشب",
+    "description_ar": "محبرة خشبية تقليدية مزخرفة بغطاء دائري وجسم ممدود يحمل زخارف هندسية ونباتية، وتمثل أدوات الكتابة والحرفة الفنية في تلك الفترة.",
+    "story": "أداة الكتابة تصبح تجربة: افتح الغطاء، اغمس القلم، ثم اكتب على الشاشة.",
+    "facts": [
+      "المادة: خشب",
+      "زخارف هندسية ونباتية",
+      "القرن 19–20 م",
+      "مرتبطة بأدوات الكتابة"
+    ],
+    "timeline": [
+      [
+        "القرن 19–20 م",
+        "صناعة المحبرة وزخرفتها"
+      ],
+      [
+        "الاستخدام",
+        "حفظ الحبر وأدوات الكتابة"
+      ],
+      [
+        "اليوم",
+        "تستعيد التجربة فعل الكتابة التقليدي"
+      ]
+    ],
+    "experience": "اكتب كما كانوا يكتبون",
+    "experience_type": "ink_write",
+    "prompt": "المس المحبرة ثم اكتب كلمة على اللوح الرقمي.",
+    "image": "/artifacts/17.png",
+    "model": "/models/17.glb",
+    "source": "https://raw.githubusercontent.com/HOUYOKI/Ruwi-AI/oxrdoxr-ruwi-mvp/assets/clean_artifacts/17.png",
+    "asset_status": "3D interactive reconstruction from the museum-reference image",
+    "provenance": "Grounded artifact record inherited from the Ruwi-AI museum explorer dataset; exact public catalog record should be matched before official exhibition publication."
+  },
+  {
+    "id": 18,
+    "name_ar": "خنجر بمقبض فضي وغمد",
+    "name_en": "Silver-Handled Khanjar",
+    "age": "القرن الثالث عشر الهجري، التاسع عشر الميلادي",
+    "location": "منطقة عسير",
+    "material": "فضة وحديد وجلد",
+    "description_ar": "خنجر عربي تقليدي بمقبض وغمد فضيين مزخرفين، يمثل حرفة منطقة عسير، وكانت هذه الخناجر تحمل أيضًا دلالات للمكانة والشرف والهوية القبلية.",
+    "story": "التجربة تركز على الزخرفة والهوية والحرفة، لا على الاستخدام القتالي.",
+    "facts": [
+      "المادة: فضة وحديد وجلد",
+      "الموقع: عسير",
+      "القرن 13 هـ / 19 م",
+      "زخارف هندسية وأعمال فِلِغري"
+    ],
+    "timeline": [
+      [
+        "القرن 19 م",
+        "صناعة الخنجر والزخرفة"
+      ],
+      [
+        "عسير",
+        "سياق إقليمي للحرفة"
+      ],
+      [
+        "اليوم",
+        "قراءة القطعة كرمز للحرفة والمكانة"
+      ]
+    ],
+    "experience": "مختبر الحرفة الفضية",
+    "experience_type": "silver_craft",
+    "prompt": "قرّب إلى المقبض والغمد واكشف تفاصيل الزخرفة.",
+    "image": "/artifacts/18.png",
+    "model": "/models/18.glb",
+    "source": "https://raw.githubusercontent.com/HOUYOKI/Ruwi-AI/oxrdoxr-ruwi-mvp/assets/clean_artifacts/18.png",
+    "asset_status": "3D interactive reconstruction from the museum-reference image",
+    "provenance": "Grounded artifact record inherited from the Ruwi-AI museum explorer dataset; exact public catalog record should be matched before official exhibition publication."
+  },
+  {
+    "id": 19,
+    "name_ar": "تاج عمود رخامي",
+    "name_en": "Carved Marble Column Capital",
+    "age": "القرنان الثامن–الثالث عشر الميلاديان",
+    "location": "منطقة مكة المكرمة",
+    "material": "رخام",
+    "description_ar": "تاج عمود رخامي مزين بنقوش نباتية وهندسية بارزة، منها عناقيد العنب والأوراق والزخارف الزهرية، وكان يزين قمة عمود كبير في سياق معماري تاريخي بالحجاز.",
+    "story": "أعد تركيب التاج فوق عمود افتراضي، ثم قرّب النقوش لتفهم كيف تحولت الزخرفة إلى جزء من العمارة.",
+    "facts": [
+      "المادة: رخام",
+      "زخارف نباتية وهندسية",
+      "عناقيد عنب وأوراق وزهور",
+      "الموقع: منطقة مكة المكرمة"
+    ],
+    "timeline": [
+      [
+        "8–13 م",
+        "الفترة المحتملة لصناعة التاج"
+      ],
+      [
+        "عمارة الحجاز",
+        "استخدامه كعنصر معماري"
+      ],
+      [
+        "اليوم",
+        "دراسة الزخرفة والنحت المعماري"
+      ]
+    ],
+    "experience": "أعد بناء العمود",
+    "experience_type": "architecture_rebuild",
+    "prompt": "اسحب التاج إلى موضعه وشاهد العمود يعود إلى سياقه المعماري.",
+    "image": "/artifacts/19.png",
+    "model": "/models/19.glb",
+    "source": "https://raw.githubusercontent.com/HOUYOKI/Ruwi-AI/oxrdoxr-ruwi-mvp/assets/clean_artifacts/19.png",
+    "asset_status": "3D interactive reconstruction from the museum-reference image",
+    "provenance": "Grounded artifact record inherited from the Ruwi-AI museum explorer dataset; exact public catalog record should be matched before official exhibition publication."
+  },
+  {
+    "id": 20,
+    "name_ar": "مَعْلم عباسي من درب زبيدة",
+    "name_en": "Abbasid Milestone from Darb Zubaydah",
+    "age": "القرن الثاني الهجري، الثامن الميلادي",
+    "location": "درب زبيدة",
+    "material": "حجر",
+    "description_ar": "حجر معلم من العصر العباسي يحمل نقوشًا تشير إلى المسافة من إحدى محطات طريق الحج من الكوفة إلى مكة، ويجسد البنية اللوجستية للطريق التاريخي.",
+    "story": "حوّل النقش إلى خريطة: اتبع المحطات وتخيل كيف كان المسافر يعرف المسافة والاتجاه على الطريق.",
+    "facts": [
+      "القرن الثاني الهجري / الثامن الميلادي",
+      "الموقع: درب زبيدة",
+      "نقوش للمسافات",
+      "يرتبط بطريق الحج من الكوفة إلى مكة"
+    ],
+    "timeline": [
+      [
+        "القرن 2 هـ",
+        "وضع المعلم على طريق الحج"
+      ],
+      [
+        "درب زبيدة",
+        "استخدامه كمرشد للمسافرين والحجاج"
+      ],
+      [
+        "اليوم",
+        "دليل على التخطيط والبنية التحتية التاريخية"
+      ]
+    ],
+    "experience": "طريق الحج",
+    "experience_type": "pilgrimage_route",
+    "prompt": "مرّر على مسار درب زبيدة واكتشف وظيفة المعالم الحجرية.",
+    "image": "/artifacts/20.png",
+    "model": "/models/20.glb",
+    "source": "https://raw.githubusercontent.com/HOUYOKI/Ruwi-AI/oxrdoxr-ruwi-mvp/assets/clean_artifacts/20.png",
+    "asset_status": "3D interactive reconstruction from the museum-reference image",
+    "provenance": "Grounded artifact record inherited from the Ruwi-AI museum explorer dataset; exact public catalog record should be matched before official exhibition publication."
+  }
+]
