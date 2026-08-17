@@ -6,19 +6,20 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "typecheck": "tsc -b"
   },
   "dependencies": {
     "@vitejs/plugin-react": "latest",
-    "three": "latest",
     "react": "latest",
-    "react-dom": "latest"
+    "react-dom": "latest",
+    "three": "latest"
   },
   "devDependencies": {
-    "typescript": "latest",
-    "vite": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
-    "@types/three": "latest"
+    "@types/three": "latest",
+    "typescript": "latest",
+    "vite": "latest"
   }
 }
