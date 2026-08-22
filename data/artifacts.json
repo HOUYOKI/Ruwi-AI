@@ -38,7 +38,7 @@
     "location": "Al-Qassim Region",
     "material": "Petrified Wood",
     "name": "Petrified Tree Trunk",
-    "ocr_arabic": "جذع شجرة متحجر\\nتكشف بقايا النباتات المتحجرة، بما في ذلك الأشجار الكبيرة التي يعود تاريخها إلى حوالي 255 مليون سنة، أن المناخ كان مختلفًا للغاية في شبه الجزيرة العربية التي ربما كانت آنذاك غنية بالتنوع البيولوجي من حيواناتٍ ونباتاتٍ ربما لم تعد موجودة في شبه الجزيرة العربية.\\n\\n255 مليون سنة قبل الميلاد\\n\\nمنطقة القصيم",
+    "ocr_arabic": "جذع شجرة متحجر\nتكشف بقايا النباتات المتحجرة، بما في ذلك الأشجار الكبيرة التي يعود تاريخها إلى حوالي 255 مليون سنة، أن المناخ كان مختلفًا للغاية في شبه الجزيرة العربية التي ربما كانت آنذاك غنية بالتنوع البيولوجي من حيواناتٍ ونباتاتٍ ربما لم تعد موجودة في شبه الجزيرة العربية.\n\n255 مليون سنة قبل الميلاد\n\nمنطقة القصيم",
     "id": 4,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/_4-tree.jpg",
     "clean_image_path": "assets/clean_artifacts/4.png"
@@ -192,7 +192,7 @@
     "location": "Asir Region",
     "material": "Silver, Steel, and Leather",
     "name": "Silver-Handled Dagger and Sheath (Khanjar)",
-    "ocr_arabic": "خنجر بمقبض فضي وغمد\\nيرجع إلى القرن الثالث عشر\\nالهجري (القرن التاسع عشر\\nالميلادي)\\n\\nمنطقة عسير",
+    "ocr_arabic": "خنجر بمقبض فضي وغمد\nيرجع إلى القرن الثالث عشر\nالهجري (القرن التاسع عشر\nالميلادي)\n\nمنطقة عسير",
     "id": 18,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/_18-khanjar.jpg",
     "clean_image_path": "assets/clean_artifacts/18.png"
@@ -258,7 +258,7 @@
     "location": "Al-Ma'lah Cemetery, Makkah Al-Mukarramah Region",
     "material": "Basalt",
     "name": "Basalt Tombstone of Mujibah bint Alwan al-Uqbi",
-    "ocr_arabic": "شاهد قبر من البازلت\\nيحمل اسم مجيبة بنت علوان العقبي بخط الثلث الإسلامي.\\nيرجع تاريخ شاهد القبر إلى يوم السبت الثالث من شهر ذي الحجة عام 840 هـ (1437 م).\\n840 هـ (1437 م)\\nمقبرة المعلاة - منطقة مكة المكرمة",
+    "ocr_arabic": "شاهد قبر من البازلت\nيحمل اسم مجيبة بنت علوان العقبي بخط الثلث الإسلامي.\nيرجع تاريخ شاهد القبر إلى يوم السبت الثالث من شهر ذي الحجة عام 840 هـ (1437 م).\n840 هـ (1437 م)\nمقبرة المعلاة - منطقة مكة المكرمة",
     "id": 24,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/_24-black_tombstone.jpg",
     "clean_image_path": "assets/clean_artifacts/24.png"
@@ -859,7 +859,7 @@
     "location": "Saudi Arabia",
     "material": "Copper",
     "name": "Hanging Copper Incense Burner (Mabkhara)",
-    "ocr_arabic": "قاعة الحج والحرمين الشريفين\\nمبخرة نحاسية\\nمبخرة مصممة للتعليق.\\nعام 1198 هـ (1784 م)",
+    "ocr_arabic": "قاعة الحج والحرمين الشريفين\nمبخرة نحاسية\nمبخرة مصممة للتعليق.\nعام 1198 هـ (1784 م)",
     "id": 79,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/hajj/35-hang.jpg",
     "clean_image_path": "assets/clean_artifacts/79.png"
@@ -870,7 +870,7 @@
     "location": "Tayma, Tabuk Region",
     "material": "Clay",
     "name": "Decorated Pottery Cup",
-    "ocr_arabic": "كوب فخاري\\nيحتوي هذا الكوب الفخاري الأحمر على زخارف تصميمية مثيرة للاهتمام من بينها صورة مبسّطة لطائر - ربما يكون طاووساً - وقد تم اكتشاف الكثير من الأواني الفخارية المزينة بزخارف هندسية وطيور في تيماء.\\nالألفية الأولى قبل الميلاد\\nتيماء - منطقة تبوك",
+    "ocr_arabic": "كوب فخاري\nيحتوي هذا الكوب الفخاري الأحمر على زخارف تصميمية مثيرة للاهتمام من بينها صورة مبسّطة لطائر - ربما يكون طاووساً - وقد تم اكتشاف الكثير من الأواني الفخارية المزينة بزخارف هندسية وطيور في تيماء.\nالألفية الأولى قبل الميلاد\nتيماء - منطقة تبوك",
     "id": 80,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/ak/1-brokenglass.jpg",
     "clean_image_path": "assets/clean_artifacts/80.png"
@@ -936,7 +936,7 @@
     "location": "Qaryat al-Faw, Riyadh Region",
     "material": "Clay (Ceramic)",
     "name": "Ceramic Jar Decorated with Camel Figures",
-    "ocr_arabic": "إناء فخاري\\nجرة خزفية صغيرة ذات عنق أسطواني طويل، مزينة برسوم لعدة جمال ربما تعكس قافلة تجارية.\\nالقرن الرابع قبل الميلاد -\\nالقرن الرابع الميلادي\\nقرية الفاو - منطقة الرياض",
+    "ocr_arabic": "إناء فخاري\nجرة خزفية صغيرة ذات عنق أسطواني طويل، مزينة برسوم لعدة جمال ربما تعكس قافلة تجارية.\nالقرن الرابع قبل الميلاد -\nالقرن الرابع الميلادي\nقرية الفاو - منطقة الرياض",
     "id": 86,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/ak/7-vase.jpg",
     "clean_image_path": "assets/clean_artifacts/86.png"

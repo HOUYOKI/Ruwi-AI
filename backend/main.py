@@ -1,17 +1,21 @@
 """Ruwi backend — FastAPI service for the artifact explorer MVP."""
 import json
 import logging
+import uuid
 from pathlib import Path
 from typing import Optional
 
-import anthropic
+import openai
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
+from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field, field_validator
 
 import config
-from prompts import SYSTEM_PROMPT
+from agents.narrator.narrator import run_narrator_turn
+from prompts import OPTIONAL_TEXT_FIELDS
+from tts.speak_text import speak_text
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("ruwi")
@@ -19,21 +23,12 @@ logger = logging.getLogger("ruwi")
 BASE_DIR = Path(__file__).resolve().parent
 ARTIFACTS_JSON_PATH = (BASE_DIR / config.ARTIFACTS_JSON_PATH).resolve()
 ASSETS_DIR = (BASE_DIR / config.ASSETS_DIR).resolve()
+AUDIO_DIR = (BASE_DIR / "static" / "audio").resolve()
+AUDIO_DIR.mkdir(parents=True, exist_ok=True)
 
 # Structural fields: without these the artifact can't be displayed or served at
 # all, so a gap here means the file is genuinely malformed and startup must fail.
 REQUIRED_ARTIFACT_FIELDS = {"id", "name", "clean_image_path"}
-
-# Descriptive fields: a handful of source records are missing these (curatorial
-# data-entry gaps, not file corruption). Default them instead of refusing to
-# start the whole 102-artifact catalog over a few incomplete entries.
-OPTIONAL_TEXT_FIELDS = {
-    "age": "Not available",
-    "location": "Not available",
-    "material": "Not available",
-    "description": "No description is available for this artifact yet.",
-}
-
 
 def load_artifacts() -> dict[int, dict]:
     """Load and validate artifacts.json once at startup. Raises on any problem
@@ -75,14 +70,9 @@ def load_artifacts() -> dict[int, dict]:
 ARTIFACTS_BY_ID = load_artifacts()
 logger.info("Loaded %d artifacts from %s", len(ARTIFACTS_BY_ID), ARTIFACTS_JSON_PATH)
 
-if not config.ANTHROPIC_API_KEY:
-    raise RuntimeError("ANTHROPIC_API_KEY environment variable is not set")
-
-claude_client = anthropic.Anthropic(
-    api_key=config.ANTHROPIC_API_KEY,
-    timeout=config.CLAUDE_REQUEST_TIMEOUT_SECONDS,
-    max_retries=config.CLAUDE_MAX_RETRIES,
-)
+if not config.NARRATOR_MODEL:
+    raise RuntimeError("NARRATOR_MODEL environment variable is not set")
+config.get_narrator_provider_credentials()  # fail fast at boot, not mid-request
 
 app = FastAPI(title="Ruwi API")
 
@@ -93,6 +83,8 @@ app.add_middleware(
     allow_methods=["GET", "POST"],
     allow_headers=["*"],
 )
+
+app.mount("/static/audio", StaticFiles(directory=AUDIO_DIR), name="audio")
 
 
 def to_summary(artifact: dict) -> dict:
@@ -158,6 +150,8 @@ class ChatRequest(BaseModel):
 
 class ChatResponse(BaseModel):
     answer: str
+    hit_iteration_cap: bool = False
+    audio_url: str | None = None
 
 
 @app.post("/chat", response_model=ChatResponse)
@@ -166,49 +160,31 @@ def chat(payload: ChatRequest):
     if artifact is None:
         raise HTTPException(status_code=404, detail="Artifact not found")
 
-    has_placeholder_field = any(
-        artifact[field] == default for field, default in OPTIONAL_TEXT_FIELDS.items()
-    )
-    ocr_arabic = artifact.get("ocr_arabic")
-
-    context_lines = [
-        "<artifact_context>",
-        f"Name: {artifact['name']}",
-        f"Age: {artifact['age']}",
-        f"Location: {artifact['location']}",
-        f"Material: {artifact['material']}",
-        f"Description: {artifact['description']}",
-    ]
-    if has_placeholder_field and ocr_arabic:
-        context_lines.append(
-            "Raw Arabic museum label (use this to fill in any fields above marked "
-            '"Not available" — translate and extract the relevant facts, don\'t '
-            f"just repeat the raw text): {ocr_arabic}"
-        )
-    context_lines.append("</artifact_context>")
-    artifact_context_block = "\n".join(context_lines)
-
     try:
-        response = claude_client.messages.create(
-            model=config.CLAUDE_MODEL,
-            max_tokens=1024,
-            system=SYSTEM_PROMPT,
-            messages=[
-                {
-                    "role": "user",
-                    "content": [
-                        {"type": "text", "text": artifact_context_block},
-                        {"type": "text", "text": payload.question},
-                    ],
-                }
-            ],
+        result = run_narrator_turn(
+            question=payload.question,
+            current_artifact=artifact,
+            artifacts_by_id=ARTIFACTS_BY_ID,
+            conversation_history=None,
         )
-    except anthropic.APIError as exc:
-        logger.error("Claude API call failed for artifact %s: %s", payload.artifact_id, exc)
+    except openai.OpenAIError as exc:
+        logger.error("Narrator API call failed for artifact %s: %s", payload.artifact_id, exc)
         raise HTTPException(status_code=502, detail="Ruwi is temporarily unavailable. Please try again.") from exc
     except Exception as exc:  # noqa: BLE001 — last-resort guard so no stack trace leaks to the client
-        logger.exception("Unexpected error calling Claude for artifact %s", payload.artifact_id)
+        logger.exception("Unexpected error running Narrator for artifact %s", payload.artifact_id)
         raise HTTPException(status_code=502, detail="Ruwi is temporarily unavailable. Please try again.") from exc
 
-    answer_text = "".join(block.text for block in response.content if block.type == "text")
-    return ChatResponse(answer=answer_text)
+    audio_url = None
+    try:
+        audio_bytes = speak_text(result.text)
+        filename = f"{uuid.uuid4().hex}.mp3"
+        audio_path = (AUDIO_DIR / filename).resolve()
+        if AUDIO_DIR not in audio_path.parents:
+            raise RuntimeError("resolved audio path escaped AUDIO_DIR")
+        audio_path.write_bytes(audio_bytes)
+        audio_url = f"/static/audio/{filename}"
+    except Exception:  # noqa: BLE001 — TTS failure must never break the text response
+        logger.exception("TTS generation failed for artifact %s; returning text-only response", payload.artifact_id)
+
+    logger.debug("Narrator transcript for artifact %s: %s", payload.artifact_id, result.transcript)
+    return ChatResponse(answer=result.text, hit_iteration_cap=result.hit_iteration_cap, audio_url=audio_url)

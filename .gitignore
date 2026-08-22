@@ -30,4 +30,19 @@ build/
 .DS_Store
 Thumbs.db
 
+#Other
 tree.txt
+# Generated TTS audio - runtime artifacts, not source
+backend/static/audio/*.mp3
+!backend/static/audio/.gitkeep
+
+test_output_ar.mp3
+test_output_en.mp3
+
+# Personal Claude Code skill choices, not project logic
+skills-lock.json
+graphify-out
+
+
+# Personal Claude Code local config, not project logic
+.claude/
