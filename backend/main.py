@@ -84,38 +84,60 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-app.mount("/static/audio", StaticFiles(directory=AUDIO_DIR), name="audio")
+class ImmutableStaticFiles(StaticFiles):
+    """Generated TTS filenames are uuid4-based and never reused or
+    overwritten, so unlike artifact images these are safe to cache
+    aggressively and permanently."""
+
+    def file_response(self, *args, **kwargs) -> FileResponse:
+        response = super().file_response(*args, **kwargs)
+        response.headers["Cache-Control"] = "public, max-age=31536000, immutable"
+        return response
 
 
-def to_summary(artifact: dict) -> dict:
+app.mount("/static/audio", ImmutableStaticFiles(directory=AUDIO_DIR), name="audio")
+
+
+def localized(artifact: dict, field: str, lang: str) -> str:
+    """Picks the `{field}_ar` value when lang is "ar" and it's non-empty,
+    else falls back to the English `{field}` — same defensive-fallback
+    style as the OPTIONAL_TEXT_FIELDS backfill in load_artifacts()."""
+    if lang == "ar":
+        ar_value = artifact.get(f"{field}_ar")
+        if ar_value:
+            return ar_value
+    return artifact[field]
+
+
+def to_summary(artifact: dict, lang: str) -> dict:
     return {
         "id": artifact["id"],
-        "name": artifact["name"],
-        "age": artifact["age"],
-        "location": artifact["location"],
-        "material": artifact["material"],
+        "name": localized(artifact, "name", lang),
+        "age": localized(artifact, "age", lang),
+        "location": localized(artifact, "location", lang),
+        "material": localized(artifact, "material", lang),
         "image_url": f"/images/{artifact['id']}.png",
     }
 
 
-def to_detail(artifact: dict) -> dict:
+def to_detail(artifact: dict, lang: str) -> dict:
     return {
-        **to_summary(artifact),
-        "description": artifact["description"],
+        **to_summary(artifact, lang),
+        "description": localized(artifact, "description", lang),
     }
 
 
 @app.get("/artifacts")
-def list_artifacts():
-    return [to_summary(a) for a in ARTIFACTS_BY_ID.values()]
+def list_artifacts(lang: str = "en"):
+    return [to_summary(a, lang) for a in ARTIFACTS_BY_ID.values()]
 
 
 @app.get("/artifacts/{artifact_id}")
-def get_artifact(artifact_id: int):
+def get_artifact(artifact_id: int, lang: str = "en"):
     artifact = ARTIFACTS_BY_ID.get(artifact_id)
     if artifact is None:
         raise HTTPException(status_code=404, detail="Artifact not found")
-    return to_detail(artifact)
+    return to_detail(artifact, lang)
 
 
 @app.get("/images/{artifact_id}.png")
@@ -132,7 +154,10 @@ def get_artifact_image(artifact_id: int):
     if ASSETS_DIR not in image_path.parents or not image_path.is_file():
         raise HTTPException(status_code=404, detail="Artifact image not found")
 
-    return FileResponse(image_path, media_type="image/png")
+    # Moderate, not "immutable" — this MVP's images can still be replaced in
+    # place under the same id during active curation, unlike generated audio
+    # filenames (uuid4, never reused) which get the aggressive cache below.
+    return FileResponse(image_path, media_type="image/png", headers={"Cache-Control": "public, max-age=86400"})
 
 
 class ChatRequest(BaseModel):

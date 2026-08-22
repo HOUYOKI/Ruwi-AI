@@ -8,7 +8,12 @@
     "ocr_arabic": "إصبع بشري قديم\nبقايا عظم الإصبع الأوسط\nمن يد بشرية عثر عليها في\nبحيرة جافة في تيماء، وهو\nيمثل أقدم بقايا بشرية\nمعروفة من المنطقة،\nوبالتالي أقدم دليل على\nالتواجد البشري في\nالمنطقة.\n\n85,000 قبل الميلاد\n\nتل الغادة، تيماء، منطقة\nتبوك.",
     "id": 1,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/1-MiddleFinger.jpg",
-    "clean_image_path": "assets/clean_artifacts/1.png"
+    "clean_image_path": "assets/clean_artifacts/1.png",
+    "name_ar": "إصبع بشري قديم",
+    "description_ar": "بقايا عظم الإصبع الأوسط من يد بشرية عثر عليها في بحيرة جافة في تيماء، وهو يمثل أقدم بقايا بشرية معروفة من المنطقة، وبالتالي أقدم دليل على التواجد البشري في المنطقة.",
+    "age_ar": "85,000 قبل الميلاد",
+    "location_ar": "تل الغادة، تيماء، منطقة تبوك.",
+    "material_ar": "عظم متحجر"
   },
   {
     "age": "5000 BC",
@@ -19,7 +24,12 @@
     "ocr_arabic": "وعاء مخروطي\nهذا الوعاء هو مثال على ما\nكان ينتج محليا من الأوعية\nالفخارية، وفي داخله هناك\nبقايا لمادة القار التي ربما\nجُلبت من جنوب العراق،\nويخبرنا وجود الصدف أن هذا\nالوعاء قد تُرِك في الأصل\nفي منطقة ذات مستوى\nمرتفع من الماء الذي انحسر\nفي النهاية.\n\n5000 قبل الميلاد\n\nعين السيح - المنطقة\nالشرقية",
     "id": 2,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/2-Dallah.jpg",
-    "clean_image_path": "assets/clean_artifacts/2.png"
+    "clean_image_path": "assets/clean_artifacts/2.png",
+    "name_ar": "وعاء مخروطي",
+    "description_ar": "هذا الوعاء هو مثال على ما كان ينتج محليا من الأوعية الفخارية، وفي داخله هناك بقايا لمادة القار التي ربما جُلبت من جنوب العراق، ويخبرنا وجود الصدف أن هذا الوعاء قد تُرِك في الأصل في منطقة ذات مستوى مرتفع من الماء الذي انحسر في النهاية.",
+    "age_ar": "5000 قبل الميلاد",
+    "location_ar": "عين السيح - المنطقة الشرقية",
+    "material_ar": "الفخار (الطين) والقار"
   },
   {
     "age": "Miocene Epoch (circa 17 million years ago)",
@@ -30,7 +40,12 @@
     "ocr_arabic": "الفك السفلي لحيوان الصناجة (الماستودون)\nتخبرنا البقايا المتحجرة لحيوان الصناجة ومخلوقات أخرى منقرضة أن طبيعة الأرض والمناخ في شبه الجزيرة العربية كانتا مختلفتين تماماً قبل 17 مليون سنة، وربما شجعت الأرض الخضراء الخصبة آنذاك والموارد الطبيعية البشر الأوائل على القدوم إلى المنطقة والاستقرار فيها بشكل دائم.\nالصرار - المنطقة الشرقية.",
     "id": 3,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/_3-mastodon.jpg",
-    "clean_image_path": "assets/clean_artifacts/3.png"
+    "clean_image_path": "assets/clean_artifacts/3.png",
+    "name_ar": "الفك السفلي لحيوان الصناجة (الماستودون)",
+    "description_ar": "تخبرنا البقايا المتحجرة لحيوان الصناجة ومخلوقات أخرى منقرضة أن طبيعة الأرض والمناخ في شبه الجزيرة العربية كانتا مختلفتين تماماً قبل 17 مليون سنة، وربما شجعت الأرض الخضراء الخصبة آنذاك والموارد الطبيعية البشر الأوائل على القدوم إلى المنطقة والاستقرار فيها بشكل دائم.",
+    "age_ar": "",
+    "location_ar": "الصرار - المنطقة الشرقية.",
+    "material_ar": "عظم متحجر"
   },
   {
     "age": "255 Million Years BC",
@@ -41,7 +56,12 @@
     "ocr_arabic": "جذع شجرة متحجر\nتكشف بقايا النباتات المتحجرة، بما في ذلك الأشجار الكبيرة التي يعود تاريخها إلى حوالي 255 مليون سنة، أن المناخ كان مختلفًا للغاية في شبه الجزيرة العربية التي ربما كانت آنذاك غنية بالتنوع البيولوجي من حيواناتٍ ونباتاتٍ ربما لم تعد موجودة في شبه الجزيرة العربية.\n\n255 مليون سنة قبل الميلاد\n\nمنطقة القصيم",
     "id": 4,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/_4-tree.jpg",
-    "clean_image_path": "assets/clean_artifacts/4.png"
+    "clean_image_path": "assets/clean_artifacts/4.png",
+    "name_ar": "جذع شجرة متحجر",
+    "description_ar": "تكشف بقايا النباتات المتحجرة، بما في ذلك الأشجار الكبيرة التي يعود تاريخها إلى حوالي 255 مليون سنة، أن المناخ كان مختلفًا للغاية في شبه الجزيرة العربية التي ربما كانت آنذاك غنية بالتنوع البيولوجي من حيواناتٍ ونباتاتٍ ربما لم تعد موجودة في شبه الجزيرة العربية.",
+    "age_ar": "255 مليون سنة قبل الميلاد",
+    "location_ar": "منطقة القصيم",
+    "material_ar": "الخشب المتحجر"
   },
   {
     "age": "2000 BC",
@@ -52,7 +72,12 @@
     "ocr_arabic": "قطعة فنية صخرية\nيظهر على هذهِ الصخرة الكبيرة رسوماً مميزة لسبعة أذرع وأيدي، وبعض الرموز التي ربما تشير إلى أحرف أبجدية من نص قديم محفور على سطحه، وقد يكون لتصوير هذه الأذرع البشرية معنى اجتماعي أو ثقافي أو ديني، وقد تم نحت رموز من الخط الثمودي على الحجر في وقت لاحق.\n2000\nعان حامضة منطقة نجران",
     "id": 5,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/_5-handstone.jpg",
-    "clean_image_path": "assets/clean_artifacts/5.png"
+    "clean_image_path": "assets/clean_artifacts/5.png",
+    "name_ar": "قطعة فنية صخرية",
+    "description_ar": "يظهر على هذهِ الصخرة الكبيرة رسوماً مميزة لسبعة أذرع وأيدي، وبعض الرموز التي ربما تشير إلى أحرف أبجدية من نص قديم محفور على سطحه، وقد يكون لتصوير هذه الأذرع البشرية معنى اجتماعي أو ثقافي أو ديني، وقد تم نحت رموز من الخط الثمودي على الحجر في وقت لاحق.",
+    "age_ar": "2000",
+    "location_ar": "عان حامضة منطقة نجران",
+    "material_ar": "الحجر"
   },
   {
     "age": "Estimated impact approximately 400 years ago (discovered in 1932)",
@@ -63,7 +88,12 @@
     "ocr_arabic": "جزء من نيزك\nتتكون قطعة النيزك الكبيرة هذه من الحديد والنيكل. ويُعتقد أن هذا النيزك قد ضرب الأرض منذ ما يقرب الـ 400 عام، تزن هذه القطعة حوالي 2.75 طن.\nتم اكتشافها عام 1932 في الربع الخالي بالمملكة العربية السعودية",
     "id": 6,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/6-Meteortie.jpg",
-    "clean_image_path": "assets/clean_artifacts/6.png"
+    "clean_image_path": "assets/clean_artifacts/6.png",
+    "name_ar": "جزء من نيزك",
+    "description_ar": "تتكون قطعة النيزك الكبيرة هذه من الحديد والنيكل. ويُعتقد أن هذا النيزك قد ضرب الأرض منذ ما يقرب الـ 400 عام، تزن هذه القطعة حوالي 2.75 طن.",
+    "age_ar": "تم اكتشافها عام 1932 في الربع الخالي بالمملكة العربية السعودية",
+    "location_ar": "",
+    "material_ar": "الحديد والنيكل"
   },
   {
     "age": "2200 - 2000 BC",
@@ -74,7 +104,12 @@
     "ocr_arabic": "إناء فخاري\nجرة فخارية ملونة ومزينة\nبأشكال هندسية وزخارف\nنباتية مطلية باللون الأسود\nتميز حضارة العُبيد.\n\n2000 - 2200 قبل الميلاد\n\nالمنطقة الشرقية",
     "id": 7,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/_7-vase.jpg",
-    "clean_image_path": "assets/clean_artifacts/7.png"
+    "clean_image_path": "assets/clean_artifacts/7.png",
+    "name_ar": "إناء فخاري",
+    "description_ar": "جرة فخارية ملونة ومزينة بأشكال هندسية وزخارف نباتية مطلية باللون الأسود تميز حضارة العُبيد.",
+    "age_ar": "2000 - 2200 قبل الميلاد",
+    "location_ar": "المنطقة الشرقية",
+    "material_ar": "الفخار"
   },
   {
     "age": "5000 BC",
@@ -85,7 +120,12 @@
     "ocr_arabic": "شفرة من حجر السبح البركاني\nحجر السبح هو حجر زجاجي بركاني\nحاد للغاية، ويبدو أنه كان منتشراً\nفي بعض أجزاء شبه الجزيرة العربية،\nوقد تم استخدام هذا الحجر من\nالبشر الأوائل كأداة لقطع وكشط\nالمواد.\n\n5000 قبل الميلاد\n\nالدوسرية - المنطقة الشرقية",
     "id": 8,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/_8-obsidianblack.jpg",
-    "clean_image_path": "assets/clean_artifacts/8.png"
+    "clean_image_path": "assets/clean_artifacts/8.png",
+    "name_ar": "شفرة من حجر السبح البركاني",
+    "description_ar": "حجر السبح هو حجر زجاجي بركاني حاد للغاية، ويبدو أنه كان منتشراً في بعض أجزاء شبه الجزيرة العربية، وقد تم استخدام هذا الحجر من البشر الأوائل كأداة لقطع وكشط المواد.",
+    "age_ar": "5000 قبل الميلاد",
+    "location_ar": "الدوسرية - المنطقة الشرقية",
+    "material_ar": "السبج (الزجاج البركاني)"
   },
   {
     "age": "8000 - 4000 BC",
@@ -96,7 +136,12 @@
     "ocr_arabic": "رأس سهم حجري\nرأس السهم له حواف مسننة وكان يستخدم كأداة للصيد، وقد تم اكتشاف الآلاف من رؤوس الأسهم هذه والأدوات الحجرية الأخرى في هذا الموقع.\n8000 - 4000 قبل الميلاد\nالثمامة - منطقة الرياض",
     "id": 9,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/_9-arrowhead.jpg",
-    "clean_image_path": "assets/clean_artifacts/9.png"
+    "clean_image_path": "assets/clean_artifacts/9.png",
+    "name_ar": "رأس سهم حجري",
+    "description_ar": "رأس السهم له حواف مسننة وكان يستخدم كأداة للصيد، وقد تم اكتشاف الآلاف من رؤوس الأسهم هذه والأدوات الحجرية الأخرى في هذا الموقع.",
+    "age_ar": "8000 - 4000 قبل الميلاد",
+    "location_ar": "الثمامة - منطقة الرياض",
+    "material_ar": "الحجر"
   },
   {
     "age": "4th Century AH (10th Century AD)",
@@ -107,7 +152,12 @@
     "ocr_arabic": "اسطوانة حجرية مجوفة\nكانت هذه الأداة ضرورية لتوزيع الهواء داخل الأفران أثناء صهر المعادن لإبقاء النيران مشتعلة، فالاختلافات في درجة الحرارة قد تؤثر على النتيجة النهائية للمنتج، مسببة ضعف المواد مما يؤدي إلى منتج غير منتظم أو يشوبه التصدع أو الكسور.\nالقرن الرابع الهجري (العاشر الميلادي)",
     "id": 10,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/_10-v_shape_air.jpg",
-    "clean_image_path": "assets/clean_artifacts/10.png"
+    "clean_image_path": "assets/clean_artifacts/10.png",
+    "name_ar": "اسطوانة حجرية مجوفة",
+    "description_ar": "كانت هذه الأداة ضرورية لتوزيع الهواء داخل الأفران أثناء صهر المعادن لإبقاء النيران مشتعلة، فالاختلافات في درجة الحرارة قد تؤثر على النتيجة النهائية للمنتج، مسببة ضعف المواد مما يؤدي إلى منتج غير منتظم أو يشوبه التصدع أو الكسور.",
+    "age_ar": "القرن الرابع الهجري (العاشر الميلادي)",
+    "location_ar": "",
+    "material_ar": "الحجر"
   },
   {
     "age": "3rd - 6th century AH (9th - 12th century AD)",
@@ -118,7 +168,12 @@
     "ocr_arabic": "وزن فضة\nربما كانت تستخدم هذه القطعة كعملة قياسية للتجارة والتداول، وهي مصنوعة من الفضة وعليها رموز.\nالقرن الثالث - القرن السادس الهجري (القرن التاسع - القرن الثاني عشر الميلادي)\nمبيات ، العلا ، المدينة المنورة",
     "id": 11,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/_11-iphonestone.jpg",
-    "clean_image_path": "assets/clean_artifacts/11.png"
+    "clean_image_path": "assets/clean_artifacts/11.png",
+    "name_ar": "وزن فضة",
+    "description_ar": "ربما كانت تستخدم هذه القطعة كعملة قياسية للتجارة والتداول، وهي مصنوعة من الفضة وعليها رموز.",
+    "age_ar": "القرن الثالث - القرن السادس الهجري (القرن التاسع - القرن الثاني عشر الميلادي)",
+    "location_ar": "مبيات ، العلا ، المدينة المنورة",
+    "material_ar": "الفضة"
   },
   {
     "age": "132 AH - 656 AH (750 AD - 1258 AD)",
@@ -129,7 +184,12 @@
     "ocr_arabic": "أداة طبية\nأداة مصنوعة من النحاس، ربما تم استخدامها في الممارسة الطبية وكانت على الأرجح جزءاً من مجموعة أكبر من الأدوات.\n\n132 هـ - 656 هـ (750 م - 1258 م)\n\nالعلا - منطقة المدينة المنورة",
     "id": 12,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/_12-goldspoon.jpg",
-    "clean_image_path": "assets/clean_artifacts/12.png"
+    "clean_image_path": "assets/clean_artifacts/12.png",
+    "name_ar": "أداة طبية",
+    "description_ar": "أداة مصنوعة من النحاس، ربما تم استخدامها في الممارسة الطبية وكانت على الأرجح جزءاً من مجموعة أكبر من الأدوات.",
+    "age_ar": "132 هـ - 656 هـ (750 م - 1258 م)",
+    "location_ar": "العلا - منطقة المدينة المنورة",
+    "material_ar": "النحاس"
   },
   {
     "age": "3rd century AH (9th century AD)",
@@ -140,7 +200,12 @@
     "ocr_arabic": "قاعة الإسلام والجزيرة العربية\nIslam and Arabia Gallery\n\nقلادة من البرونز\nقطعة حُلّي فاخرة منقوشة\nبالخط الإسلامي.\n\nترجع إلى القرن الثالث الهجري\n(القرن التاسع الميلادي)\n\nالربذة، درب زبيدة - طريق الحج",
     "id": 13,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/_13-tiny_locket.jpg",
-    "clean_image_path": "assets/clean_artifacts/13.png"
+    "clean_image_path": "assets/clean_artifacts/13.png",
+    "name_ar": "قلادة من البرونز",
+    "description_ar": "قطعة حُلّي فاخرة منقوشة بالخط الإسلامي.",
+    "age_ar": "ترجع إلى القرن الثالث الهجري (القرن التاسع الميلادي)",
+    "location_ar": "الربذة، درب زبيدة - طريق الحج",
+    "material_ar": "البرونز"
   },
   {
     "age": "6th - 4th century BC",
@@ -151,7 +216,12 @@
     "ocr_arabic": "قاعدة (أو مذبح) مميزة بمشاهد شعائرية\nما يلفت النظر عند مطالعة هذا المكعب الكبير المصنوع من الحجر الرملي هو المشاهد الشعائرية المرسومة عليه والتي تتضمن رأس ثور على جانب واحد مع قرص شمسي بين قرنيه، وعلى الجانب الآخر منه صورة كاملة لثور، يعلوه قرص شمسي مجنح، ولم يخلو المكعب من تصاميم أخرى من الزخارف النباتية، وتذكرنا الرموز والمخلوقات الموجودة على هذا المكعب بالتصاميم والرموز الدينية المصرية القديمة وبلاد ما بين النهرين.\nالقرن السادس - القرن الرابع قبل الميلاد\nتيماء، منطقة تبوك",
     "id": 14,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/_14-bigcube.jpg",
-    "clean_image_path": "assets/clean_artifacts/14.png"
+    "clean_image_path": "assets/clean_artifacts/14.png",
+    "name_ar": "قاعدة (أو مذبح) مميزة بمشاهد شعائرية",
+    "description_ar": "ما يلفت النظر عند مطالعة هذا المكعب الكبير المصنوع من الحجر الرملي هو المشاهد الشعائرية المرسومة عليه والتي تتضمن رأس ثور على جانب واحد مع قرص شمسي بين قرنيه، وعلى الجانب الآخر منه صورة كاملة لثور، يعلوه قرص شمسي مجنح، ولم يخلو المكعب من تصاميم أخرى من الزخارف النباتية، وتذكرنا الرموز والمخلوقات الموجودة على هذا المكعب بالتصاميم والرموز الدينية المصرية القديمة وبلاد ما بين النهرين.",
+    "age_ar": "القرن السادس - القرن الرابع قبل الميلاد",
+    "location_ar": "تيماء، منطقة تبوك",
+    "material_ar": "الحجر الرملي"
   },
   {
     "age": "13th Century AH (19th Century AD)",
@@ -162,7 +232,12 @@
     "ocr_arabic": "بندقية طويلة الماسورة\nتتميز هذه البندقية بالأداة النحاسية المتصلة بالمقبض على شكل الفأس، والتي تعطي له شكلاً تزيينيًا أكثر من كونها تستخدم لأغراض وظيفية عملية.\nترجع إلى القرن الثالث عشر الهجري (القرن التاسع عشر الميلادي)",
     "id": 15,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/_15-shotgun.jpg",
-    "clean_image_path": "assets/clean_artifacts/15.png"
+    "clean_image_path": "assets/clean_artifacts/15.png",
+    "name_ar": "بندقية طويلة الماسورة",
+    "description_ar": "تتميز هذه البندقية بالأداة النحاسية المتصلة بالمقبض على شكل الفأس، والتي تعطي له شكلاً تزيينيًا أكثر من كونها تستخدم لأغراض وظيفية عملية.",
+    "age_ar": "ترجع إلى القرن الثالث عشر الهجري (القرن التاسع عشر الميلادي)",
+    "location_ar": "",
+    "material_ar": "الخشب والحديد والنحاس الأصفر"
   },
   {
     "age": "5th century AH (11th century AD)",
@@ -173,7 +248,12 @@
     "ocr_arabic": "مصباح من الحجر الصابوني\nيحتوي هذا المصباح الزيتي\nالمصنوع من الحجر الصابوني\nعلى أشكال هندسية. وكان\nالحجر الصابوني من المواد\nالجيدة لصناعة المصابيح والمباخر\nلأنه يمتص وينقل الحرارة بشكل\nجيد.\n\nالقرن الخامس الهجري (القرن\nالحادي عشر الميلادي)\n\nالطائف، منطقة مكة المكرمة",
     "id": 16,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/_16-iron.jpg",
-    "clean_image_path": "assets/clean_artifacts/16.png"
+    "clean_image_path": "assets/clean_artifacts/16.png",
+    "name_ar": "مصباح من الحجر الصابوني",
+    "description_ar": "يحتوي هذا المصباح الزيتي المصنوع من الحجر الصابوني على أشكال هندسية. وكان الحجر الصابوني من المواد الجيدة لصناعة المصابيح والمباخر لأنه يمتص وينقل الحرارة بشكل جيد.",
+    "age_ar": "القرن الخامس الهجري (القرن الحادي عشر الميلادي)",
+    "location_ar": "الطائف، منطقة مكة المكرمة",
+    "material_ar": "حجر الصابون"
   },
   {
     "age": "19th - 20th Century AD",
@@ -184,7 +264,12 @@
     "ocr_arabic": "محبرة خشبية مزخرفة القرن التاسع عشر - القرن العشرين الميلادي",
     "id": 17,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/_17-dual-ink.jpg",
-    "clean_image_path": "assets/clean_artifacts/17.png"
+    "clean_image_path": "assets/clean_artifacts/17.png",
+    "name_ar": "محبرة خشبية مزخرفة",
+    "description_ar": "محبرة خشبية تقليدية منحوتة بعناية، بغطاء دائري زخرفي وجسم ممدود مزيّن بزخارف هندسية ونباتية. تعود إلى القرن التاسع عشر والعشرين الميلادي، وتمثل أدوات الكتابة والحرفية الفنية في عصر توحيد المملكة العربية السعودية.",
+    "age_ar": "القرن التاسع عشر - القرن العشرين الميلادي",
+    "location_ar": "المملكة العربية السعودية",
+    "material_ar": "الخشب"
   },
   {
     "age": "13th century AH (19th century AD)",
@@ -195,7 +280,12 @@
     "ocr_arabic": "خنجر بمقبض فضي وغمد\nيرجع إلى القرن الثالث عشر\nالهجري (القرن التاسع عشر\nالميلادي)\n\nمنطقة عسير",
     "id": 18,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/_18-khanjar.jpg",
-    "clean_image_path": "assets/clean_artifacts/18.png"
+    "clean_image_path": "assets/clean_artifacts/18.png",
+    "name_ar": "خنجر بمقبض فضي وغمد",
+    "description_ar": "",
+    "age_ar": "يرجع إلى القرن الثالث عشر الهجري (القرن التاسع عشر الميلادي)",
+    "location_ar": "منطقة عسير",
+    "material_ar": "الفضة والصلب والجلد"
   },
   {
     "age": "8th–13th Century AD (2nd–7th Century AH)",
@@ -206,7 +296,12 @@
     "ocr_arabic": "تاج عمود رخامي\nتزين هذه القطعة أعلى قمة عمود كبير، إذ تضفي الزخارف الهندسية والزهرية التي تتميز بها على العمود مظهرًا جميلاً.\n\nيحتمل أن منشأها كان في الفترة ما بين القرنين الثامن والثالث عشر الميلاديين\n\nمنطقة مكة المكرمة",
     "id": 19,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/_19-grape_pilllar.jpg",
-    "clean_image_path": "assets/clean_artifacts/19.png"
+    "clean_image_path": "assets/clean_artifacts/19.png",
+    "name_ar": "تاج عمود رخامي",
+    "description_ar": "تزين هذه القطعة أعلى قمة عمود كبير، إذ تضفي الزخارف الهندسية والزهرية التي تتميز بها على العمود مظهرًا جميلاً.",
+    "age_ar": "يحتمل أن منشأها كان في الفترة ما بين القرنين الثامن والثالث عشر الميلاديين",
+    "location_ar": "منطقة مكة المكرمة",
+    "material_ar": "الرخام"
   },
   {
     "age": "2nd century AH (8th century AD)",
@@ -217,7 +312,12 @@
     "ocr_arabic": "مَعْلم\nيعود تاريخ هذا المعلم إلى\nالعصر العباسي، وعُثر عليه\nفي درب زبيدة، وتدلي\nالنقوش المحفورة عليه\nبمعلومات توضح المسافة\nمن إحدى المحطات الواقعة\nعلى طريق الحج من الكوفة\nإلى مكة.\n\nالقرن الثاني الهجري (القرن\nالثامن الميلادي)\n\nعُثر عليها على طريق الحج،\nدرب زبيدة.",
     "id": 20,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/_20-mail_stone.jpg",
-    "clean_image_path": "assets/clean_artifacts/20.png"
+    "clean_image_path": "assets/clean_artifacts/20.png",
+    "name_ar": "مَعْلم",
+    "description_ar": "يعود تاريخ هذا المعلم إلى العصر العباسي، وعُثر عليه في درب زبيدة، وتدلي النقوش المحفورة عليه بمعلومات توضح المسافة من إحدى المحطات الواقعة على طريق الحج من الكوفة إلى مكة.",
+    "age_ar": "القرن الثاني الهجري (القرن الثامن الميلادي)",
+    "location_ar": "عُثر عليها على طريق الحج، درب زبيدة.",
+    "material_ar": "الحجر"
   },
   {
     "age": "2nd Century AD",
@@ -228,7 +328,12 @@
     "ocr_arabic": "رأس ومخلب أسد من البرونز\nهناك عناصر في هذا الأسد تشبه إلى حد بعيد الأساليب الفنية اليونانية الرومانية، ولكن يُعتقد أن هذا الأسد قد تم إنتاجه محلياً بسبب جوانب أخرى من سماته وطريقة إنتاجه، ويعتقد بعض علماء الآثار أن هذين الجزئين ينتميان إلى تمثال أسد كامل، لكن الأجزاء الأخرى قد اندثرت لأن البرونز قد يكون رقيق وسهل التأكل.\nالقرن الثاني الميلادي\nمنطقة نجران",
     "id": 21,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/_21-lion.jpg",
-    "clean_image_path": "assets/clean_artifacts/21.png"
+    "clean_image_path": "assets/clean_artifacts/21.png",
+    "name_ar": "رأس ومخلب أسد من البرونز",
+    "description_ar": "هناك عناصر في هذا الأسد تشبه إلى حد بعيد الأساليب الفنية اليونانية الرومانية، ولكن يُعتقد أن هذا الأسد قد تم إنتاجه محلياً بسبب جوانب أخرى من سماته وطريقة إنتاجه، ويعتقد بعض علماء الآثار أن هذين الجزئين ينتميان إلى تمثال أسد كامل، لكن الأجزاء الأخرى قد اندثرت لأن البرونز قد يكون رقيق وسهل التأكل.",
+    "age_ar": "القرن الثاني الميلادي",
+    "location_ar": "منطقة نجران",
+    "material_ar": "البرونز"
   },
   {
     "age": "2nd Century AH (8th Century AD)",
@@ -239,18 +344,28 @@
     "ocr_arabic": "مَعْلم البازلت\nيحتوي هذا الحجر على نقش عربي من ستة أسطر يقول: \"المسافة اثنين وستين ميلاً من الكوفة\"، ربما كان هذا الحجر موضوع على أحد طرق الحج الرئيسية.\nالقرن الثاني الهجري (القرن الثامن الميلادي)\nعُثر عليها على طريق الحج، درب زبيدة.",
     "id": 22,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/_22-mail_stone2.jpg",
-    "clean_image_path": "assets/clean_artifacts/22.png"
+    "clean_image_path": "assets/clean_artifacts/22.png",
+    "name_ar": "مَعْلم البازلت",
+    "description_ar": "يحتوي هذا الحجر على نقش عربي من ستة أسطر يقول: \"المسافة اثنين وستين ميلاً من الكوفة\"، ربما كان هذا الحجر موضوع على أحد طرق الحج الرئيسية.",
+    "age_ar": "القرن الثاني الهجري (القرن الثامن الميلادي)",
+    "location_ar": "عُثر عليها على طريق الحج، درب زبيدة.",
+    "material_ar": "البازلت"
   },
   {
-  "name": "Inscribed Lintel",
-  "age": "6th Century AH (12th Century AD)",
-  "location": "Al-Haura, Tabuk Region",
-  "material": "Stone (carved, Islamic calligraphy inscription)",
-  "description": "This lintel was originally placed above the doorway of a house or building, serving a decorative purpose. It bears an inscription rendered in Islamic calligraphy.",
-  "ocr_arabic": "عتبة منقوشة\nكان من المفترض وضع هذه العتبة فوق باب منزل أو مبنى لأغراض التزيين وهي تحتوي على نقش بالخط الإسلامي.\nالقرن السادس الهجري\n(القرن الثاني عشر\nالميلادي)\nالحوراء - منطقة تبوك",
-  "id": 23,
-  "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/_23-sakif.jpg",
-  "clean_image_path": "assets/clean_artifacts/23.png"
+    "name": "Inscribed Lintel",
+    "age": "6th Century AH (12th Century AD)",
+    "location": "Al-Haura, Tabuk Region",
+    "material": "Stone (carved, Islamic calligraphy inscription)",
+    "description": "This lintel was originally placed above the doorway of a house or building, serving a decorative purpose. It bears an inscription rendered in Islamic calligraphy.",
+    "ocr_arabic": "عتبة منقوشة\nكان من المفترض وضع هذه العتبة فوق باب منزل أو مبنى لأغراض التزيين وهي تحتوي على نقش بالخط الإسلامي.\nالقرن السادس الهجري\n(القرن الثاني عشر\nالميلادي)\nالحوراء - منطقة تبوك",
+    "id": 23,
+    "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/_23-sakif.jpg",
+    "clean_image_path": "assets/clean_artifacts/23.png",
+    "name_ar": "عتبة منقوشة",
+    "description_ar": "كان من المفترض وضع هذه العتبة فوق باب منزل أو مبنى لأغراض التزيين وهي تحتوي على نقش بالخط الإسلامي.",
+    "age_ar": "القرن السادس الهجري (القرن الثاني عشر الميلادي)",
+    "location_ar": "الحوراء - منطقة تبوك",
+    "material_ar": "الحجر (منقوش، نقش بخط عربي إسلامي)"
   },
   {
     "age": "840 AH (1437 AD)",
@@ -261,7 +376,12 @@
     "ocr_arabic": "شاهد قبر من البازلت\nيحمل اسم مجيبة بنت علوان العقبي بخط الثلث الإسلامي.\nيرجع تاريخ شاهد القبر إلى يوم السبت الثالث من شهر ذي الحجة عام 840 هـ (1437 م).\n840 هـ (1437 م)\nمقبرة المعلاة - منطقة مكة المكرمة",
     "id": 24,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/_24-black_tombstone.jpg",
-    "clean_image_path": "assets/clean_artifacts/24.png"
+    "clean_image_path": "assets/clean_artifacts/24.png",
+    "name_ar": "شاهد قبر من البازلت",
+    "description_ar": "يحمل اسم مجيبة بنت علوان العقبي بخط الثلث الإسلامي. يرجع تاريخ شاهد القبر إلى يوم السبت الثالث من شهر ذي الحجة عام 840 هـ (1437 م).",
+    "age_ar": "840 هـ (1437 م)",
+    "location_ar": "مقبرة المعلاة - منطقة مكة المكرمة",
+    "material_ar": "البازلت"
   },
   {
     "age": "4th - 6th Century AD",
@@ -272,7 +392,12 @@
     "ocr_arabic": "جرس برونزي\nجرس برونزي لكن كرة الرنين داخله مفقودة، أما البقع الخضراء الظاهرة عليه فهي تآكل ناتج عن تفاعل المعدن مع الهواء، ربما كان هذا الجرس يستخدم في الطقوس والشعائر الدينية.\nالقرن الرابع - القرن السادس الميلادي\nدومة الجندل - منطقة الجوف",
     "id": 25,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/_25-bell.jpg",
-    "clean_image_path": "assets/clean_artifacts/25.png"
+    "clean_image_path": "assets/clean_artifacts/25.png",
+    "name_ar": "جرس برونزي",
+    "description_ar": "جرس برونزي لكن كرة الرنين داخله مفقودة، أما البقع الخضراء الظاهرة عليه فهي تآكل ناتج عن تفاعل المعدن مع الهواء، ربما كان هذا الجرس يستخدم في الطقوس والشعائر الدينية.",
+    "age_ar": "القرن الرابع - القرن السادس الميلادي",
+    "location_ar": "دومة الجندل - منطقة الجوف",
+    "material_ar": "البرونز"
   },
   {
     "age": "132 - 656 AH (750 - 1258 AD)",
@@ -283,7 +408,12 @@
     "ocr_arabic": "عملات دينار ذهبي\nتعتبر هذه العملات معدنية المسكوكة في مدن مثل مكة والكوفة وبغداد من الدلائل على أن الربذة كانت نقطة توقف مهمة للتجارة والتبادل للحجاج والتجار على طريق الحج.\n132 - 656 هـ (750 - 1258 م)\nالربذة، درب زبيدة - طريق الحج",
     "id": 26,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/_26-gold_coin.jpg",
-    "clean_image_path": "assets/clean_artifacts/26.png"
+    "clean_image_path": "assets/clean_artifacts/26.png",
+    "name_ar": "عملات دينار ذهبي",
+    "description_ar": "تعتبر هذه العملات معدنية المسكوكة في مدن مثل مكة والكوفة وبغداد من الدلائل على أن الربذة كانت نقطة توقف مهمة للتجارة والتبادل للحجاج والتجار على طريق الحج.",
+    "age_ar": "132 - 656 هـ (750 - 1258 م)",
+    "location_ar": "الربذة، درب زبيدة - طريق الحج",
+    "material_ar": "الذهب"
   },
   {
     "age": "2nd Century BC",
@@ -294,7 +424,12 @@
     "ocr_arabic": "قطعة زخرفية برونزية\nقطعة زخرفية برونزية صغيرة على شكل جمل وبها ثقب في المنتصف ويعتقد أنها تلبس كَحُلِيّ للزينة.\nالقرن الثاني قبل الميلاد\nدومة الجندل - منطقة الجوف",
     "id": 27,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/_27-smallhorse.jpg",
-    "clean_image_path": "assets/clean_artifacts/27.png"
+    "clean_image_path": "assets/clean_artifacts/27.png",
+    "name_ar": "قطعة زخرفية برونزية",
+    "description_ar": "قطعة زخرفية برونزية صغيرة على شكل جمل وبها ثقب في المنتصف ويعتقد أنها تلبس كَحُلِيّ للزينة.",
+    "age_ar": "القرن الثاني قبل الميلاد",
+    "location_ar": "دومة الجندل - منطقة الجوف",
+    "material_ar": "البرونز"
   },
   {
     "age": "4th Century BC - 4th Century AD",
@@ -305,7 +440,12 @@
     "ocr_arabic": "إناء زجاجي\nيتميز هذا الكأس الطويل المصنوع من الزجاج الرقيق بالزخارف المسننة، وقد كانت المادة المصنوع منها الكأس شائعة الاستخدام في إنتاج المزهريات والزجاجات الصغيرة للعطور ومستحضرات التجميل.\nالقرن الرابع قبل الميلاد -\nالقرن الرابع الميلادي\n\nقرية الفاو بمنطقة\nالرياض",
     "id": 28,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/_28-glass.jpg",
-    "clean_image_path": "assets/clean_artifacts/28.png"
+    "clean_image_path": "assets/clean_artifacts/28.png",
+    "name_ar": "إناء زجاجي",
+    "description_ar": "يتميز هذا الكأس الطويل المصنوع من الزجاج الرقيق بالزخارف المسننة، وقد كانت المادة المصنوع منها الكأس شائعة الاستخدام في إنتاج المزهريات والزجاجات الصغيرة للعطور ومستحضرات التجميل.",
+    "age_ar": "القرن الرابع قبل الميلاد - القرن الرابع الميلادي",
+    "location_ar": "قرية الفاو بمنطقة الرياض",
+    "material_ar": "الزجاج"
   },
   {
     "age": "2nd Century BC - 1st Century AD",
@@ -316,7 +456,12 @@
     "ocr_arabic": "حلية مربعة\nهذه القطعة الصغيرة المستطيلة الشكل محاطة بنقش بلغة المسند، وفي وسطها يوجد أسد قابع تحت نخلة، لكن أهميتها والغرض منها غير معروفين. وتشيع رسوم الحيوانات في القطع التي عُثر عليها في نجران، وربما كان يُنظر إلى الأسد على أنه رمز للقوة والمكانة.\nالقرن الثاني قبل الميلاد - القرن الأول الميلادي\nمنطقة نجران",
     "id": 29,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/_29-lionsquare.jpg",
-    "clean_image_path": "assets/clean_artifacts/29.png"
+    "clean_image_path": "assets/clean_artifacts/29.png",
+    "name_ar": "حلية مربعة",
+    "description_ar": "هذه القطعة الصغيرة المستطيلة الشكل محاطة بنقش بلغة المسند، وفي وسطها يوجد أسد قابع تحت نخلة، لكن أهميتها والغرض منها غير معروفين. وتشيع رسوم الحيوانات في القطع التي عُثر عليها في نجران، وربما كان يُنظر إلى الأسد على أنه رمز للقوة والمكانة.",
+    "age_ar": "القرن الثاني قبل الميلاد - القرن الأول الميلادي",
+    "location_ar": "منطقة نجران",
+    "material_ar": "البرونز"
   },
   {
     "age": "600 BC - 50 AD",
@@ -327,7 +472,12 @@
     "ocr_arabic": "أواني ملتصقة من المرمر\nآنيتين مصنوعتين من المرمر (الألباستر) تم اكتشافها في منطقة نجران جنوب غرب المملكة العربية السعودية، وقد كانت نجران نقطة توقف مهمة في طرق التجارة الجنوبية وأحد أقدم المراكز الحضرية في شبه الجزيرة العربية.\n\n600 قبل الميلاد - 50 ميلادي\n\nمدينة الأخدود الأثرية - نجران",
     "id": 30,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/_30-donutsponge.jpg",
-    "clean_image_path": "assets/clean_artifacts/30.png"
+    "clean_image_path": "assets/clean_artifacts/30.png",
+    "name_ar": "أواني ملتصقة من المرمر",
+    "description_ar": "آنيتين مصنوعتين من المرمر (الألباستر) تم اكتشافها في منطقة نجران جنوب غرب المملكة العربية السعودية، وقد كانت نجران نقطة توقف مهمة في طرق التجارة الجنوبية وأحد أقدم المراكز الحضرية في شبه الجزيرة العربية.",
+    "age_ar": "600 قبل الميلاد - 50 ميلادي",
+    "location_ar": "مدينة الأخدود الأثرية - نجران",
+    "material_ar": "الألباستر"
   },
   {
     "age": "Third millennium BC",
@@ -338,7 +488,12 @@
     "ocr_arabic": "جرة على شكل كمثرى\nالألفية الثالثة قبل الميلاد\nمدينة ثاج الأثرية - المنطقة\nالشرقية",
     "id": 31,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/_31-old_black_vase.jpg",
-    "clean_image_path": "assets/clean_artifacts/31.png"
+    "clean_image_path": "assets/clean_artifacts/31.png",
+    "name_ar": "جرة على شكل كمثرى",
+    "description_ar": "",
+    "age_ar": "الألفية الثالثة قبل الميلاد",
+    "location_ar": "مدينة ثاج الأثرية - المنطقة الشرقية",
+    "material_ar": "الفخار"
   },
   {
     "age": "2200 - 2000 BC",
@@ -349,7 +504,12 @@
     "ocr_arabic": "إناء فخاري\nجرة فخارية ملونة ومزينة\nبأشكال هندسية وزخارف\nنباتية مطلية باللون\nالأسود تميز حضارة العُبيد.\n\n2000 - 2200 قبل الميلاد\n\nالمنطقة الشرقية",
     "id": 32,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/_32-egg_vase.jpg",
-    "clean_image_path": "assets/clean_artifacts/32.png"
+    "clean_image_path": "assets/clean_artifacts/32.png",
+    "name_ar": "إناء فخاري",
+    "description_ar": "جرة فخارية ملونة ومزينة بأشكال هندسية وزخارف نباتية مطلية باللون الأسود تميز حضارة العُبيد.",
+    "age_ar": "2000 - 2200 قبل الميلاد",
+    "location_ar": "المنطقة الشرقية",
+    "material_ar": "الطين (الفخار)"
   },
   {
     "age": "4th Century BC - 4th Century AD",
@@ -360,7 +520,12 @@
     "ocr_arabic": "تمثال الوعل\nكانت رؤية الوعل في الكثير\nمن أنحاء الجزيرة العربية من\nالمشاهد المألوفة الشائعة،\nوقد كان الوعل مصدر إلهام\nللفنانين والحرفيين.\nالقرن الرابع قبل الميلاد -\nالقرن الرابع الميلادي\nقرية الفاو - منطقة الرياض",
     "id": 33,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/_33-markhor.jpg",
-    "clean_image_path": "assets/clean_artifacts/33.png"
+    "clean_image_path": "assets/clean_artifacts/33.png",
+    "name_ar": "تمثال الوعل",
+    "description_ar": "كانت رؤية الوعل في الكثير من أنحاء الجزيرة العربية من المشاهد المألوفة الشائعة، وقد كان الوعل مصدر إلهام للفنانين والحرفيين.",
+    "age_ar": "القرن الرابع قبل الميلاد - القرن الرابع الميلادي",
+    "location_ar": "قرية الفاو - منطقة الرياض",
+    "material_ar": "البرونز"
   },
   {
     "age": "3rd Millennium BC",
@@ -371,7 +536,12 @@
     "ocr_arabic": "بقايا وعاء من الحجر الصابوني\nتُظهر بقايا هذا الإناء الحجري الكبير نقوشاً لحيوانات أسطورية ورجل راكع وزخارف نباتية.\nالألفية الثالثة قبل الميلاد\nجزيرة تاروت - المنطقة الشرقية",
     "id": 34,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/_34-crownstone.jpg",
-    "clean_image_path": "assets/clean_artifacts/34.png"
+    "clean_image_path": "assets/clean_artifacts/34.png",
+    "name_ar": "بقايا وعاء من الحجر الصابوني",
+    "description_ar": "تُظهر بقايا هذا الإناء الحجري الكبير نقوشاً لحيوانات أسطورية ورجل راكع وزخارف نباتية.",
+    "age_ar": "الألفية الثالثة قبل الميلاد",
+    "location_ar": "جزيرة تاروت - المنطقة الشرقية",
+    "material_ar": "حجر الصابون (الستياتيت)"
   },
   {
     "age": "1st millennium BC",
@@ -382,7 +552,12 @@
     "ocr_arabic": "وعاء فخاري\nيعتبر هذا الوعاء الفخاري بهذا النمط من الزخارف الهندسية ذات اللون البني/\nالأحمر شائعًا في موقع\nتيماء.\nالألفية الأولى قبل الميلاد\nتيماء، منطقة تبوك",
     "id": 35,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/_35-cocomobowl.jpg",
-    "clean_image_path": "assets/clean_artifacts/35.png"
+    "clean_image_path": "assets/clean_artifacts/35.png",
+    "name_ar": "وعاء فخاري",
+    "description_ar": "يعتبر هذا الوعاء الفخاري بهذا النمط من الزخارف الهندسية ذات اللون البني/ الأحمر شائعًا في موقع تيماء.",
+    "age_ar": "الألفية الأولى قبل الميلاد",
+    "location_ar": "تيماء، منطقة تبوك",
+    "material_ar": "الفخار"
   },
   {
     "age": "1st Century AD - 3rd Century AD",
@@ -393,7 +568,12 @@
     "ocr_arabic": "إبريق فخاري بمقبض\nيتميز هذا الإبريق الفخاري بطبقة لامعة زجاجية ملونة، وعادةً ما ترتبط هذه الطبقة بالأشياء التي عُثر عليها في المقابر والأضرحة، وربما تكون مثل هذه الأشياء مستوردة.\n\nالقرن الأول الميلادي -\nالقرن الثالث الميلادي\n\nقرية الفاو - منطقة الرياض",
     "id": 36,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/_36-smallvase.jpg",
-    "clean_image_path": "assets/clean_artifacts/36.png"
+    "clean_image_path": "assets/clean_artifacts/36.png",
+    "name_ar": "إبريق فخاري بمقبض",
+    "description_ar": "يتميز هذا الإبريق الفخاري بطبقة لامعة زجاجية ملونة، وعادةً ما ترتبط هذه الطبقة بالأشياء التي عُثر عليها في المقابر والأضرحة، وربما تكون مثل هذه الأشياء مستوردة.",
+    "age_ar": "القرن الأول الميلادي - القرن الثالث الميلادي",
+    "location_ar": "قرية الفاو - منطقة الرياض",
+    "material_ar": "الفخار المزجج"
   },
   {
     "age": "4th century BC - 4th century AD",
@@ -404,7 +584,12 @@
     "ocr_arabic": "جزء من تمثال من الرخام الأبيض\nفي هذا الجزء من التمثال الرخامي يمكننا أن نرى بوضوح رأس وكتفين وتفاصيل وجه أنثوي على الطراز اليوناني الروماني، ويبدو أنه كان جزءاً من مشهد أكبر قد يكون مستخدم لتزيين واجهة مبنى.\nالقرن الرابع قبل الميلاد - القرن الرابع الميلادي\nقرية الفاو - منطقة الرياض",
     "id": 37,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/_37-boothiaunty.jpg",
-    "clean_image_path": "assets/clean_artifacts/37.png"
+    "clean_image_path": "assets/clean_artifacts/37.png",
+    "name_ar": "جزء من تمثال من الرخام الأبيض",
+    "description_ar": "في هذا الجزء من التمثال الرخامي يمكننا أن نرى بوضوح رأس وكتفين وتفاصيل وجه أنثوي على الطراز اليوناني الروماني، ويبدو أنه كان جزءاً من مشهد أكبر قد يكون مستخدم لتزيين واجهة مبنى.",
+    "age_ar": "القرن الرابع قبل الميلاد - القرن الرابع الميلادي",
+    "location_ar": "قرية الفاو - منطقة الرياض",
+    "material_ar": "الرخام الأبيض"
   },
   {
     "age": "First Millennium BC",
@@ -415,7 +600,12 @@
     "ocr_arabic": "وعاء فخاري\nهناك العديد من النماذج الرائعة للأوعية الفخارية من هذا الطراز في تيماء، تم طلاء الزخارف باللون البني/الأحمر، وعادة ما تظهر زخارف متقاطعة وهندسية ونباتية.\nالألفية الأولى قبل الميلاد\nتيماء، منطقة تبوك",
     "id": 38,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/_38-cocomo_small.jpg",
-    "clean_image_path": "assets/clean_artifacts/38.png"
+    "clean_image_path": "assets/clean_artifacts/38.png",
+    "name_ar": "وعاء فخاري",
+    "description_ar": "هناك العديد من النماذج الرائعة للأوعية الفخارية من هذا الطراز في تيماء، تم طلاء الزخارف باللون البني/الأحمر، وعادة ما تظهر زخارف متقاطعة وهندسية ونباتية.",
+    "age_ar": "الألفية الأولى قبل الميلاد",
+    "location_ar": "تيماء، منطقة تبوك",
+    "material_ar": "الفخار (الطين)"
   },
   {
     "age": "6th - 4th century BC",
@@ -426,7 +616,12 @@
     "ocr_arabic": "شاهد تذكاري حجري\nالجزء السفلي من القطعة مفقود، لكن النقش مكتوب باللغة الآرامية وهناك رموز لها علاقة بالفلك ورموز دينية أخرى، ويبدو أن هذا الشاهد التذكاري كانت بمثابة شاهد ديني، وقد نُقشت بعض الرموز من اللغة الثمودية على جانب الحجر في وقت لاحق.\nالقرن السادس - القرن الرابع قبل الميلاد\nتيماء، منطقة تبوك",
     "id": 39,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/_39-longstone.jpg",
-    "clean_image_path": "assets/clean_artifacts/39.png"
+    "clean_image_path": "assets/clean_artifacts/39.png",
+    "name_ar": "شاهد تذكاري حجري",
+    "description_ar": "الجزء السفلي من القطعة مفقود، لكن النقش مكتوب باللغة الآرامية وهناك رموز لها علاقة بالفلك ورموز دينية أخرى، ويبدو أن هذا الشاهد التذكاري كانت بمثابة شاهد ديني، وقد نُقشت بعض الرموز من اللغة الثمودية على جانب الحجر في وقت لاحق.",
+    "age_ar": "القرن السادس - القرن الرابع قبل الميلاد",
+    "location_ar": "تيماء، منطقة تبوك",
+    "material_ar": "الحجر"
   },
   {
     "age": "1st Century BC - 1st Century AD",
@@ -437,7 +632,12 @@
     "ocr_arabic": "مبخرة من الحجر الجيري\nتتميز هذه المبخرة المكعبة بالكتابة المحفورة على قاعدتها، بينما يتسم الجزء العلوي بالإطار المربع الذي يتوسطه رمز على شكل حرف \"X\".\n\nالقرن الأول قبل الميلاد -\nالقرن الأول الميلادي\n\nتيماء - منطقة تبوك",
     "id": 40,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/_40-stone_burner.jpg",
-    "clean_image_path": "assets/clean_artifacts/40.png"
+    "clean_image_path": "assets/clean_artifacts/40.png",
+    "name_ar": "مبخرة من الحجر الجيري",
+    "description_ar": "تتميز هذه المبخرة المكعبة بالكتابة المحفورة على قاعدتها، بينما يتسم الجزء العلوي بالإطار المربع الذي يتوسطه رمز على شكل حرف \"X\".",
+    "age_ar": "القرن الأول قبل الميلاد - القرن الأول الميلادي",
+    "location_ar": "تيماء - منطقة تبوك",
+    "material_ar": "الحجر الجيري"
   },
   {
     "age": "3rd Century BC - 3rd Century AD",
@@ -448,7 +648,12 @@
     "ocr_arabic": "شاهد قبر\nالنقش الموجود على الشاهد مكتوب بخط المسند المعروف باسم \"الاحسائي\"، ويتكون من أربعة سطور، على الرغم من تلف السطر الأخير.\nالقرن الثالث قبل الميلاد - القرن الثالث الميلادي\nمدينة ثاج الأثرية - المنطقة الشرقية",
     "id": 41,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/_41-tombstone.jpg",
-    "clean_image_path": "assets/clean_artifacts/41.png"
+    "clean_image_path": "assets/clean_artifacts/41.png",
+    "name_ar": "شاهد قبر",
+    "description_ar": "النقش الموجود على الشاهد مكتوب بخط المسند المعروف باسم \"الاحسائي\"، ويتكون من أربعة سطور، على الرغم من تلف السطر الأخير.",
+    "age_ar": "القرن الثالث قبل الميلاد - القرن الثالث الميلادي",
+    "location_ar": "مدينة ثاج الأثرية - المنطقة الشرقية",
+    "material_ar": "الحجر الرملي"
   },
   {
     "age": "4th Century BC - 4th Century AD",
@@ -459,7 +664,12 @@
     "ocr_arabic": "مصباح برونزي\nتم اكتشاف هذا المصباح في موقع قرية الفاو، العاصمة الأولى لمملكة كندة التي كانت تعتبر نقطة توقف مهمة على طرق التجارة القديمة، ويتميز هذا المصباح بطرازه اليوناني الروماني المميز، ويشير إلى أنه كان هناك تبادل مكثف مع الثقافات الأخرى خلال هذه الفترة.\n\nالقرن الرابع قبل الميلاد -\nالقرن الرابع الميلادي\n\nقرية الفاو - منطقة الرياض",
     "id": 42,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/_42-aladdien.jpg",
-    "clean_image_path": "assets/clean_artifacts/42.png"
+    "clean_image_path": "assets/clean_artifacts/42.png",
+    "name_ar": "مصباح برونزي",
+    "description_ar": "تم اكتشاف هذا المصباح في موقع قرية الفاو، العاصمة الأولى لمملكة كندة التي كانت تعتبر نقطة توقف مهمة على طرق التجارة القديمة، ويتميز هذا المصباح بطرازه اليوناني الروماني المميز، ويشير إلى أنه كان هناك تبادل مكثف مع الثقافات الأخرى خلال هذه الفترة.",
+    "age_ar": "القرن الرابع قبل الميلاد - القرن الرابع الميلادي",
+    "location_ar": "قرية الفاو - منطقة الرياض",
+    "material_ar": "البرونز"
   },
   {
     "age": "1st - 2nd Century AD",
@@ -470,7 +680,12 @@
     "ocr_arabic": "جزء من لوحة جدارية\nهذا جزء من لوحة جدارية تصور رجلاً بشعر كثيف مجعد وشارب رفيع، وفوق رأسه خادمان صغيران وحفنة عنب على كرمة، يذكرنا أسلوب هذه اللوحة الجدارية بالزخارف اليونانية الرومانية وربما كانت تمثل مشهداً لوليمة، فعلى إحدى الجهات هناك كتابة تقول \"زاكي\".\nالقرن الأول - الثاني الميلادي\nقرية الفاو - منطقة الرياض",
     "id": 43,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/_43-wallmural.jpg",
-    "clean_image_path": "assets/clean_artifacts/43.png"
+    "clean_image_path": "assets/clean_artifacts/43.png",
+    "name_ar": "جزء من لوحة جدارية",
+    "description_ar": "هذا جزء من لوحة جدارية تصور رجلاً بشعر كثيف مجعد وشارب رفيع، وفوق رأسه خادمان صغيران وحفنة عنب على كرمة، يذكرنا أسلوب هذه اللوحة الجدارية بالزخارف اليونانية الرومانية وربما كانت تمثل مشهداً لوليمة، فعلى إحدى الجهات هناك كتابة تقول \"زاكي\".",
+    "age_ar": "القرن الأول - الثاني الميلادي",
+    "location_ar": "قرية الفاو - منطقة الرياض",
+    "material_ar": "الجص والأصباغ"
   },
   {
     "age": "1st Century BC - 1st Century AD",
@@ -481,7 +696,12 @@
     "ocr_arabic": "تمثال برونزي لامرأة\nهذا التمثال يشبه الأنماط اليونانية الرومانية، وهو يصور امرأة تجمع طرف ملابسها بيدها اليمنى، بينما تحمل يدُها اليسرى عموداً أو عصا، وقد كان هذا التمثال واحداً من أربعة تماثيل تشكّل أرجل سرير جنائزي.\n\nالقرن الأول قبل الميلاد -\nالقرن الأول الميلادي\n\nمدينة ثاج الأثرية - المنطقة الشرقية",
     "id": 44,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/_44-auntymurti.jpg",
-    "clean_image_path": "assets/clean_artifacts/44.png"
+    "clean_image_path": "assets/clean_artifacts/44.png",
+    "name_ar": "تمثال برونزي لامرأة",
+    "description_ar": "هذا التمثال يشبه الأنماط اليونانية الرومانية، وهو يصور امرأة تجمع طرف ملابسها بيدها اليمنى، بينما تحمل يدُها اليسرى عموداً أو عصا، وقد كان هذا التمثال واحداً من أربعة تماثيل تشكّل أرجل سرير جنائزي.",
+    "age_ar": "القرن الأول قبل الميلاد - القرن الأول الميلادي",
+    "location_ar": "مدينة ثاج الأثرية - المنطقة الشرقية",
+    "material_ar": "البرونز"
   },
   {
     "age": "1st Century AD",
@@ -492,7 +712,12 @@
     "ocr_arabic": "قدم برونزية\nقطعة من البرونز على شكل قدم مصنوعة من البرونز المصبوب وكانت جزءاً من ساق كرسي وليس تمثالاً، وهي مصممة على الطراز الروماني حيث أن هناك فتحتان بالقرب من الجزء العلوي كانت مخصصة للمسامير.\nالقرن الأول الميلادي\nقرية الفاو - منطقة الرياض\nقاعة الممالك العربية\nArabian Kingdoms Gallery",
     "id": 45,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/_45-foot.jpg",
-    "clean_image_path": "assets/clean_artifacts/45.png"
+    "clean_image_path": "assets/clean_artifacts/45.png",
+    "name_ar": "قدم برونزية",
+    "description_ar": "قطعة من البرونز على شكل قدم مصنوعة من البرونز المصبوب وكانت جزءاً من ساق كرسي وليس تمثالاً، وهي مصممة على الطراز الروماني حيث أن هناك فتحتان بالقرب من الجزء العلوي كانت مخصصة للمسامير.",
+    "age_ar": "القرن الأول الميلادي",
+    "location_ar": "قرية الفاو - منطقة الرياض",
+    "material_ar": "البرونز المصبوب"
   },
   {
     "age": "1st Century AD",
@@ -503,7 +728,12 @@
     "ocr_arabic": "قناع جنائزي صغير\nوجه بشري مصنوع من الذهب الرقيق، حيث يمكن رؤية ملامح الوجه والفم والأنف والعينين والحاجبين بوضوح، هذه قطعة فنية رائعة وربما كانت تثبت على الكفن (أو ما شابه) الذي يغطي الجسم حيث توجد به أربعة ثقوب حول الحواف، وقد كان هذا القناع واحداً من بين العديد من الأشياء الفاخرة التي تم العثور عليها والتي تزين جسد الطفلة الصغيرة البالغة من العمر حوالي 6 سنوات، وتشير طريقة الدفن والعدد الكبير من الأشياء التي وجدت معها، إلى أن عائلتها كانت ثرية للغاية وقد حرصت على دفنها وفقاً لعاداتهم.\nالقرن الأول الميلادي\nمدينة ثاج الأثرية - المنطقة الشرقية",
     "id": 46,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/_46-goldenface.jpg",
-    "clean_image_path": "assets/clean_artifacts/46.png"
+    "clean_image_path": "assets/clean_artifacts/46.png",
+    "name_ar": "قناع جنائزي صغير",
+    "description_ar": "وجه بشري مصنوع من الذهب الرقيق، حيث يمكن رؤية ملامح الوجه والفم والأنف والعينين والحاجبين بوضوح، هذه قطعة فنية رائعة وربما كانت تثبت على الكفن (أو ما شابه) الذي يغطي الجسم حيث توجد به أربعة ثقوب حول الحواف، وقد كان هذا القناع واحداً من بين العديد من الأشياء الفاخرة التي تم العثور عليها والتي تزين جسد الطفلة الصغيرة البالغة من العمر حوالي 6 سنوات، وتشير طريقة الدفن والعدد الكبير من الأشياء التي وجدت معها، إلى أن عائلتها كانت ثرية للغاية وقد حرصت على دفنها وفقاً لعاداتهم.",
+    "age_ar": "القرن الأول الميلادي",
+    "location_ar": "مدينة ثاج الأثرية - المنطقة الشرقية",
+    "material_ar": "الذهب"
   },
   {
     "age": "3rd century BC",
@@ -514,7 +744,12 @@
     "ocr_arabic": "طبق من الفخار\nيحتوي هذا الطبق الفخاري\nعلى طبقة رقيقة من\nالذهب مطلية على\nالسطح باستخدام تقنية\nتعرف باسم \"التذهيب\".\nالقرن الثالث قبل الميلاد\nجزيرة تاروت - المنطقة\nالشرقية",
     "id": 47,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/_47-small_bowl.jpg",
-    "clean_image_path": "assets/clean_artifacts/47.png"
+    "clean_image_path": "assets/clean_artifacts/47.png",
+    "name_ar": "طبق من الفخار",
+    "description_ar": "يحتوي هذا الطبق الفخاري على طبقة رقيقة من الذهب مطلية على السطح باستخدام تقنية تعرف باسم \"التذهيب\".",
+    "age_ar": "القرن الثالث قبل الميلاد",
+    "location_ar": "جزيرة تاروت - المنطقة الشرقية",
+    "material_ar": "الفخار المذهّب"
   },
   {
     "age": "4th Century BC - 4th Century AD",
@@ -525,7 +760,12 @@
     "ocr_arabic": "رأس مغزل حجري\nيوجد برأس المغزل الحجري هذا\nفتحة في المنتصف وخطوط\nغائرة للتزيين.\nالقرن الرابع قبل الميلاد -\nالقرن الرابع الميلادي\nقرية الفاو - منطقة الرياض",
     "id": 48,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/_48-smallwheelhole.jpg",
-    "clean_image_path": "assets/clean_artifacts/48.png"
+    "clean_image_path": "assets/clean_artifacts/48.png",
+    "name_ar": "رأس مغزل حجري",
+    "description_ar": "يوجد برأس المغزل الحجري هذا فتحة في المنتصف وخطوط غائرة للتزيين.",
+    "age_ar": "القرن الرابع قبل الميلاد - القرن الرابع الميلادي",
+    "location_ar": "قرية الفاو - منطقة الرياض",
+    "material_ar": "الحجر"
   },
   {
     "age": "3rd millennium BC",
@@ -536,14 +776,28 @@
     "ocr_arabic": "وعاء من الحجر الصابوني\nيتميز هذا الوعاء الصغير كروي الشكل بنقش محفور لدوائر متحدة المركز حول حافة الوعاء، وتشير الثقوب إلى أن هذا النوع من الأوعية كان مصمماً للتعليق.\nالألفية الثالثة قبل الميلاد\nجزيرة تاروت - المنطقة الشرقية",
     "id": 49,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/_49-brokenvase.jpg",
-    "clean_image_path": "assets/clean_artifacts/49.png"
+    "clean_image_path": "assets/clean_artifacts/49.png",
+    "name_ar": "وعاء من الحجر الصابوني",
+    "description_ar": "يتميز هذا الوعاء الصغير كروي الشكل بنقش محفور لدوائر متحدة المركز حول حافة الوعاء، وتشير الثقوب إلى أن هذا النوع من الأوعية كان مصمماً للتعليق.",
+    "age_ar": "الألفية الثالثة قبل الميلاد",
+    "location_ar": "جزيرة تاروت - المنطقة الشرقية",
+    "material_ar": "حجر الصابون (الستياتيت)"
   },
   {
     "name": "Prehistoric Rock Art Slab",
     "ocr_arabic": "قطعة فنية صخرية\nتعد هذه القطعة الفنية الصخرية التي تعود إلى عصور ما قبل التاريخ واحدة من نماذج كثيرة عُثر عليها في جميع أنحاء شبه الجزيرة العربية، وهي تصور رسماً ليدين بشريتين، إحداهما أكبر من الأخرى، وفأس، ومَعْلَمين مجردين لوجوه بشرية.\n\n4000 قبل الميلاد\nسراة عبيدة - منطقة عسير‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎",
     "id": 50,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/_50-monkeystone.jpg",
-    "clean_image_path": "assets/clean_artifacts/50.png"
+    "clean_image_path": "assets/clean_artifacts/50.png",
+    "name_ar": "قطعة فنية صخرية",
+    "description_ar": "تعد هذه القطعة الفنية الصخرية التي تعود إلى عصور ما قبل التاريخ واحدة من نماذج كثيرة عُثر عليها في جميع أنحاء شبه الجزيرة العربية، وهي تصور رسماً ليدين بشريتين، إحداهما أكبر من الأخرى، وفأس، ومَعْلَمين مجردين لوجوه بشرية.",
+    "age_ar": "4000 قبل الميلاد",
+    "location_ar": "سراة عبيدة - منطقة عسير",
+    "age": "4000 BCE",
+    "location": "Sarat 'Ubaydah, Asir Region",
+    "material": "Sandstone",
+    "description": "This prehistoric rock art slab is one of many such examples found across the Arabian Peninsula. It depicts two human handprints of different sizes, an axe, and two abstract human face motifs.",
+    "material_ar": "حجر رملي"
   },
   {
     "age": "1st Century BC - 3rd Century AD",
@@ -554,7 +808,12 @@
     "ocr_arabic": "",
     "id": 51,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/pagetitle3.jpg",
-    "clean_image_path": "assets/clean_artifacts/51.png"
+    "clean_image_path": "assets/clean_artifacts/51.png",
+    "name_ar": "جرة مزجّجة ومصباح زيت برونزي وتمثال جمل من قرية الفاو",
+    "description_ar": "مجموعة أثرية رائعة مكوّنة من ثلاث قطع اكتُشفت في قرية الفاو، عاصمة مملكة كِندة القديمة. تُظهر هذه المجموعة براعة الصناعة اليدوية وتنوع الروابط التجارية للمنطقة. على اليسار جرة فخارية صغيرة مزجّجة محفوظة بعناية، بطلاء أخضر مائل إلى الفيروزي يدل على تأثيرات فارثية أو رافدينية. وفي المنتصف مصباح زيت برونزي بفوهة ممدودة أنيقة ومقبض على شكل ورقة زخرفية. وعلى اليمين تمثال برونزي مصغّر لجمل يجسّد حيوان الحمل الذي شكّل عصب طرق التجارة عبر الجزيرة العربية. تعكس هذه القطع معًا الحياة اليومية والبراعة الفنية والحيوية الاقتصادية لمحطة قوافل رئيسية على حافة الربع الخالي.",
+    "age_ar": "القرن الأول قبل الميلاد - القرن الثالث الميلادي",
+    "location_ar": "قرية الفاو، المملكة العربية السعودية",
+    "material_ar": "البرونز والخزف المزجج"
   },
   {
     "age": "Early Islamic Period (8th - 10th Century AD)",
@@ -565,7 +824,12 @@
     "ocr_arabic": "",
     "id": 52,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/pagetitle5.jpg",
-    "clean_image_path": "assets/clean_artifacts/52.png"
+    "clean_image_path": "assets/clean_artifacts/52.png",
+    "name_ar": "إبريق صغير مزجّج ومصباح زيت برونزي من العصر الإسلامي المبكر",
+    "description_ar": "زوج أنيق من الأدوات اليومية يعكس الحياة المنزلية والبراعة الفنية في العصر الإسلامي المبكر. يتميز الإبريق الصغير الفخاري الأخضر المزجّج بطلاء قلوي سميك زاهي، وهي تقنية صُقلت كثيرًا في العصر العباسي لمحاكاة الأواني المستوردة الفاخرة. وبجانبه مصباح زيت برونزي مصبوب بمقبض حلقي ومسند إبهام على شكل نخلة مزخرفة، وفوهة ممدودة لحمل الفتيلة. اكتُشفت هذه القطع في تنقيبات أثرية بالمملكة العربية السعودية، وتقدّم لمحة حميمة عن التطور التقني والاحتياجات العملية والذوق الجمالي لمجتمعات العصر الإسلامي المبكر على طول طرق التجارة والحج التاريخية.",
+    "age_ar": "العصر الإسلامي المبكر (القرن الثامن - العاشر الميلادي)",
+    "location_ar": "الربذة، المملكة العربية السعودية",
+    "material_ar": "الخزف المزجج والبرونز"
   },
   {
     "age": "10th - 13th Century AH (16th - 19th Century AD)",
@@ -576,7 +840,12 @@
     "ocr_arabic": "مصباح نحاسي على\nشكل طائر طويل العنق\nالقرن العاشر- الثالث عشر\nالهجري (القرن السادس\nعشر- التاسع عشر\nالميلادي)",
     "id": 53,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/islam/27-snakelamp.jpg",
-    "clean_image_path": "assets/clean_artifacts/53.png"
+    "clean_image_path": "assets/clean_artifacts/53.png",
+    "name_ar": "مصباح نحاسي على شكل طائر طويل العنق",
+    "description_ar": "مصباح نحاسي بديع مصنوع من سبيكة النحاس على هيئة طائر طويل العنق، يعود إلى الفترة ما بين القرن العاشر والثالث عشر الهجري (السادس عشر إلى التاسع عشر الميلادي). تُظهر هذه التحفة من الأعمال المعدنية الإسلامية براعة صناعية فائقة، بعنق منحنٍ برشاقة يعمل كمقبض عملي، وينتهي برأس طائر مصمم بأسلوب مُجرّد. صُمم المصباح للاستخدام والجمال معًا، ويعكس التقليد الفني الغني لدمج العناصر الحيوانية في الأدوات اليومية خلال العصور الإسلامية.",
+    "age_ar": "القرن العاشر- الثالث عشر الهجري (القرن السادس عشر- التاسع عشر الميلادي)",
+    "location_ar": "المتحف الوطني السعودي",
+    "material_ar": "النحاس"
   },
   {
     "age": "Early Islamic Period (c. 8th - 10th Century AD)",
@@ -587,7 +856,12 @@
     "ocr_arabic": "مصباح فخاري بمقبض صغير\nميناء رأس الزور (رأس الخير)\nالمنطقة الشرقية",
     "id": 54,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/islam/28-miskeenlamp.jpg",
-    "clean_image_path": "assets/clean_artifacts/54.png"
+    "clean_image_path": "assets/clean_artifacts/54.png",
+    "name_ar": "مصباح فخاري بمقبض صغير",
+    "description_ar": "",
+    "age_ar": "",
+    "location_ar": "ميناء رأس الزور (رأس الخير) المنطقة الشرقية",
+    "material_ar": "الفخار المزجج"
   },
   {
     "age": "750 AH (1258 AD)",
@@ -598,7 +872,12 @@
     "ocr_arabic": "سلطانية فضية مزخرفة\n750 هـ (1258 م)",
     "id": 55,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/islam/29-blackbowl.jpg",
-    "clean_image_path": "assets/clean_artifacts/55.png"
+    "clean_image_path": "assets/clean_artifacts/55.png",
+    "name_ar": "سلطانية فضية مزخرفة",
+    "description_ar": "سلطانية فضية بديعة الزخرفة تعود إلى عام 750هـ (1258م)، تعكس براعة الصناعة في العصر الذهبي الإسلامي. يتميز الإناء بجسم مستدق برفق يرتكز على قاعدة صغيرة، ومُزيّن بأشرطة محفورة يدويًا بزخارف هندسية ونباتية دقيقة حول الحافة العلوية، إضافة إلى مدالية مركزية بخط الكتابة العربية. كانت مثل هذه الأواني الفضية الفاخرة تُستخدم كأدوات مائدة راقية، تعبّر عن الثراء والمكانة الرفيعة والرقي الفني الذي ساد المجتمعات الإسلامية في منتصف القرن الثالث عشر الميلادي.",
+    "age_ar": "750 هـ (1258 م)",
+    "location_ar": "المملكة العربية السعودية (معروضة في قاعة الإسلام والجزيرة العربية)",
+    "material_ar": "الفضة"
   },
   {
     "age": "750 AH (1258 AD)",
@@ -609,7 +888,12 @@
     "ocr_arabic": "مصباح زيتي من الفخار\nمصباح مصنوع من الخزف المزجج، مطلي بطلاء زجاجي أخضر غامق (زيتوني).\n750 هـ (1258 م)\nالمنطقة الشرقية",
     "id": 56,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/islam/30-tinylota.jpg",
-    "clean_image_path": "assets/clean_artifacts/56.png"
+    "clean_image_path": "assets/clean_artifacts/56.png",
+    "name_ar": "مصباح زيتي من الفخار",
+    "description_ar": "مصباح مصنوع من الخزف المزجج، مطلي بطلاء زجاجي أخضر غامق (زيتوني).",
+    "age_ar": "750 هـ (1258 م)",
+    "location_ar": "المنطقة الشرقية",
+    "material_ar": "الخزف المزجج"
   },
   {
     "age": "5th Century AH (11th Century AD)",
@@ -620,7 +904,12 @@
     "ocr_arabic": "جرة فخارية\nكانت هذه الجُرَّة غير تقليدية المظهر تستخدم لحمل مياه الشرب، وقد تم اكتشافها داخل حطام سفينة قديمة غارقة.\n\nالقرن الخامس الهجري\n(القرن الحادي عشر\nالميلادي)\n\nميناء الجار بينبع - منطقة\nالمدينة المنورة",
     "id": 57,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/islam/31-horlics.jpg",
-    "clean_image_path": "assets/clean_artifacts/57.png"
+    "clean_image_path": "assets/clean_artifacts/57.png",
+    "name_ar": "جرة فخارية",
+    "description_ar": "كانت هذه الجُرَّة غير تقليدية المظهر تستخدم لحمل مياه الشرب، وقد تم اكتشافها داخل حطام سفينة قديمة غارقة.",
+    "age_ar": "القرن الخامس الهجري (القرن الحادي عشر الميلادي)",
+    "location_ar": "ميناء الجار بينبع - منطقة المدينة المنورة",
+    "material_ar": "الفخار"
   },
   {
     "age": "6th Century AH / 12th Century AD (Seljuk Period)",
@@ -631,7 +920,12 @@
     "ocr_arabic": "إبريق برونزي\nهذا الإبريق المزخرف مزين بزخارف نباتية وعليه كتابات بخط النسخ والخط الكوفي الإسلامي، وينسب هذا الإبريق إلى العصر السلجوقي.\nالقرن السادس الهجري\n(القرن الثاني عشر الميلادي)",
     "id": 58,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/islam/32-fancykettle.jpg",
-    "clean_image_path": "assets/clean_artifacts/58.png"
+    "clean_image_path": "assets/clean_artifacts/58.png",
+    "name_ar": "إبريق برونزي",
+    "description_ar": "هذا الإبريق المزخرف مزين بزخارف نباتية وعليه كتابات بخط النسخ والخط الكوفي الإسلامي، وينسب هذا الإبريق إلى العصر السلجوقي.",
+    "age_ar": "القرن السادس الهجري (القرن الثاني عشر الميلادي)",
+    "location_ar": "",
+    "material_ar": "البرونز"
   },
   {
     "age": "10th - 13th Century AH (16th - 19th Century AD)",
@@ -642,7 +936,12 @@
     "ocr_arabic": "علبة نحاسية للأقلام مع محبرة\nعلبة أقلام ومحبرة تقليديتان تحملان زخارف هندسية ونقوش زخرفية.\nالقرن العاشر - الثالث عشر الهجري\n(القرن السادس عشر - التاسع عشر الميلادي)",
     "id": 59,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/islam/33-longkey.jpg",
-    "clean_image_path": "assets/clean_artifacts/59.png"
+    "clean_image_path": "assets/clean_artifacts/59.png",
+    "name_ar": "علبة نحاسية للأقلام مع محبرة",
+    "description_ar": "علبة أقلام ومحبرة تقليديتان تحملان زخارف هندسية ونقوش زخرفية.",
+    "age_ar": "القرن العاشر - الثالث عشر الهجري (القرن السادس عشر - التاسع عشر الميلادي)",
+    "location_ar": "",
+    "material_ar": "النحاس الأصفر"
   },
   {
     "age": "4th Century AH (10th Century AD)",
@@ -653,7 +952,12 @@
     "ocr_arabic": "إبريق خزفي\nإبريق من الخزف ذو مقبض مزين بزخارف نباتية.\nالقرن الرابع الهجري (العاشر الميلادي)",
     "id": 60,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/islam/34-redjug.jpg",
-    "clean_image_path": "assets/clean_artifacts/60.png"
+    "clean_image_path": "assets/clean_artifacts/60.png",
+    "name_ar": "إبريق خزفي",
+    "description_ar": "إبريق من الخزف ذو مقبض مزين بزخارف نباتية.",
+    "age_ar": "القرن الرابع الهجري (العاشر الميلادي)",
+    "location_ar": "",
+    "material_ar": "الخزف"
   },
   {
     "age": "132 - 656 AH (750 - 1258 AD)",
@@ -664,7 +968,12 @@
     "ocr_arabic": "خاتم فضي\nهذا الخاتم مرصع بحجر شبه كريم\nعليه نقش بخط الرقعة\nالإسلامي لاسم صاحبه (عبده\nحسين بن محمد بن عرفج).\n\n132 - 656 هـ (750 م - 1258 م)\n\nالمنطقة الشرقية",
     "id": 61,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/islam/35-ring.jpg",
-    "clean_image_path": "assets/clean_artifacts/61.png"
+    "clean_image_path": "assets/clean_artifacts/61.png",
+    "name_ar": "خاتم فضي",
+    "description_ar": "هذا الخاتم مرصع بحجر شبه كريم عليه نقش بخط الرقعة الإسلامي لاسم صاحبه (عبده حسين بن محمد بن عرفج).",
+    "age_ar": "132 - 656 هـ (750 م - 1258 م)",
+    "location_ar": "المنطقة الشرقية",
+    "material_ar": "الفضة وأحجار شبه كريمة"
   },
   {
     "age": "10th Century AH (16th Century AD)",
@@ -675,7 +984,12 @@
     "ocr_arabic": "جرة فخارية\nجرة فخارية مزينة بزخارف هندسية.\nترجع إلى القرن العاشر الهجري\n(القرن السادس عشر\nالميلادي)\nدومة الجندل - منطقة الجوف",
     "id": 62,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/islam/36-kfcpot.jpg",
-    "clean_image_path": "assets/clean_artifacts/62.png"
+    "clean_image_path": "assets/clean_artifacts/62.png",
+    "name_ar": "جرة فخارية",
+    "description_ar": "جرة فخارية مزينة بزخارف هندسية.",
+    "age_ar": "ترجع إلى القرن العاشر الهجري (القرن السادس عشر الميلادي)",
+    "location_ar": "دومة الجندل - منطقة الجوف",
+    "material_ar": "الطين"
   },
   {
     "age": "3rd Century AH (9th Century AD)",
@@ -686,7 +1000,12 @@
     "ocr_arabic": "قنينة زجاجية\nتشير الدلائل على وجود\nقناني زجاجية في أماكن مثل\nالربذة، وقد تكون القطع\nالزجاجية أنتجت محلياً ووُزعت\nعبر طرق التجارة والحج.\n\nترجع إلى القرن الثالث الهجري\n(القرن التاسع الميلادي)\n\nالربذة، درب زبيدة - طريق الحج",
     "id": 63,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/islam/37-transpotion.jpg",
-    "clean_image_path": "assets/clean_artifacts/63.png"
+    "clean_image_path": "assets/clean_artifacts/63.png",
+    "name_ar": "قنينة زجاجية",
+    "description_ar": "تشير الدلائل على وجود قناني زجاجية في أماكن مثل الربذة، وقد تكون القطع الزجاجية أنتجت محلياً ووُزعت عبر طرق التجارة والحج.",
+    "age_ar": "ترجع إلى القرن الثالث الهجري (القرن التاسع الميلادي)",
+    "location_ar": "الربذة، درب زبيدة - طريق الحج",
+    "material_ar": "الزجاج"
   },
   {
     "age": "3rd - 4th Century AH / 9th - 10th Century AD",
@@ -697,7 +1016,12 @@
     "ocr_arabic": "جرة خزفية مطلية بطبقة زجاجية\nالقرن الثالث الهجري - القرن\nالرابع الهجري (القرن التاسع\nالميلادي - القرن العاشر\nالميلادي)\nالدوادمي، منطقة الرياض",
     "id": 64,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/islam/38-goblinpot.jpg",
-    "clean_image_path": "assets/clean_artifacts/64.png"
+    "clean_image_path": "assets/clean_artifacts/64.png",
+    "name_ar": "جرة خزفية مطلية بطبقة زجاجية",
+    "description_ar": "",
+    "age_ar": "القرن الثالث الهجري - القرن الرابع الهجري (القرن التاسع الميلادي - القرن العاشر الميلادي)",
+    "location_ar": "الدوادمي، منطقة الرياض",
+    "material_ar": "الخزف المزجج"
   },
   {
     "age": "4th Century AH (10th Century AD)",
@@ -708,7 +1032,12 @@
     "ocr_arabic": "طبق من الفخار\nطبق فخاري مطلي باللون\nالأخضر ومزين بزخارف\nنباتية.\nالقرن الرابع الهجري (العاشر\nالميلادي)\nالمنطقة الشرقية",
     "id": 65,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/islam/39-goblinplate.jpg",
-    "clean_image_path": "assets/clean_artifacts/65.png"
+    "clean_image_path": "assets/clean_artifacts/65.png",
+    "name_ar": "طبق من الفخار",
+    "description_ar": "طبق فخاري مطلي باللون الأخضر ومزين بزخارف نباتية.",
+    "age_ar": "القرن الرابع الهجري (العاشر الميلادي)",
+    "location_ar": "المنطقة الشرقية",
+    "material_ar": "الطين (الفخار)"
   },
   {
     "age": "12th - 14th Century AH (19th - 21st Century AD)",
@@ -719,7 +1048,12 @@
     "ocr_arabic": "وعاء خزفي\nوعاء فخاري مزخرف بطبقة زجاجية، وقد يكون جلبه الحجاج أو التجار إلى مدينة الربذة.\nالقرن الثاني عشر الهجري -\nالقرن الرابع عشر الهجري\n(القرن التاسع عشر الميلادي -\nالقرن الحادي والعشرون)",
     "id": 66,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/islam/40-whitepot.jpg",
-    "clean_image_path": "assets/clean_artifacts/66.png"
+    "clean_image_path": "assets/clean_artifacts/66.png",
+    "name_ar": "وعاء خزفي",
+    "description_ar": "وعاء فخاري مزخرف بطبقة زجاجية، وقد يكون جلبه الحجاج أو التجار إلى مدينة الربذة.",
+    "age_ar": "القرن الثاني عشر الهجري - القرن الرابع عشر الهجري (القرن التاسع عشر الميلادي - القرن الحادي والعشرون)",
+    "location_ar": "",
+    "material_ar": "الخزف المزجج"
   },
   {
     "age": "12th–14th Century AH (18th–20th Century AD)",
@@ -730,7 +1064,12 @@
     "ocr_arabic": "مصباح زيت نحاسي\nالقرن الثاني عشر الهجري -\nالقرن الرابع عشر الهجري\n(القرن الثامن عشر الميلادي -\nالقرن العشرين)",
     "id": 67,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/islam/41-lampship.jpg",
-    "clean_image_path": "assets/clean_artifacts/67.png"
+    "clean_image_path": "assets/clean_artifacts/67.png",
+    "name_ar": "مصباح زيت نحاسي",
+    "description_ar": "",
+    "age_ar": "القرن الثاني عشر الهجري - القرن الرابع عشر الهجري (القرن الثامن عشر الميلادي - القرن العشرين)",
+    "location_ar": "",
+    "material_ar": "النحاس"
   },
   {
     "age": "3rd Century AH (9th Century AD)",
@@ -741,7 +1080,12 @@
     "ocr_arabic": "وعاء فخاري مزين بطبقة زجاجية\nوعاء فخاري مزخرف بطبقة زجاجية، وقد يكون جلبه الحجاج أو التجار إلى مدينة الربذة.\nترجع إلى القرن الثالث الهجري\n(القرن التاسع الميلادي)\nالربذة، درب زبيدة - طريق الحج",
     "id": 68,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/islam/42-whiteplate.jpg",
-    "clean_image_path": "assets/clean_artifacts/68.png"
+    "clean_image_path": "assets/clean_artifacts/68.png",
+    "name_ar": "وعاء فخاري مزين بطبقة زجاجية",
+    "description_ar": "وعاء فخاري مزخرف بطبقة زجاجية، وقد يكون جلبه الحجاج أو التجار إلى مدينة الربذة.",
+    "age_ar": "ترجع إلى القرن الثالث الهجري (القرن التاسع الميلادي)",
+    "location_ar": "الربذة، درب زبيدة - طريق الحج",
+    "material_ar": "الفخار المزجج"
   },
   {
     "age": "947 AH (1540 AD)",
@@ -752,7 +1096,12 @@
     "ocr_arabic": "حامل الشموع من النحاس المذهب\nامل شموع مستخدم في الحرم المدني،\nويتميز بخط منمق يحمل اسم صاحب\nالجلالة الملك القادر سليمان الوزير.\n\nعام 947 هـ (1540 م)\n\nالحرم المدني ، منطقة المدينة المنورة",
     "id": 69,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/hajj/23-bigbell.jpg",
-    "clean_image_path": "assets/clean_artifacts/69.png"
+    "clean_image_path": "assets/clean_artifacts/69.png",
+    "name_ar": "حامل الشموع من النحاس المذهب",
+    "description_ar": "امل شموع مستخدم في الحرم المدني، ويتميز بخط منمق يحمل اسم صاحب الجلالة الملك القادر سليمان الوزير.",
+    "age_ar": "عام 947 هـ (1540 م)",
+    "location_ar": "الحرم المدني ، منطقة المدينة المنورة",
+    "material_ar": "النحاس المذهّب"
   },
   {
     "age": "767 AH (1366 AD)",
@@ -763,7 +1112,12 @@
     "ocr_arabic": "مسلة من الحجر الرملي عليها نقوش\nحجر منقوش من ثلاث جهات وقد تم إنشاؤه\nبمناسبة تجديد المبنى في بركة المعظم.\n767 هـ (1366 م)\nقلعة المعظم بمنطقة تبوك",
     "id": 70,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/hajj/24-longstone.jpg",
-    "clean_image_path": "assets/clean_artifacts/70.png"
+    "clean_image_path": "assets/clean_artifacts/70.png",
+    "name_ar": "مسلة من الحجر الرملي عليها نقوش",
+    "description_ar": "حجر منقوش من ثلاث جهات وقد تم إنشاؤه بمناسبة تجديد المبنى في بركة المعظم.",
+    "age_ar": "767 هـ (1366 م)",
+    "location_ar": "قلعة المعظم بمنطقة تبوك",
+    "material_ar": "الحجر الرملي"
   },
   {
     "age": "10th - 13th Century AH (16th - 19th Century AD)",
@@ -774,7 +1128,12 @@
     "ocr_arabic": "حاوية بخور\nوعاء فضي مزخرف بتصميم دقيق مطلي بالذهب ويحتوي على بخور، وعلى قاعدته نقش للسلطان عبد المجيد خان. وقد صُمم غطاء الإناء على شكل ثمرة فاكهة مستقرة على كرمة من أوراق الشجر المتصلة بصحن.\nالقرن العاشر - الثالث عشر الهجري (القرن السادس عشر - التاسع عشر الميلادي)\nالمسجد النبوي بالمدينة المنورة",
     "id": 71,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/hajj/25-trophy.jpg",
-    "clean_image_path": "assets/clean_artifacts/71.png"
+    "clean_image_path": "assets/clean_artifacts/71.png",
+    "name_ar": "حاوية بخور",
+    "description_ar": "وعاء فضي مزخرف بتصميم دقيق مطلي بالذهب ويحتوي على بخور، وعلى قاعدته نقش للسلطان عبد المجيد خان. وقد صُمم غطاء الإناء على شكل ثمرة فاكهة مستقرة على كرمة من أوراق الشجر المتصلة بصحن.",
+    "age_ar": "القرن العاشر - الثالث عشر الهجري (القرن السادس عشر - التاسع عشر الميلادي)",
+    "location_ar": "المسجد النبوي بالمدينة المنورة",
+    "material_ar": "الفضة المذهّبة (فضة مطلية بالذهب)"
   },
   {
     "age": "11th Century AH (17th Century AD)",
@@ -785,7 +1144,12 @@
     "ocr_arabic": "مبخرة حديدية\nمبخرة جميلة تحمل اسم والدة السلطان مراد الرابع، وهي مزينة بسيقان زهور ذهبية وفضية.\nالقرن الحادي عشر الهجري\n(القرن السابع عشر الميلادي)\nالمسجد النبوي بالمدينة المنورة",
     "id": 72,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/hajj/26-drumb.jpg",
-    "clean_image_path": "assets/clean_artifacts/72.png"
+    "clean_image_path": "assets/clean_artifacts/72.png",
+    "name_ar": "مبخرة حديدية",
+    "description_ar": "مبخرة جميلة تحمل اسم والدة السلطان مراد الرابع، وهي مزينة بسيقان زهور ذهبية وفضية.",
+    "age_ar": "القرن الحادي عشر الهجري (القرن السابع عشر الميلادي)",
+    "location_ar": "المسجد النبوي بالمدينة المنورة",
+    "material_ar": "الحديد المطعّم بالذهب والفضة"
   },
   {
     "age": "6th–9th Century AH / 12th–15th Century AD",
@@ -796,7 +1160,12 @@
     "ocr_arabic": "نرد برونزي\nهناك الكثير من الأدلة الأثرية\nلأنواع مختلفة من الألعاب في\nالعالم القديم، ربما كان هذا\nالنرد جزءاً من لعبة ما كانت\nتستخدم في التسلية والترفيه.\n\nالقرن السادس - التاسع الهجري\n(القرن الثاني عشر - الخامس\nعشر الميلادي)\n\nوجدت على طريق الحجاج\nالمصريين",
     "id": 73,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/hajj/27-tinycube.jpg",
-    "clean_image_path": "assets/clean_artifacts/73.png"
+    "clean_image_path": "assets/clean_artifacts/73.png",
+    "name_ar": "نرد برونزي",
+    "description_ar": "هناك الكثير من الأدلة الأثرية لأنواع مختلفة من الألعاب في العالم القديم، ربما كان هذا النرد جزءاً من لعبة ما كانت تستخدم في التسلية والترفيه.",
+    "age_ar": "القرن السادس - التاسع الهجري (القرن الثاني عشر - الخامس عشر الميلادي)",
+    "location_ar": "وجدت على طريق الحجاج المصريين",
+    "material_ar": "البرونز"
   },
   {
     "age": "2nd-3rd Century AH (8th-9th Century AD)",
@@ -807,7 +1176,12 @@
     "ocr_arabic": "قنينة زجاجية بيضاء\nتم صنع هذه القنينة عن طريق نفخ الزجاج الساخن في قالب مصنوع عادة من الطين أو الخشب أو المعدن، وتتميز القنينة بالزخارف البارزة على شكل خطوط متعرجة تمتد من الأعلى إلى الأسفل.\nالقرنان الثاني والثالث الهجري (القرنان الثامن والتاسع الميلادي)\nعُثر عليها على طريق الحج، درب زبيدة.",
     "id": 74,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/hajj/30-dirtypot.jpg",
-    "clean_image_path": "assets/clean_artifacts/74.png"
+    "clean_image_path": "assets/clean_artifacts/74.png",
+    "name_ar": "قنينة زجاجية بيضاء",
+    "description_ar": "تم صنع هذه القنينة عن طريق نفخ الزجاج الساخن في قالب مصنوع عادة من الطين أو الخشب أو المعدن، وتتميز القنينة بالزخارف البارزة على شكل خطوط متعرجة تمتد من الأعلى إلى الأسفل.",
+    "age_ar": "القرنان الثاني والثالث الهجري (القرنان الثامن والتاسع الميلادي)",
+    "location_ar": "عُثر عليها على طريق الحج، درب زبيدة.",
+    "material_ar": "الزجاج"
   },
   {
     "age": "Islamic Period",
@@ -818,7 +1192,12 @@
     "ocr_arabic": "وزن برونزي\nقطعة من البرونز كانت تستخدم على الأرجح في التجارة لقياس البضائع ذات الوزن المتساوي.\nالحوراء - منطقة تبوك",
     "id": 75,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/hajj/31-stampweight.jpg",
-    "clean_image_path": "assets/clean_artifacts/75.png"
+    "clean_image_path": "assets/clean_artifacts/75.png",
+    "name_ar": "وزن برونزي",
+    "description_ar": "قطعة من البرونز كانت تستخدم على الأرجح في التجارة لقياس البضائع ذات الوزن المتساوي.",
+    "age_ar": "",
+    "location_ar": "الحوراء - منطقة تبوك",
+    "material_ar": "البرونز"
   },
   {
     "age": "1327 AH (1909 AD)",
@@ -829,7 +1208,12 @@
     "ocr_arabic": "مزهرية فضية\nمزهرية مزخرفة كانت تستخدم\nلتخزين البخور، وهي منقوشة\nباسم محمد خان.\n1327 هـ (1909 م)",
     "id": 76,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/hajj/32-bukhoor.jpg",
-    "clean_image_path": "assets/clean_artifacts/76.png"
+    "clean_image_path": "assets/clean_artifacts/76.png",
+    "name_ar": "مزهرية فضية",
+    "description_ar": "مزهرية مزخرفة كانت تستخدم لتخزين البخور، وهي منقوشة باسم محمد خان.",
+    "age_ar": "1327 هـ (1909 م)",
+    "location_ar": "",
+    "material_ar": "الفضة"
   },
   {
     "age": "10th Century AH (1494-1590 AD)",
@@ -838,9 +1222,14 @@
     "material": "Hammered Copper with Gilding",
     "name": "Crescent-Shaped Minaret Finial",
     "ocr_arabic": "علم المئذنة على شكل هلال\nصُنع هذا العلم (الطرف) المزخرف من نحاس مطروق ومغطى ليوضع على رأس المئذنة.\nالقرن العاشر الهجري (1494-1590 م)\nمنطقة مكة المكرمة",
-    "id": 77, 
+    "id": 77,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/hajj/33-minaret.jpg",
-    "clean_image_path": "assets/clean_artifacts/77.png"
+    "clean_image_path": "assets/clean_artifacts/77.png",
+    "name_ar": "علم المئذنة على شكل هلال",
+    "description_ar": "صُنع هذا العلم (الطرف) المزخرف من نحاس مطروق ومغطى ليوضع على رأس المئذنة.",
+    "age_ar": "القرن العاشر الهجري (1494-1590 م)",
+    "location_ar": "منطقة مكة المكرمة",
+    "material_ar": "النحاس المطروق المذهّب"
   },
   {
     "age": "709 AH (1309 AD)",
@@ -851,7 +1240,12 @@
     "ocr_arabic": "عمود رخامي\nهذه القطعة منقوشة بالخط\nالإسلامي باللون الأخضر البراق.\n709 هـ (1309 م)\nمنطقة مكة المكرمة",
     "id": 78,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/hajj/34-thinpillar.jpg",
-    "clean_image_path": "assets/clean_artifacts/78.png"
+    "clean_image_path": "assets/clean_artifacts/78.png",
+    "name_ar": "عمود رخامي",
+    "description_ar": "هذه القطعة منقوشة بالخط الإسلامي باللون الأخضر البراق.",
+    "age_ar": "709 هـ (1309 م)",
+    "location_ar": "منطقة مكة المكرمة",
+    "material_ar": "الرخام"
   },
   {
     "age": "1198 AH (1784 AD)",
@@ -862,7 +1256,12 @@
     "ocr_arabic": "قاعة الحج والحرمين الشريفين\nمبخرة نحاسية\nمبخرة مصممة للتعليق.\nعام 1198 هـ (1784 م)",
     "id": 79,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/hajj/35-hang.jpg",
-    "clean_image_path": "assets/clean_artifacts/79.png"
+    "clean_image_path": "assets/clean_artifacts/79.png",
+    "name_ar": "مبخرة نحاسية",
+    "description_ar": "مبخرة مصممة للتعليق.",
+    "age_ar": "عام 1198 هـ (1784 م)",
+    "location_ar": "",
+    "material_ar": "النحاس"
   },
   {
     "age": "First Millennium BC",
@@ -873,7 +1272,12 @@
     "ocr_arabic": "كوب فخاري\nيحتوي هذا الكوب الفخاري الأحمر على زخارف تصميمية مثيرة للاهتمام من بينها صورة مبسّطة لطائر - ربما يكون طاووساً - وقد تم اكتشاف الكثير من الأواني الفخارية المزينة بزخارف هندسية وطيور في تيماء.\nالألفية الأولى قبل الميلاد\nتيماء - منطقة تبوك",
     "id": 80,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/ak/1-brokenglass.jpg",
-    "clean_image_path": "assets/clean_artifacts/80.png"
+    "clean_image_path": "assets/clean_artifacts/80.png",
+    "name_ar": "كوب فخاري",
+    "description_ar": "يحتوي هذا الكوب الفخاري الأحمر على زخارف تصميمية مثيرة للاهتمام من بينها صورة مبسّطة لطائر - ربما يكون طاووساً - وقد تم اكتشاف الكثير من الأواني الفخارية المزينة بزخارف هندسية وطيور في تيماء.",
+    "age_ar": "الألفية الأولى قبل الميلاد",
+    "location_ar": "تيماء - منطقة تبوك",
+    "material_ar": "الطين"
   },
   {
     "age": "3rd millennium BC",
@@ -884,7 +1288,12 @@
     "ocr_arabic": "إناء من الحجر الصابوني\nإناء كبير مخروطي الشكل مزين بأشكال هندسية تحتوي على خطوط منقطة وصفوف من الدوائر، وقد تم العثور على هذه القطعة في مقبرة بالمنطقة الشرقية تعود إلى فترة دلمون.\n\nالألفية الثالثة قبل الميلاد\n\nالظهران - المنطقة الشرقية",
     "id": 81,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/ak/2-vase.jpg",
-    "clean_image_path": "assets/clean_artifacts/81.png"
+    "clean_image_path": "assets/clean_artifacts/81.png",
+    "name_ar": "إناء من الحجر الصابوني",
+    "description_ar": "إناء كبير مخروطي الشكل مزين بأشكال هندسية تحتوي على خطوط منقطة وصفوف من الدوائر، وقد تم العثور على هذه القطعة في مقبرة بالمنطقة الشرقية تعود إلى فترة دلمون.",
+    "age_ar": "الألفية الثالثة قبل الميلاد",
+    "location_ar": "الظهران - المنطقة الشرقية",
+    "material_ar": "حجر الصابون"
   },
   {
     "age": "4th century BC - 4th century AD",
@@ -895,7 +1304,12 @@
     "ocr_arabic": "تمثال لجمل من البرونز\nتمثال برونزي صغير للجمل المعروف بالجمل العربي، مزين بعقد حول رقبته، وعليه نقش طقوسي قديم، وأسفل التمثال هناك ثقبان صغيران مما يوحي بأن هذا التمثال كان في الأصل متصلاً بقاعدة.\nلطالما كانت الجمال سلعة ثمينة حيث كانت تستخدم لنقل البضائع عبر شبكة معقدة من طرق التجارة في العصور القديمة.\nالقرن الرابع قبل الميلاد -\nالقرن الرابع الميلادي\nقرية الفاو - منطقة الرياض",
     "id": 82,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/ak/3-tinycamel.jpg",
-    "clean_image_path": "assets/clean_artifacts/82.png"
+    "clean_image_path": "assets/clean_artifacts/82.png",
+    "name_ar": "تمثال لجمل من البرونز",
+    "description_ar": "تمثال برونزي صغير للجمل المعروف بالجمل العربي، مزين بعقد حول رقبته، وعليه نقش طقوسي قديم، وأسفل التمثال هناك ثقبان صغيران مما يوحي بأن هذا التمثال كان في الأصل متصلاً بقاعدة. لطالما كانت الجمال سلعة ثمينة حيث كانت تستخدم لنقل البضائع عبر شبكة معقدة من طرق التجارة في العصور القديمة.",
+    "age_ar": "القرن الرابع قبل الميلاد - القرن الرابع الميلادي",
+    "location_ar": "قرية الفاو - منطقة الرياض",
+    "material_ar": "البرونز"
   },
   {
     "age": "2nd Century BC",
@@ -906,7 +1320,12 @@
     "ocr_arabic": "مبخرة\nيظهر على هذه المبخرة الحجرية الكبيرة كتابة باللغة الآرامية.\nالقرن الثاني قبل الميلاد\nتيماء - منطقة تبوك",
     "id": 83,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/ak/4-mabkhara.jpg",
-    "clean_image_path": "assets/clean_artifacts/83.png"
+    "clean_image_path": "assets/clean_artifacts/83.png",
+    "name_ar": "مبخرة",
+    "description_ar": "يظهر على هذه المبخرة الحجرية الكبيرة كتابة باللغة الآرامية.",
+    "age_ar": "القرن الثاني قبل الميلاد",
+    "location_ar": "تيماء - منطقة تبوك",
+    "material_ar": "الحجر"
   },
   {
     "age": "1st Century BC",
@@ -917,7 +1336,12 @@
     "ocr_arabic": "حوض مستطيل الشكل\nهذا الحوض المصنوع من الحجر الرملي يحتوي على نقش ديني نبطي صُنع بتكليف من شخص يُدعى \"أهاب\".\nالقرن الأول قبل الميلاد\nتيماء - منطقة تبوك",
     "id": 84,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/ak/5-tub.jpg",
-    "clean_image_path": "assets/clean_artifacts/84.png"
+    "clean_image_path": "assets/clean_artifacts/84.png",
+    "name_ar": "حوض مستطيل الشكل",
+    "description_ar": "هذا الحوض المصنوع من الحجر الرملي يحتوي على نقش ديني نبطي صُنع بتكليف من شخص يُدعى \"أهاب\".",
+    "age_ar": "القرن الأول قبل الميلاد",
+    "location_ar": "تيماء - منطقة تبوك",
+    "material_ar": "الحجر الرملي"
   },
   {
     "age": "3rd to 1st Century BC",
@@ -928,7 +1352,12 @@
     "ocr_arabic": "تمثال صغير من الطين للخصوبة\nعند مطالعة هذا التمثال الطيني نرى آثاراً للطلاء، وعلى الأرجح أنه يرمز إلى الأمومة والخصوبة، ويتضح ذلك من خلال الأكتاف العريضة، والحوض العريض، واليدان اللتان تغطيان الثديين، وقد تم تصدير هذه الأنواع من التماثيل عبر أنحاء شرق الجزيرة العربية.\nالقرن الثالث إلى الأول قبل الميلاد\nمدينة ثاج الأثرية - المنطقة الشرقية",
     "id": 85,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/ak/6-aurat.jpg",
-    "clean_image_path": "assets/clean_artifacts/85.png"
+    "clean_image_path": "assets/clean_artifacts/85.png",
+    "name_ar": "تمثال صغير من الطين للخصوبة",
+    "description_ar": "عند مطالعة هذا التمثال الطيني نرى آثاراً للطلاء، وعلى الأرجح أنه يرمز إلى الأمومة والخصوبة، ويتضح ذلك من خلال الأكتاف العريضة، والحوض العريض، واليدان اللتان تغطيان الثديين، وقد تم تصدير هذه الأنواع من التماثيل عبر أنحاء شرق الجزيرة العربية.",
+    "age_ar": "القرن الثالث إلى الأول قبل الميلاد",
+    "location_ar": "مدينة ثاج الأثرية - المنطقة الشرقية",
+    "material_ar": "الطين"
   },
   {
     "age": "4th Century BC - 4th Century AD",
@@ -939,7 +1368,12 @@
     "ocr_arabic": "إناء فخاري\nجرة خزفية صغيرة ذات عنق أسطواني طويل، مزينة برسوم لعدة جمال ربما تعكس قافلة تجارية.\nالقرن الرابع قبل الميلاد -\nالقرن الرابع الميلادي\nقرية الفاو - منطقة الرياض",
     "id": 86,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/ak/7-vase.jpg",
-    "clean_image_path": "assets/clean_artifacts/86.png"
+    "clean_image_path": "assets/clean_artifacts/86.png",
+    "name_ar": "إناء فخاري",
+    "description_ar": "جرة خزفية صغيرة ذات عنق أسطواني طويل، مزينة برسوم لعدة جمال ربما تعكس قافلة تجارية.",
+    "age_ar": "القرن الرابع قبل الميلاد - القرن الرابع الميلادي",
+    "location_ar": "قرية الفاو - منطقة الرياض",
+    "material_ar": "الطين (الخزف)"
   },
   {
     "age": "3rd Millennium BC",
@@ -950,7 +1384,12 @@
     "ocr_arabic": "ختم من الحجر الصابوني\nهذا الختم الصغير بيضاوي\nالشكل تقريباً، وله قاعدة\nمحدبة ونقشة بارزة لكي\nيتسنى ضغطه في\nالصلصال المرن أو أي مادة\nمشابهة لتكوين الختم الذي\nيظهر نقشة نمطية للدلالة\nعلى شخصية المالك، وقد\nيتم تعليقه كتميمة.\n\nالألفية الثالثة قبل الميلاد\n\nالمنطقة الشرقية",
     "id": 87,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/ak/8-tinyblackring.jpg",
-    "clean_image_path": "assets/clean_artifacts/87.png"
+    "clean_image_path": "assets/clean_artifacts/87.png",
+    "name_ar": "ختم من الحجر الصابوني",
+    "description_ar": "هذا الختم الصغير بيضاوي الشكل تقريباً، وله قاعدة محدبة ونقشة بارزة لكي يتسنى ضغطه في الصلصال المرن أو أي مادة مشابهة لتكوين الختم الذي يظهر نقشة نمطية للدلالة على شخصية المالك، وقد يتم تعليقه كتميمة.",
+    "age_ar": "الألفية الثالثة قبل الميلاد",
+    "location_ar": "المنطقة الشرقية",
+    "material_ar": "حجر الصابون (الستياتيت)"
   },
   {
     "age": "3rd Millennium BC",
@@ -961,7 +1400,12 @@
     "ocr_arabic": "ختم أسطواني\nيتميز هذا الختم الفخاري الأسطواني الصغير بتصميمات حيوانية، وهناك ثقب في وسط الاسطوانة، مما يشير إلى أنه من المحتمل أن مالك الختم كان يرتديه كزينة.\nالألفية الثالثة قبل الميلاد\nالمنطقة الشرقية",
     "id": 88,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/ak/9-carlock.jpg",
-    "clean_image_path": "assets/clean_artifacts/88.png"
+    "clean_image_path": "assets/clean_artifacts/88.png",
+    "name_ar": "ختم أسطواني",
+    "description_ar": "يتميز هذا الختم الفخاري الأسطواني الصغير بتصميمات حيوانية، وهناك ثقب في وسط الاسطوانة، مما يشير إلى أنه من المحتمل أن مالك الختم كان يرتديه كزينة.",
+    "age_ar": "الألفية الثالثة قبل الميلاد",
+    "location_ar": "المنطقة الشرقية",
+    "material_ar": "الطين"
   },
   {
     "age": "Third millennium BC",
@@ -972,14 +1416,28 @@
     "ocr_arabic": "جعران على الطراز المصري\nربما تم جلب هذه الخرزة الصغيرة من مصر، لأنها مصنوعة على طراز تميمة الجعران المميزة وتتميز ببعض الكتابات الهيروغليفية (المصرية القديمة).\nالألفية الثالثة قبل الميلاد\nالمنطقة الشرقية",
     "id": 89,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/ak/10-greenstone.jpg",
-    "clean_image_path": "assets/clean_artifacts/89.png"
+    "clean_image_path": "assets/clean_artifacts/89.png",
+    "name_ar": "جعران على الطراز المصري",
+    "description_ar": "ربما تم جلب هذه الخرزة الصغيرة من مصر، لأنها مصنوعة على طراز تميمة الجعران المميزة وتتميز ببعض الكتابات الهيروغليفية (المصرية القديمة).",
+    "age_ar": "الألفية الثالثة قبل الميلاد",
+    "location_ar": "المنطقة الشرقية",
+    "material_ar": "الحجر"
   },
   {
     "name": "Limestone Altar with Ibex Carvings",
     "ocr_arabic": "مذبح من الحجر الجيري\nيتميز هذا المذبح المستطيل بمسطح مستوٍ لاستخدامه في الطقوس الدينية، وعلى جانبيه هناك نقوش بلغة المسند، أما في المقدمة، فيوجد صف من أربعة تماثيل منحوتة للوعل.\n\nالقرن الثاني قبل الميلاد -\nالقرن الثاني الميلادي\n\nجنوب المملكة العربية السعودية",
     "id": 90,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/ak/11-mazbah.jpg",
-    "clean_image_path": "assets/clean_artifacts/90.png"
+    "clean_image_path": "assets/clean_artifacts/90.png",
+    "name_ar": "مذبح من الحجر الجيري",
+    "description_ar": "يتميز هذا المذبح المستطيل بمسطح مستوٍ لاستخدامه في الطقوس الدينية، وعلى جانبيه هناك نقوش بلغة المسند، أما في المقدمة، فيوجد صف من أربعة تماثيل منحوتة للوعل.",
+    "age_ar": "القرن الثاني قبل الميلاد - القرن الثاني الميلادي",
+    "location_ar": "جنوب المملكة العربية السعودية",
+    "age": "2nd Century BC - 2nd Century AD",
+    "location": "Southern Saudi Arabia",
+    "material": "Limestone",
+    "description": "This rectangular altar has a flat surface used for religious rituals. Its sides are inscribed in Musnad script, and its front bears a row of four carved ibex figures.",
+    "material_ar": "حجر جيري"
   },
   {
     "age": "2nd century BC - 1st century AD",
@@ -990,7 +1448,12 @@
     "ocr_arabic": "إناء من الحجر الرملي\nتكشف بقايا هذا الإناء مسطح القاعدة رسومات بشرية وحيوانية بارزة، ورسمة لطائر كبير (ربما نسر).\nالقرن الثاني قبل الميلاد -\nالقرن الأول الميلادي\nمدائن صالح - منطقة\nالمدينة المنورة",
     "id": 91,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/ak/12-stonecup.jpg",
-    "clean_image_path": "assets/clean_artifacts/91.png"
+    "clean_image_path": "assets/clean_artifacts/91.png",
+    "name_ar": "إناء من الحجر الرملي",
+    "description_ar": "تكشف بقايا هذا الإناء مسطح القاعدة رسومات بشرية وحيوانية بارزة، ورسمة لطائر كبير (ربما نسر).",
+    "age_ar": "القرن الثاني قبل الميلاد - القرن الأول الميلادي",
+    "location_ar": "مدائن صالح - منطقة المدينة المنورة",
+    "material_ar": "الحجر الرملي"
   },
   {
     "age": "First Millennium BCE",
@@ -1001,7 +1464,12 @@
     "ocr_arabic": "ختم حجري أسطواني\nيزين سطح هذا الختم نقشة\nنمطية، وعندما يتم دحرجته\nفي الصلصال أو الحبر، سيصبح\nالتصميم واضحاً. وكانت بعض\nالأختام حصرية لمالكها، حيث\nتستخدم لتوقيع المستندات\nالرسمية أو ختم البضائع لتحديد\nالملكية، وقد تنوعت أشكال\nوأنماط الأختام، حيث كان يتم\nارتداء بعضها كالتميمة أو\nالقلادة وكانت تعتبر من\nالممتلكات الثمينة.\nالألفية الأولى قبل الميلاد\nتيماء - منطقة تبوك",
     "id": 92,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/ak/13-blacklock.jpg",
-    "clean_image_path": "assets/clean_artifacts/92.png"
+    "clean_image_path": "assets/clean_artifacts/92.png",
+    "name_ar": "ختم حجري أسطواني",
+    "description_ar": "يزين سطح هذا الختم نقشة نمطية، وعندما يتم دحرجته في الصلصال أو الحبر، سيصبح التصميم واضحاً. وكانت بعض الأختام حصرية لمالكها، حيث تستخدم لتوقيع المستندات الرسمية أو ختم البضائع لتحديد الملكية، وقد تنوعت أشكال وأنماط الأختام، حيث كان يتم ارتداء بعضها كالتميمة أو القلادة وكانت تعتبر من الممتلكات الثمينة.",
+    "age_ar": "الألفية الأولى قبل الميلاد",
+    "location_ar": "تيماء - منطقة تبوك",
+    "material_ar": "الحجر"
   },
   {
     "age": "Third Millennium BC",
@@ -1012,7 +1480,12 @@
     "ocr_arabic": "جرة فخارية\nهذا النوع من الجرار\nالفخارية الملونة كان على\nالأرجح من القطع الفاخرة،\nفهو مميز بشريط من\nالوعول الملونة ذات القرون\nالكبيرة، وقد تم العثور\nعلى مزهرية أخرى مماثلة\nلها في جزيرة تاروت، مما\nيشير إلى أن هذا الطراز\nمن الأواني الفخارية قد تم\nتصنيعه بكميات كبيرة.\nالألفية الثالثة قبل الميلاد\nبقيق - المنطقة الشرقية",
     "id": 93,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/ak/14-bigvase.jpg",
-    "clean_image_path": "assets/clean_artifacts/93.png"
+    "clean_image_path": "assets/clean_artifacts/93.png",
+    "name_ar": "جرة فخارية",
+    "description_ar": "هذا النوع من الجرار الفخارية الملونة كان على الأرجح من القطع الفاخرة، فهو مميز بشريط من الوعول الملونة ذات القرون الكبيرة، وقد تم العثور على مزهرية أخرى مماثلة لها في جزيرة تاروت، مما يشير إلى أن هذا الطراز من الأواني الفخارية قد تم تصنيعه بكميات كبيرة.",
+    "age_ar": "الألفية الثالثة قبل الميلاد",
+    "location_ar": "بقيق - المنطقة الشرقية",
+    "material_ar": "الطين"
   },
   {
     "age": "2nd Century AD",
@@ -1023,7 +1496,12 @@
     "ocr_arabic": "كوب زجاجي\nيُظهر هذا الكوب الزجاجي\nالجميل ذو المقبض الدقيق\nمهارة الصانع مِن خلال\nتطبيقه تصميماً على\nالطبقة الزجاجية الأصلية\nباستخدام لون ثانوي لإظهار\nالتباين.\n\nالقرن الثاني الميلادي\n\nمدينة ثاج الأثرية - المنطقة\nالشرقية",
     "id": 94,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/ak/15-unknown.jpg",
-    "clean_image_path": "assets/clean_artifacts/94.png"
+    "clean_image_path": "assets/clean_artifacts/94.png",
+    "name_ar": "كوب زجاجي",
+    "description_ar": "يُظهر هذا الكوب الزجاجي الجميل ذو المقبض الدقيق مهارة الصانع مِن خلال تطبيقه تصميماً على الطبقة الزجاجية الأصلية باستخدام لون ثانوي لإظهار التباين.",
+    "age_ar": "القرن الثاني الميلادي",
+    "location_ar": "مدينة ثاج الأثرية - المنطقة الشرقية",
+    "material_ar": "الزجاج"
   },
   {
     "age": "4th century BC - 4th century AD",
@@ -1034,7 +1512,12 @@
     "ocr_arabic": "تميمة مربعة من الخزف المزجج\nمن المحتمل أن هذه التميمة كانت تُلبس كحُلي وعليها تصميم مطبوع على الخزف المزجج، ويحيطها إطار ذهبي مزخرف.\nالقرن الرابع قبل الميلاد -\nالقرن الرابع الميلادي\nقرية الفاو منطقة الرياض",
     "id": 95,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/ak/16-tamima.jpg",
-    "clean_image_path": "assets/clean_artifacts/95.png"
+    "clean_image_path": "assets/clean_artifacts/95.png",
+    "name_ar": "تميمة مربعة من الخزف المزجج",
+    "description_ar": "من المحتمل أن هذه التميمة كانت تُلبس كحُلي وعليها تصميم مطبوع على الخزف المزجج، ويحيطها إطار ذهبي مزخرف.",
+    "age_ar": "القرن الرابع قبل الميلاد - القرن الرابع الميلادي",
+    "location_ar": "قرية الفاو منطقة الرياض",
+    "material_ar": "الخزف المزجج والذهب"
   },
   {
     "age": "4th Century BC - 4th Century AD",
@@ -1045,7 +1528,12 @@
     "ocr_arabic": "إناء من حجر المرمر(هيصم)\nالمقبضان الموجودان على جانبي هذا الإناء تشبه رأس ثور، ويعلو الغطاء حلقة بها فتحة مثقوبة في المنتصف.\nالقرن الرابع قبل الميلاد -\nالقرن الرابع الميلادي\n(قرية الفاو منطقة الرياض)",
     "id": 96,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/ak/17-sugarpot.jpg",
-    "clean_image_path": "assets/clean_artifacts/96.png"
+    "clean_image_path": "assets/clean_artifacts/96.png",
+    "name_ar": "إناء من حجر المرمر(هيصم)",
+    "description_ar": "المقبضان الموجودان على جانبي هذا الإناء تشبه رأس ثور، ويعلو الغطاء حلقة بها فتحة مثقوبة في المنتصف.",
+    "age_ar": "القرن الرابع قبل الميلاد - القرن الرابع الميلادي",
+    "location_ar": "(قرية الفاو منطقة الرياض)",
+    "material_ar": "الألباستر"
   },
   {
     "age": "Second Millennium BC",
@@ -1056,7 +1544,12 @@
     "ocr_arabic": "إناء فخاري صغير\nإناء من الطين الأحمر مزين بتصميمات هندسية بنية داكنة/ سوداء.\nالألفية الثانية قبل الميلاد\nمنطقة تبوك",
     "id": 97,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/ak/18-zitpot.jpg",
-    "clean_image_path": "assets/clean_artifacts/97.png"
+    "clean_image_path": "assets/clean_artifacts/97.png",
+    "name_ar": "إناء فخاري صغير",
+    "description_ar": "إناء من الطين الأحمر مزين بتصميمات هندسية بنية داكنة/ سوداء.",
+    "age_ar": "الألفية الثانية قبل الميلاد",
+    "location_ar": "منطقة تبوك",
+    "material_ar": "الطين الأحمر"
   },
   {
     "age": "First Millennium BC",
@@ -1067,7 +1560,12 @@
     "ocr_arabic": "تمثال لامرأة برأس طائر\nيُظهر التمثال الفخاري جسداً\nأنثوياً برأس طائر، وتحمل\nفي يدها مبخرة، ومع ذلك\nليس معروفاً فيم كان\nيستخدم هذا التمثال ولا\nالرمزية أو المعنى من ورائه.\n\nالألفية الأولى قبل الميلاد\n\nتيماء، منطقة تبوك",
     "id": 98,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/ak/19-ministatue.jpg",
-    "clean_image_path": "assets/clean_artifacts/98.png"
+    "clean_image_path": "assets/clean_artifacts/98.png",
+    "name_ar": "تمثال لامرأة برأس طائر",
+    "description_ar": "يُظهر التمثال الفخاري جسداً أنثوياً برأس طائر، وتحمل في يدها مبخرة، ومع ذلك ليس معروفاً فيم كان يستخدم هذا التمثال ولا الرمزية أو المعنى من ورائه.",
+    "age_ar": "الألفية الأولى قبل الميلاد",
+    "location_ar": "تيماء، منطقة تبوك",
+    "material_ar": "الطين"
   },
   {
     "age": "2nd Century AD",
@@ -1078,7 +1576,12 @@
     "ocr_arabic": "لوحة مستطيلة منقوشة\nالنص الظاهر على هذه اللوحة البرونزية هو نص باللغة السبئية، وهي لغة تعتبر قريبة جدًا من اللغة العربية القديمة، وعلى الرغم من ضياع بعض النقوش ، يبدو هذا النص لغرض ديني.\n\nالقرن الثاني الميلادي\n\nمنطقة نجران",
     "id": 99,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/ak/20-crocodile.jpg",
-    "clean_image_path": "assets/clean_artifacts/99.png"
+    "clean_image_path": "assets/clean_artifacts/99.png",
+    "name_ar": "لوحة مستطيلة منقوشة",
+    "description_ar": "النص الظاهر على هذه اللوحة البرونزية هو نص باللغة السبئية، وهي لغة تعتبر قريبة جدًا من اللغة العربية القديمة، وعلى الرغم من ضياع بعض النقوش ، يبدو هذا النص لغرض ديني.",
+    "age_ar": "القرن الثاني الميلادي",
+    "location_ar": "منطقة نجران",
+    "material_ar": "البرونز"
   },
   {
     "age": "3rd Century BC - 2nd Century AD",
@@ -1089,7 +1592,12 @@
     "ocr_arabic": "جرة على شكل كمثرى\nهذه الجرة الفخارية لم يتم حرقها في الفرن بشكل صحيح ونتيجة لذلك أصبح شكلها كما لو كانت غارقة بالماء وتحول لون الفخار إلى اللون الأبيض.\n\nالقرن الثالث قبل الميلاد -\nالقرن الثاني الميلادي\n\nمدينة ثاج الأثرية - المنطقة الشرقية",
     "id": 100,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/ak/21-weirdvase.jpg",
-    "clean_image_path": "assets/clean_artifacts/100.png"
+    "clean_image_path": "assets/clean_artifacts/100.png",
+    "name_ar": "جرة على شكل كمثرى",
+    "description_ar": "هذه الجرة الفخارية لم يتم حرقها في الفرن بشكل صحيح ونتيجة لذلك أصبح شكلها كما لو كانت غارقة بالماء وتحول لون الفخار إلى اللون الأبيض.",
+    "age_ar": "القرن الثالث قبل الميلاد - القرن الثاني الميلادي",
+    "location_ar": "مدينة ثاج الأثرية - المنطقة الشرقية",
+    "material_ar": "الفخار"
   },
   {
     "age": "Pre-Islamic Era",
@@ -1100,7 +1608,12 @@
     "ocr_arabic": "غطاء من المرمر (الألباستر)\nغطاء متآكل لإناء مصنوع على\nشكل حيوان يبدو كالأسد.\n\nمدينة الأخدود الأثرية - منطقة\nنجران",
     "id": 101,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/jahil/1-dhakkan.jpg",
-    "clean_image_path": "assets/clean_artifacts/101.png"
+    "clean_image_path": "assets/clean_artifacts/101.png",
+    "name_ar": "غطاء من المرمر (الألباستر)",
+    "description_ar": "غطاء متآكل لإناء مصنوع على شكل حيوان يبدو كالأسد.",
+    "age_ar": "",
+    "location_ar": "مدينة الأخدود الأثرية - منطقة نجران",
+    "material_ar": "الألباستر"
   },
   {
     "age": "5300 - 4700 BC",
@@ -1111,6 +1624,11 @@
     "ocr_arabic": "كوب فخاري\nإناء خزفي للشرب مزين بزخارف نباتية وهندسية، وهذا النوع من الأواني الفخارية مصمم على الطراز العبيدي، وقد سمي على اسم نوع مميز من الفخار من موقع تل العبيد بالقرب من مدينة أور جنوبي العراق. ويشير اكتشاف آلاف القطع من هذا النوع من الفخار في المنطقة الشرقية والبحرين وقطر إلى التجارة التي كانت قائمة مع بلاد ما بين النهرين، وقد يكون هذا النوع من الفخار من السلع الفاخرة آنذاك.\n5300 - 4700 قبل الميلاد\nالخرسانية - المنطقة الشرقية",
     "id": 102,
     "source_panel_url": "https://nationalmuseum.moc.gov.sa/style/images/art/manu/51-coneglass.jpg",
-    "clean_image_path": "assets/clean_artifacts/102.png"
+    "clean_image_path": "assets/clean_artifacts/102.png",
+    "name_ar": "كوب فخاري",
+    "description_ar": "إناء خزفي للشرب مزين بزخارف نباتية وهندسية، وهذا النوع من الأواني الفخارية مصمم على الطراز العبيدي، وقد سمي على اسم نوع مميز من الفخار من موقع تل العبيد بالقرب من مدينة أور جنوبي العراق. ويشير اكتشاف آلاف القطع من هذا النوع من الفخار في المنطقة الشرقية والبحرين وقطر إلى التجارة التي كانت قائمة مع بلاد ما بين النهرين، وقد يكون هذا النوع من الفخار من السلع الفاخرة آنذاك.",
+    "age_ar": "5300 - 4700 قبل الميلاد",
+    "location_ar": "الخرسانية - المنطقة الشرقية",
+    "material_ar": "الفخار"
   }
 ]

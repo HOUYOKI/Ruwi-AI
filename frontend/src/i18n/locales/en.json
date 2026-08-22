@@ -1,0 +1,68 @@
+{
+  "gallery": {
+    "eyebrow": "Saudi National Museum — Experience",
+    "subtitleStory": "Select an artifact to reveal its story — and the civilizations it quietly connects to.",
+    "subtitleGrounded": "Ruwi speaks as a narrator, not a search engine — every connection it draws across cultures is grounded, never guessed.",
+    "footer": "Every artifact here is waiting to be asked a question."
+  },
+  "artifactGrid": {
+    "loading": "Loading the gallery…",
+    "errorTitle": "Couldn't load the artifact gallery",
+    "genericError": "Something went wrong loading the gallery.",
+    "empty": "No artifacts are available yet."
+  },
+  "api": {
+    "serverUnreachable": "Could not reach the Ruwi server. Is the backend running?"
+  },
+  "artifactPage": {
+    "backToGallery": "Back to gallery",
+    "age": "Age",
+    "location": "Location",
+    "material": "Material",
+    "loading": "Loading artifact…",
+    "notFoundTitle": "This artifact couldn't be found",
+    "notFoundDetail": "It may have been removed, or the link is incorrect.",
+    "errorTitle": "Couldn't load this artifact",
+    "genericError": "Something went wrong loading this artifact."
+  },
+  "chat": {
+    "heading": "Ask Ruwi",
+    "hitIterationCap": "Ruwi paused its search early for this one, feel free to ask again or try something else.",
+    "pending": "Ruwi is connecting eras…",
+    "previouslyAsked": "Previously asked",
+    "fallbackError": "Ruwi couldn't respond. Please try again.",
+    "showText": "Show text",
+    "hideText": "Hide text"
+  },
+  "composer": {
+    "placeholder": "Ask Ruwi about this artifact…",
+    "submit": "Ask",
+    "suggestions": ["Tell me its story", "What is this made of?", "Where was it found?", "How old is it?"]
+  },
+  "ttsCenterpiece": {
+    "idlePrompt": "Ask Ruwi anything about this artifact."
+  },
+  "playControls": {
+    "play": "Play",
+    "replay": "Replay"
+  },
+  "themeToggle": {
+    "ariaLabel": "Toggle light and dark mode",
+    "light": "Light",
+    "dark": "Dark"
+  },
+  "languageToggle": {
+    "ariaLabel": "Toggle Arabic and English",
+    "ar": "عربي",
+    "en": "EN"
+  },
+  "carousel": {
+    "groupLabel": "Artifact carousel",
+    "previous": "Previous artifact",
+    "next": "Next artifact"
+  },
+  "imageViewer": {
+    "zoomOut": "Zoom out",
+    "zoomIn": "Zoom in"
+  }
+}

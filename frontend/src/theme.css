@@ -1,0 +1,180 @@
+/*
+  Najdi theme — same wall, two times of day. Dark mode is night (Phase 1),
+  light mode is midday: same mud-brick/plaster materials, different light.
+
+  --bg/--surface/--text/--frame/--accent-red/--accent-teal/--gold are the
+  seven source-of-truth tokens. [data-theme="light"] redefines exactly
+  these seven — nothing else in this file changes, because every other
+  color below is derived from these seven via color-mix(). The furjat
+  background-image is the one exception: its per-triangle fill/opacity is
+  baked into a static SVG data URI (can't reference a CSS var from inside
+  one), so it gets a second, structurally-identical asset per theme
+  instead — see the furjat block below.
+
+  data-theme is set by an inline bootstrap script in index.html (reads
+  localStorage, falls back to prefers-color-scheme) before first paint,
+  and kept in sync by ThemeToggle. The prefers-color-scheme media block
+  below is a no-JS fallback only, for the (rare) case that script never ran.
+
+  Typography: Cairo (display) + IBM Plex Sans Arabic (body). Both are
+  dual-script (Latin + Arabic) under one coherent design per family —
+  the Narrator speaks Arabic with full diacritics as often as English, so
+  a pairing that falls back to the OS default Arabic font for half the
+  content isn't a real pairing. Cairo is geometric/angular (echoes the
+  furjat/shurfat triangular logic) for headings and artifact names. IBM
+  Plex Sans Arabic is a plain, warm-neutral humanist face built for long
+  reading — used for the Narrator's spoken-register prose and artifact
+  descriptions, where legibility matters more than character.
+*/
+
+:root {
+  --bg: #14100b;
+  --surface: #241a12;
+  --text: #ede3cf;
+  --frame: #ede6d6;
+  --accent-red: #b4392a;
+  --accent-teal: #1e7268;
+  --gold: #d1a046;
+}
+
+:root:not([data-theme="light"]) {
+  color-scheme: dark;
+}
+
+[data-theme="light"] {
+  color-scheme: light;
+  --bg: #e8d4ac;
+  --surface: #f5eddc;
+  --text: #201810;
+  --frame: #b08a52;
+  --accent-red: #a63324;
+  --accent-teal: #135f55;
+  /* Brief's #A87B2E is 2.6:1 as text on --bg — fails WCAG AA (needs 4.5:1).
+     Darkened, same hue/saturation, to ~5.5:1 — per "adjust lightness, not
+     hue, if a pair fails". Non-text uses (card border/chevron glow) only
+     need 3:1 and had headroom either way. */
+  --gold: #6b4a1a;
+}
+
+/* No-JS fallback: honor system preference if the bootstrap script never ran. */
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme]) {
+    color-scheme: light;
+    --bg: #e8d4ac;
+    --surface: #f5eddc;
+    --text: #201810;
+    --frame: #b08a52;
+    --accent-red: #a63324;
+    --accent-teal: #135f55;
+    --gold: #6b4a1a;
+  }
+}
+
+@theme {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-text: var(--text);
+  --color-frame: var(--frame);
+  --color-accent-red: var(--accent-red);
+  --color-accent-teal: var(--accent-teal);
+  --color-gold: var(--gold);
+
+  /* Derived tones — recompute automatically off the seven tokens above,
+     so a Phase 2 light-mode override doesn't need a second copy of these. */
+  --color-border: color-mix(in srgb, var(--frame) 18%, var(--bg));
+  --color-surface-hover: color-mix(in srgb, var(--surface) 85%, var(--frame));
+  --color-text-muted: color-mix(in srgb, var(--text) 55%, var(--bg));
+  --color-error-bg: color-mix(in srgb, var(--accent-red) 18%, var(--bg));
+  --color-error-border: color-mix(in srgb, var(--accent-red) 55%, var(--bg));
+  --color-error-text: color-mix(in srgb, var(--accent-red) 70%, var(--text));
+
+  --font-display: "Cairo", system-ui, sans-serif;
+  --font-body: "IBM Plex Sans Arabic", "IBM Plex Sans", system-ui, sans-serif;
+}
+
+/* Idle "breathing" for the TTS centerpiece's triangle corona — a quiet
+   resting state, not a dead/empty gap, while no narration is playing.
+   Gated behind Tailwind's motion-safe: variant, so prefers-reduced-motion
+   users get the static resting shape with no animation, never removed. */
+@keyframes tts-breathe {
+  0%,
+  100% {
+    opacity: 0.75;
+    transform: scale(0.97);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.04);
+  }
+}
+
+/* Shimmer — subtle loading placeholder, replaces a plain spinner ring.
+   Same reduced-motion discipline as tts-breathe/furjat: freeze to a flat
+   tone instead of removing the element. */
+@keyframes shimmer-sweep {
+  0% {
+    background-position: -150% 0;
+  }
+  100% {
+    background-position: 150% 0;
+  }
+}
+.shimmer {
+  background: linear-gradient(90deg, var(--surface) 25%, color-mix(in srgb, var(--surface) 55%, var(--frame)) 50%, var(--surface) 75%);
+  background-size: 200% 100%;
+  animation: shimmer-sweep 1.6s ease-in-out infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .shimmer {
+    animation: none;
+    background: var(--surface);
+  }
+}
+
+/* Chevron edge — thin repeating triangle ribbon, echoes the carved
+   chevron frame around Najdi window shutters. Applied to the top and
+   bottom edge of artifact cards only (see restraint rule). */
+.chevron-edge {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background-color: var(--gold);
+  opacity: 0.65;
+  pointer-events: none;
+  -webkit-mask-repeat: repeat-x;
+  mask-repeat: repeat-x;
+  -webkit-mask-size: 8px 6px;
+  mask-size: 8px 6px;
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 6'%3E%3Cpath d='M0,6 L4,0 L8,6 Z' fill='black'/%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 6'%3E%3Cpath d='M0,6 L4,0 L8,6 Z' fill='black'/%3E%3C/svg%3E");
+}
+.chevron-edge-top {
+  top: 0;
+}
+.chevron-edge-bottom {
+  bottom: 0;
+  transform: scaleY(-1);
+}
+
+/* Elevated card shadow — a "physical display case" lift for gallery
+   cards. Tinted warm-dark (--frame mixed into black, never plain black
+   on its own), softened via a second color-mix with transparent — same
+   discipline as everywhere else in this file: no raw rgba(0,0,0,...). */
+.artifact-card-elevated {
+  box-shadow: 0 6px 20px color-mix(in srgb, color-mix(in srgb, var(--frame) 30%, black) 18%, transparent);
+  transition:
+    box-shadow 200ms ease,
+    transform 200ms ease;
+}
+.artifact-card-elevated:hover {
+  box-shadow: 0 12px 32px color-mix(in srgb, color-mix(in srgb, var(--frame) 30%, black) 28%, transparent);
+}
+
+/* Static version for framed, non-interactive surfaces (the detail-page
+   image viewer) - a display case shouldn't lift on hover the way a
+   clickable gallery card does, just sit with a bit of depth. */
+.elevated-frame {
+  box-shadow: 0 6px 20px color-mix(in srgb, color-mix(in srgb, var(--frame) 30%, black) 18%, transparent);
+}
