@@ -4,12 +4,14 @@ import QuizPanel from "./QuizPanel";
 import SourceList from "./SourceList";
 import ObjectAnatomy from "./ObjectAnatomy";
 import StoryTimeline from "./StoryTimeline";
+import { useTranslation } from "react-i18next";
 
 export default function ExperienceRenderer({ experience }: { experience: ExperienceResponse }) {
+  const { t } = useTranslation();
   return (
     <article className="mt-14 border-t border-border pt-12" dir="auto">
       <header className="max-w-3xl">
-        <p className="text-xs tracking-[0.28em] text-gold/80 uppercase">A Ruwi experience</p>
+        <p className="text-xs tracking-[0.28em] text-gold/80 uppercase">{t("experience.eyebrow")}</p>
         <h2 className="mt-3 font-display text-4xl leading-tight text-text sm:text-5xl">{experience.title}</h2>
         <p className="mt-5 text-lg leading-8 text-text-muted">{experience.summary}</p>
       </header>
@@ -26,7 +28,7 @@ export default function ExperienceRenderer({ experience }: { experience: Experie
       )}
 
       {experience.story_sections.length > 0 && (
-        <section className="my-12 grid gap-5 md:grid-cols-2" aria-label="Artifact story">
+        <section className="my-12 grid gap-5 md:grid-cols-2" aria-label={t("experience.story")}>
           {experience.story_sections.map((section, index) => (
             <div key={section.id} className="rounded-lg border border-border bg-surface/30 p-7">
               <p className="text-sm text-gold/70">0{index + 1}</p>

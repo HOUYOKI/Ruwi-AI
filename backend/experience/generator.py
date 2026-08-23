@@ -59,13 +59,18 @@ def generate_experience(
 
 
 def build_curated_response(artifact: dict, curated: dict, template: str) -> dict:
+    language = curated.get("language", "en")
+
+    def localized(field: str) -> str:
+        return artifact.get(f"{field}_ar") or artifact[field] if language == "ar" else artifact[field]
+
     return {
         "artifact": {
             "id": artifact["id"],
-            "name": artifact["name"],
-            "age": artifact["age"],
-            "location": artifact["location"],
-            "material": artifact["material"],
+            "name": localized("name"),
+            "age": localized("age"),
+            "location": localized("location"),
+            "material": localized("material"),
             "image_url": f"/images/{artifact['id']}.png",
         },
         "template": template,
@@ -79,7 +84,7 @@ def build_curated_response(artifact: dict, curated: dict, template: str) -> dict
         "quiz": curated.get("quiz", []),
         "sources": curated["sources"],
         "metadata": {
-            "language": curated.get("language", "en"),
+            "language": language,
             "confidence": curated.get("confidence", 1.0),
             "generated": False,
             "warnings": [],

@@ -75,6 +75,10 @@ export default function ArtifactCarousel({ artifacts }: { artifacts: ArtifactSum
       </div>
 
       <CarouselControls current={currentIndex + 1} total={artifacts.length} />
+      <div className="min-h-12 text-center" aria-live="polite">
+        <p className="font-display text-lg text-text">{artifacts[currentIndex]?.name}</p>
+        <p className="mt-1 text-xs text-text-muted">{artifacts[currentIndex]?.age} · {artifacts[currentIndex]?.location}</p>
+      </div>
     </div>
   );
 }

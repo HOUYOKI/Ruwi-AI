@@ -1,11 +1,13 @@
 import { useEffect, useRef, useState, type DragEvent } from "react";
 import { ApiError, identifyArtifact } from "../api/apiClient";
 import type { IdentificationResponse } from "../types/identification";
+import { useTranslation } from "react-i18next";
 
 const ACCEPTED_TYPES = ["image/jpeg", "image/png", "image/webp"];
 const MAX_BYTES = 8 * 1024 * 1024;
 
 export default function ArtifactUpload({ onMatched }: { onMatched: (artifactId: number) => void }) {
+  const { t } = useTranslation();
   const inputRef = useRef<HTMLInputElement>(null);
   const [file, setFile] = useState<File | null>(null);
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
@@ -29,15 +31,15 @@ export default function ArtifactUpload({ onMatched }: { onMatched: (artifactId: 
     setResult(null);
     if (!nextFile) return;
     if (!ACCEPTED_TYPES.includes(nextFile.type)) {
-      setError("Choose a JPEG, PNG, or WebP image.");
+      setError(t("identify.invalidType"));
       return;
     }
     if (nextFile.size === 0) {
-      setError("That image is empty. Please choose another one.");
+      setError(t("identify.emptyFile"));
       return;
     }
     if (nextFile.size > MAX_BYTES) {
-      setError("Choose an image that is 8 MB or smaller.");
+      setError(t("identify.tooLarge"));
       return;
     }
     setFile(nextFile);
@@ -61,7 +63,7 @@ export default function ArtifactUpload({ onMatched }: { onMatched: (artifactId: 
         onMatched(response.artifact_id);
       }
     } catch (err) {
-      setError(err instanceof ApiError ? err.message : "Ruwi couldn't analyze this image. Please try again.");
+      setError(err instanceof ApiError && err.status !== 0 ? t("identify.analysisFailed") : t("identify.serverError"));
     } finally {
       setPending(false);
     }
@@ -98,45 +100,45 @@ export default function ArtifactUpload({ onMatched }: { onMatched: (artifactId: 
           <div className="flex h-16 w-16 items-center justify-center rounded-full border border-gold/30 bg-gold/10 text-3xl text-gold">
             ◉
           </div>
-          <h2 className="mt-6 font-display text-3xl text-text">Show Ruwi an artifact</h2>
+          <h2 className="mt-6 font-display text-3xl text-text">{t("identify.uploadTitle")}</h2>
           <p className="mt-3 max-w-md text-base leading-7 text-text-muted">
-            Take a clear photo or select an image. Ruwi will compare it only with supported showcase artifacts.
+            {t("identify.uploadInstructions")}
           </p>
           <button
             type="button"
             onClick={() => inputRef.current?.click()}
             className="mt-7 min-h-14 rounded-md bg-gold px-7 py-3 text-base font-semibold text-bg transition hover:opacity-90"
           >
-            Take photo or choose image
+            {t("identify.choosePhoto")}
           </button>
-          <p className="mt-4 text-xs text-text-muted">JPEG, PNG or WebP · maximum 8 MB</p>
+          <p className="mt-4 text-xs text-text-muted">{t("identify.fileRules")}</p>
         </div>
       ) : (
         <div className="overflow-hidden rounded-xl border border-border bg-surface/30">
           <div className="relative flex min-h-80 items-center justify-center bg-black p-4">
-            <img src={previewUrl} alt="Selected artifact preview" className="max-h-[55vh] w-full object-contain" />
+            <img src={previewUrl} alt={t("identify.previewAlt")} className="max-h-[55vh] w-full object-contain" />
           </div>
           <div className="flex flex-wrap items-center justify-between gap-4 border-t border-border p-5">
             <div className="min-w-0">
-              <p className="truncate text-sm font-medium text-neutral-200">{file?.name}</p>
-              <p className="mt-1 text-xs text-neutral-500">Ready for comparison</p>
+              <p className="truncate text-sm font-medium text-text">{file?.name}</p>
+              <p className="mt-1 text-xs text-text-muted">{t("identify.ready")}</p>
             </div>
             <div className="flex flex-wrap gap-3">
               <button
                 type="button"
                 disabled={pending}
                 onClick={reset}
-                className="min-h-12 rounded-md border border-neutral-700 px-5 py-2 text-sm text-neutral-300 hover:border-neutral-500 disabled:opacity-50"
+                className="min-h-12 rounded-md border border-border px-5 py-2 text-sm text-text-muted hover:border-gold/40 disabled:opacity-50"
               >
-                Choose another
+                {t("identify.chooseAnother")}
               </button>
               <button
                 type="button"
                 disabled={pending}
                 onClick={analyze}
-                className="min-h-12 rounded-md bg-amber-300 px-6 py-2 text-sm font-semibold text-neutral-950 hover:bg-amber-200 disabled:cursor-wait disabled:opacity-60"
+                className="min-h-12 rounded-md bg-gold px-6 py-2 text-sm font-semibold text-bg hover:opacity-90 disabled:cursor-wait disabled:opacity-60"
               >
-                {pending ? "Ruwi is looking…" : "Analyze artifact"}
+                {pending ? t("identify.analyzing") : t("identify.analyze")}
               </button>
             </div>
           </div>
@@ -144,45 +146,45 @@ export default function ArtifactUpload({ onMatched }: { onMatched: (artifactId: 
       )}
 
       {error && (
-        <div className="mt-5 rounded-lg border border-red-900/60 bg-red-950/30 p-5 text-red-300" role="alert">
-          <p className="font-medium">We couldn't complete the match</p>
-          <p className="mt-1 text-sm text-red-300/80">{error}</p>
-          <button type="button" onClick={reset} className="mt-4 min-h-11 rounded-md border border-red-700/60 px-4 py-2 text-sm hover:bg-red-900/30">
-            Try another image
+        <div className="mt-5 rounded-lg border border-error-border bg-error-bg p-5 text-error-text" role="alert">
+          <p className="font-medium">{t("identify.matchFailed")}</p>
+          <p className="mt-1 text-sm">{error}</p>
+          <button type="button" onClick={reset} className="mt-4 min-h-11 rounded-md border border-error-border px-4 py-2 text-sm hover:bg-surface/40">
+            {t("identify.tryAnother")}
           </button>
         </div>
       )}
 
       {result?.status === "partial" && (
-        <section className="mt-7 rounded-xl border border-amber-400/25 bg-amber-400/[0.06] p-6 sm:p-8" aria-labelledby="possible-title">
-          <p className="text-xs tracking-[0.22em] text-amber-300 uppercase">Possible match</p>
-          <h2 id="possible-title" className="mt-2 font-serif text-3xl text-neutral-50">Does your artifact match one of these?</h2>
-          <p className="mt-3 text-sm leading-6 text-neutral-400">{result.reason}</p>
+        <section className="mt-7 rounded-xl border border-gold/25 bg-gold/[0.06] p-6 sm:p-8" aria-labelledby="possible-title">
+          <p className="text-xs tracking-[0.22em] text-gold uppercase">{t("identify.possibleMatch")}</p>
+          <h2 id="possible-title" className="mt-2 font-display text-3xl text-text">{t("identify.confirmMatch")}</h2>
+          <p className="mt-3 text-sm leading-6 text-text-muted">{t("identify.partialReason")}</p>
           <div className="mt-6 grid gap-3 sm:grid-cols-2">
             {result.alternatives.map((candidate) => (
               <button
                 key={candidate.artifact_id}
                 type="button"
                 onClick={() => onMatched(candidate.artifact_id)}
-                className="min-h-20 rounded-lg border border-neutral-700 bg-neutral-950/60 p-5 text-left transition hover:border-amber-300/60"
+                className="min-h-20 rounded-lg border border-border bg-surface/60 p-5 text-start transition hover:border-gold/60"
               >
-                <span className="block font-serif text-xl text-neutral-100">{candidate.artifact_name}</span>
-                <span className="mt-2 block text-xs text-neutral-500">Possible match · {Math.round(candidate.confidence * 100)}%</span>
+                <span className="block font-display text-xl text-text">{candidate.artifact_name}</span>
+                <span className="mt-2 block text-xs text-text-muted">{t("identify.possibleMatch")} · {Math.round(candidate.confidence * 100)}%</span>
               </button>
             ))}
           </div>
-          <button type="button" onClick={reset} className="mt-5 min-h-11 text-sm text-amber-200 underline-offset-4 hover:underline">
-            None of these — try again
+          <button type="button" onClick={reset} className="mt-5 min-h-11 text-sm text-gold underline-offset-4 hover:underline">
+            {t("identify.noneTryAgain")}
           </button>
         </section>
       )}
 
       {result?.status === "unsupported" && (
-        <section className="mt-7 rounded-xl border border-neutral-700 bg-neutral-900/40 p-7 text-center" aria-labelledby="unsupported-title">
-          <h2 id="unsupported-title" className="font-serif text-3xl text-neutral-50">No confident showcase match</h2>
-          <p className="mx-auto mt-3 max-w-xl text-base leading-7 text-neutral-400">{result.reason}</p>
-          <button type="button" onClick={reset} className="mt-6 min-h-12 rounded-md border border-amber-400/40 px-6 py-2 text-amber-200 hover:bg-amber-400/10">
-            Try another image
+        <section className="mt-7 rounded-xl border border-border bg-surface/40 p-7 text-center" aria-labelledby="unsupported-title">
+          <h2 id="unsupported-title" className="font-display text-3xl text-text">{t("identify.unsupportedTitle")}</h2>
+          <p className="mx-auto mt-3 max-w-xl text-base leading-7 text-text-muted">{t("identify.unsupportedReason")}</p>
+          <button type="button" onClick={reset} className="mt-6 min-h-12 rounded-md border border-gold/40 px-6 py-2 text-gold hover:bg-gold/10">
+            {t("identify.tryAnother")}
           </button>
         </section>
       )}

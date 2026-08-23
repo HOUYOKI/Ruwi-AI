@@ -15,16 +15,14 @@ function getInitialLang(): Lang {
  * script before mount) rather than localStorage directly, to avoid a
  * mismatch.
  *
- * Deliberately does NOT touch document.documentElement.dir or mirror
- * layout — only text content translates. Page structure (image column,
- * chat column, toggle position) stays fixed to the English-version layout
- * regardless of language, per explicit product decision.
+ * Keeps language and writing direction on the document root in sync.
  */
 export function useLanguage() {
   const [lang, setLang] = useState<Lang>(getInitialLang);
 
   useEffect(() => {
     document.documentElement.lang = lang;
+    document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
     i18next.changeLanguage(lang);
     try {
       localStorage.setItem(STORAGE_KEY, lang);

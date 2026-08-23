@@ -40,8 +40,8 @@ export function resolveImageUrl(imageUrl: string): string {
   return `${API_BASE_URL}${imageUrl}`;
 }
 
-export function fetchArtifactExperience(id: string | number): Promise<ExperienceResponse> {
-  return request<ExperienceResponse>(`/artifacts/${id}/experience`);
+export function fetchArtifactExperience(id: string | number, lang: string): Promise<ExperienceResponse> {
+  return request<ExperienceResponse>(`/artifacts/${id}/experience?lang=${encodeURIComponent(lang)}`);
 }
 
 export function identifyArtifact(file: File): Promise<IdentificationResponse> {

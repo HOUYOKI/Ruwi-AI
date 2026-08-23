@@ -28,7 +28,30 @@
     "notFoundDetail": "ربما أُزيلت، أو أن الرابط غير صحيح.",
     "errorTitle": "تعذر تحميل هذه القطعة",
     "genericError": "حدث خطأ أثناء تحميل هذه القطعة.",
-    "experienceLoading": "جارٍ إعداد تجربة روي…"
+    "experienceLoading": "جارٍ إعداد تجربة روي…",
+    "experienceCue": "اكتشف القصة التفاعلية أدناه",
+    "experienceError": "تعذر تحميل القصة التفاعلية — حاول مجددًا"
+  },
+  "artifactCard": { "experienceBadge": "تجربة روي" },
+  "identify": {
+    "back": "استكشف المجموعة", "recognition": "التعرّف على القطعة", "eyebrow": "ارفع صورة أو التقطها",
+    "title": "ما القصة التي تحملها؟", "subtitle": "صوّر قطعة أثرية وسيبحث عنها روي بين قطع العرض المدعومة في المتحف.",
+    "browseInstead": "تصفح المجموعة يدويًا بدلًا من ذلك", "uploadTitle": "أرِ روي قطعة أثرية",
+    "uploadInstructions": "التقط صورة واضحة أو اختر صورة. سيقارنها روي بقطع العرض المدعومة فقط.",
+    "choosePhoto": "التقط صورة أو اخترها", "fileRules": "JPEG أو PNG أو WebP · بحد أقصى 8 ميجابايت", "previewAlt": "معاينة صورة القطعة المختارة",
+    "ready": "جاهزة للمقارنة", "chooseAnother": "اختر صورة أخرى", "analyze": "حلّل القطعة", "analyzing": "روي يتأمل…",
+    "invalidType": "اختر صورة بصيغة JPEG أو PNG أو WebP.", "emptyFile": "هذه الصورة فارغة. اختر صورة أخرى.",
+    "tooLarge": "اختر صورة حجمها 8 ميجابايت أو أقل.", "analysisFailed": "تعذر على روي إكمال المقارنة. جرّب صورة أخرى.",
+    "serverError": "تعذر على روي الوصول إلى خدمة الصور. حاول مجددًا.", "matchFailed": "تعذر إكمال المطابقة", "tryAnother": "جرّب صورة أخرى",
+    "possibleMatch": "تطابق محتمل", "confirmMatch": "هل تطابق قطعتك إحدى هذه القطع؟", "partialReason": "تبدو الصورة قريبة من هذه القطع المدعومة. اختر واحدة للمتابعة.",
+    "noneTryAgain": "ليست أيًا منها — حاول مجددًا", "unsupportedTitle": "لا يوجد تطابق موثوق", "unsupportedReason": "لم يتمكن روي من مطابقة الصورة بثقة مع إحدى قطع العرض المدعومة."
+  },
+  "experience": {
+    "eyebrow": "تجربة روي", "story": "قصة القطعة", "lookCloser": "انظر عن قرب", "discoverDetails": "اكتشف التفاصيل",
+    "tapMarker": "المس علامة مضيئة", "explore": "استكشف", "selectedDetail": "التفصيل المختار", "objectAnatomy": "أجزاء القطعة",
+    "exploreParts": "استكشف أجزاءها", "tapPart": "المس جزءًا معنونًا", "timeline": "عبر الزمن", "followJourney": "تتبّع رحلة القطعة",
+    "quiz": "اختبار", "whatDiscovered": "ماذا اكتشفت؟", "score": "النتيجة", "correct": "صحيح", "incorrect": "ليست الإجابة الصحيحة",
+    "result": "أجبت عن {{score}} من {{total}} إجابات.", "tryAgain": "حاول مجددًا", "sources": "المصادر الموثوقة"
   },
   "chat": {
     "heading": "اسأل روي",

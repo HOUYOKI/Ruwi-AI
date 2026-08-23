@@ -11,10 +11,11 @@ def create_experience_router(artifacts_by_id: dict[int, dict]) -> APIRouter:
     graph = build_experience_graph(artifacts_by_id)
 
     @router.get("/artifacts/{artifact_id}/experience", response_model=ExperienceResponse)
-    def get_artifact_experience(artifact_id: int):
+    def get_artifact_experience(artifact_id: int, lang: str = "en"):
         if artifact_id not in artifacts_by_id:
             raise HTTPException(status_code=404, detail="Artifact not found")
-        state = graph.invoke({"requested_artifact_id": artifact_id, "warnings": []})
+        language = "ar" if lang == "ar" else "en"
+        state = graph.invoke({"requested_artifact_id": artifact_id, "language": language, "warnings": []})
         experience = state.get("experience")
         if experience is None:
             raise HTTPException(status_code=404, detail="No interactive experience is available for this artifact")

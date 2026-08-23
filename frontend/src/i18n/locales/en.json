@@ -28,7 +28,30 @@
     "notFoundDetail": "It may have been removed, or the link is incorrect.",
     "errorTitle": "Couldn't load this artifact",
     "genericError": "Something went wrong loading this artifact.",
-    "experienceLoading": "Preparing your Ruwi experience…"
+    "experienceLoading": "Preparing your Ruwi experience…",
+    "experienceCue": "Discover the interactive story below",
+    "experienceError": "The interactive story could not load — try again"
+  },
+  "artifactCard": { "experienceBadge": "Ruwi Experience" },
+  "identify": {
+    "back": "Explore collection", "recognition": "Artifact recognition", "eyebrow": "Upload or take a photo",
+    "title": "What story are you holding?", "subtitle": "Photograph an artifact and Ruwi will look for it among the museum's supported showcase pieces.",
+    "browseInstead": "Browse the collection manually instead", "uploadTitle": "Show Ruwi an artifact",
+    "uploadInstructions": "Take a clear photo or select an image. Ruwi will compare it only with supported showcase artifacts.",
+    "choosePhoto": "Take photo or choose image", "fileRules": "JPEG, PNG or WebP · maximum 8 MB", "previewAlt": "Selected artifact preview",
+    "ready": "Ready for comparison", "chooseAnother": "Choose another", "analyze": "Analyze artifact", "analyzing": "Ruwi is looking…",
+    "invalidType": "Choose a JPEG, PNG, or WebP image.", "emptyFile": "That image is empty. Please choose another one.",
+    "tooLarge": "Choose an image that is 8 MB or smaller.", "analysisFailed": "Ruwi couldn't complete the comparison. Please try another image.",
+    "serverError": "Ruwi couldn't reach the image service. Please try again.", "matchFailed": "We couldn't complete the match", "tryAnother": "Try another image",
+    "possibleMatch": "Possible match", "confirmMatch": "Does your artifact match one of these?", "partialReason": "The image is close to these supported artifacts. Choose one to continue.",
+    "noneTryAgain": "None of these — try again", "unsupportedTitle": "No confident showcase match", "unsupportedReason": "Ruwi could not confidently match this image to a supported showcase artifact."
+  },
+  "experience": {
+    "eyebrow": "A Ruwi experience", "story": "Artifact story", "lookCloser": "Look closer", "discoverDetails": "Discover the details",
+    "tapMarker": "Tap a glowing marker", "explore": "Explore", "selectedDetail": "Selected detail", "objectAnatomy": "Object anatomy",
+    "exploreParts": "Explore its parts", "tapPart": "Tap a labeled part", "timeline": "Across time", "followJourney": "Follow the artifact's journey",
+    "quiz": "Quiz", "whatDiscovered": "What did you discover?", "score": "Score", "correct": "Correct", "incorrect": "Not quite",
+    "result": "You found {{score}} of {{total}} answers.", "tryAgain": "Try again", "sources": "Trusted sources"
   },
   "chat": {
     "heading": "Ask Ruwi",

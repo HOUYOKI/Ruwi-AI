@@ -18,19 +18,20 @@ export default function ArtifactPage() {
   const { id } = useParams<{ id: string }>();
   const [state, setState] = useState<LoadState>({ status: "loading" });
   const [experience, setExperience] = useState<ExperienceResponse | null>(null);
-  const [experienceLoading, setExperienceLoading] = useState(false);
+  const [experienceStatus, setExperienceStatus] = useState<"idle" | "loading" | "error">("idle");
 
   useEffect(() => {
     if (!id) return;
     let cancelled = false;
-    setState({ status: "loading" }); setExperience(null); setExperienceLoading(true);
-    Promise.allSettled([fetchArtifact(id, i18n.language), fetchArtifactExperience(id)]).then(([artifactResult, experienceResult]) => {
+    setState({ status: "loading" }); setExperience(null); setExperienceStatus("loading");
+    Promise.allSettled([fetchArtifact(id, i18n.language), fetchArtifactExperience(id, i18n.language)]).then(([artifactResult, experienceResult]) => {
       if (cancelled) return;
       if (artifactResult.status === "fulfilled") setState({ status: "ready", artifact: artifactResult.value });
       else if (artifactResult.reason instanceof ApiError && artifactResult.reason.status === 404) setState({ status: "not-found" });
       else setState({ status: "error", message: artifactResult.reason instanceof ApiError ? artifactResult.reason.message : t("artifactPage.genericError") });
-      if (experienceResult.status === "fulfilled") setExperience(experienceResult.value);
-      setExperienceLoading(false);
+      if (experienceResult.status === "fulfilled") { setExperience(experienceResult.value); setExperienceStatus("idle"); }
+      else if (experienceResult.reason instanceof ApiError && experienceResult.reason.status === 404) setExperienceStatus("idle");
+      else setExperienceStatus("error");
     });
     return () => { cancelled = true; };
   }, [id, i18n.language, t]);
@@ -50,8 +51,12 @@ export default function ArtifactPage() {
             <div className="flex min-w-0 flex-col gap-8"><ArtifactImageViewer imageUrl={`${resolveImageUrl(state.artifact.image_url)}?v=${state.artifact.id}`} alt={state.artifact.name} /><ArtifactDetail artifact={state.artifact} /></div>
             <div className="flex min-w-0 flex-col lg:border-s lg:border-border lg:ps-6"><ChatPanel artifactId={state.artifact.id} /></div>
           </div>
-          {experienceLoading && <StatusView tone="loading" title={t("artifactPage.experienceLoading")} />}
-          {experience && <ExperienceRenderer experience={experience} />}
+          {(experience || experienceStatus !== "idle") && <div className="border-t border-border pt-6 text-center">
+            {experience && <a href="#interactive-experience" className="inline-flex min-h-12 items-center gap-2 text-sm font-medium text-gold hover:underline">{t("artifactPage.experienceCue")} <span aria-hidden="true">↓</span></a>}
+            {experienceStatus === "loading" && <p className="text-sm text-text-muted">{t("artifactPage.experienceLoading")}</p>}
+            {experienceStatus === "error" && <button type="button" onClick={() => window.location.reload()} className="min-h-11 rounded-sm border border-border px-4 text-sm text-text-muted hover:border-gold/40 hover:text-gold">{t("artifactPage.experienceError")}</button>}
+          </div>}
+          {experience && <div id="interactive-experience"><ExperienceRenderer experience={experience} /></div>}
         </div>}
       </div>
     </main>

@@ -38,7 +38,7 @@ export default function QuestionComposer({ value, onChange, onSubmit, disabled }
           field bolted to a separate button. */}
       <form
         onSubmit={handleSubmit}
-        className="me-6 flex items-center rounded-sm border border-border bg-surface/60 pr-2 transition-colors focus-within:border-gold/50"
+        className="me-6 flex items-center rounded-sm border border-border bg-surface/60 pe-2 transition-colors focus-within:border-gold/50"
       >
         <input
           type="text"

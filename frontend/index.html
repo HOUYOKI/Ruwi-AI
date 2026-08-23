@@ -20,8 +20,10 @@
         try {
           var storedLang = localStorage.getItem("ruwi-lang");
           document.documentElement.lang = storedLang === "en" ? "en" : "ar";
+          document.documentElement.dir = storedLang === "en" ? "ltr" : "rtl";
         } catch (e) {
           document.documentElement.lang = "ar";
+          document.documentElement.dir = "rtl";
         }
       })();
     </script>

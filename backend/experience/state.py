@@ -5,6 +5,7 @@ from typing import Any, Literal, TypedDict
 
 class ExperienceState(TypedDict, total=False):
     requested_artifact_id: int
+    language: Literal["en", "ar"]
     artifact_id: int
     artifact: dict[str, Any]
     curated_context: dict[str, Any]

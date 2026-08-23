@@ -54,6 +54,16 @@ class ExperienceGraphTests(unittest.TestCase):
         self.assertNotIn("experience", state)
         self.assertEqual(state["error"], "No curated experience is available for this artifact")
 
+    def test_every_showcase_artifact_has_a_valid_arabic_experience(self):
+        for artifact_id in load_showcase_experiences():
+            with self.subTest(artifact_id=artifact_id):
+                state = self.graph.invoke({"requested_artifact_id": artifact_id, "language": "ar", "warnings": []})
+                experience = ExperienceResponse.model_validate(state["experience"])
+                self.assertEqual(experience.metadata.language, "ar")
+                self.assertRegex(experience.title, r"[\u0600-\u06ff]")
+                self.assertRegex(experience.narration, r"[\u0600-\u06ff]")
+                self.assertTrue(experience.sources)
+
     def test_live_generation_failure_uses_validated_curated_fallback(self):
         with patch("experience.graph.generate_experience", side_effect=TimeoutError("offline")):
             state = self.graph.invoke({"requested_artifact_id": 46, "warnings": []})

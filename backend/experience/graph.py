@@ -15,8 +15,6 @@ logger = logging.getLogger("ruwi.experience")
 
 
 def build_experience_graph(artifacts_by_id: dict[int, dict]):
-    showcase = load_showcase_experiences()
-
     def resolve_artifact(state: ExperienceState):
         artifact_id = state["requested_artifact_id"]
         artifact = artifacts_by_id.get(artifact_id)
@@ -25,7 +23,7 @@ def build_experience_graph(artifacts_by_id: dict[int, dict]):
         return {"artifact_id": artifact_id, "artifact": artifact, "match_status": "matched"}
 
     def retrieve_local_context(state: ExperienceState):
-        curated = showcase.get(state["artifact_id"], {})
+        curated = load_showcase_experiences(state.get("language", "en")).get(state["artifact_id"], {})
         return {
             "curated_context": curated,
             "local_context": build_artifact_context_block(state["artifact"]),

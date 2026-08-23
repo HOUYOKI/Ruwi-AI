@@ -1,5 +1,6 @@
 import type { ExperienceArtifact, Hotspot } from "../../types/experience";
 import HotspotStory from "./HotspotStory";
+import { useTranslation } from "react-i18next";
 
 export default function ObjectAnatomy({
   artifact,
@@ -8,13 +9,14 @@ export default function ObjectAnatomy({
   artifact: ExperienceArtifact;
   parts: Hotspot[];
 }) {
+  const { t } = useTranslation();
   return (
     <HotspotStory
       artifact={artifact}
       hotspots={parts}
-      eyebrow="Object anatomy"
-      title="Explore its parts"
-      instruction="Tap a labeled part"
+      eyebrow={t("experience.objectAnatomy")}
+      title={t("experience.exploreParts")}
+      instruction={t("experience.tapPart")}
     />
   );
 }
