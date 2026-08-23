@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState, type DragEvent } from "react";
-import { ApiError, identifyArtifact } from "../api/client";
+import { ApiError, identifyArtifact } from "../api/apiClient";
 import type { IdentificationResponse } from "../types/identification";
 
 const ACCEPTED_TYPES = ["image/jpeg", "image/png", "image/webp"];
@@ -92,31 +92,31 @@ export default function ArtifactUpload({ onMatched }: { onMatched: (artifactId: 
           onDragLeave={() => setDragging(false)}
           onDrop={handleDrop}
           className={`flex min-h-80 flex-col items-center justify-center rounded-xl border-2 border-dashed px-8 py-12 text-center transition ${
-            dragging ? "border-amber-300 bg-amber-400/10" : "border-neutral-700 bg-neutral-900/30"
+            dragging ? "border-gold bg-gold/10" : "border-border bg-surface/30"
           }`}
         >
-          <div className="flex h-16 w-16 items-center justify-center rounded-full border border-amber-400/30 bg-amber-400/10 text-3xl text-amber-200">
+          <div className="flex h-16 w-16 items-center justify-center rounded-full border border-gold/30 bg-gold/10 text-3xl text-gold">
             ◉
           </div>
-          <h2 className="mt-6 font-serif text-3xl text-neutral-50">Show Ruwi an artifact</h2>
-          <p className="mt-3 max-w-md text-base leading-7 text-neutral-400">
+          <h2 className="mt-6 font-display text-3xl text-text">Show Ruwi an artifact</h2>
+          <p className="mt-3 max-w-md text-base leading-7 text-text-muted">
             Take a clear photo or select an image. Ruwi will compare it only with supported showcase artifacts.
           </p>
           <button
             type="button"
             onClick={() => inputRef.current?.click()}
-            className="mt-7 min-h-14 rounded-md bg-amber-300 px-7 py-3 text-base font-semibold text-neutral-950 transition hover:bg-amber-200"
+            className="mt-7 min-h-14 rounded-md bg-gold px-7 py-3 text-base font-semibold text-bg transition hover:opacity-90"
           >
             Take photo or choose image
           </button>
-          <p className="mt-4 text-xs text-neutral-600">JPEG, PNG or WebP · maximum 8 MB</p>
+          <p className="mt-4 text-xs text-text-muted">JPEG, PNG or WebP · maximum 8 MB</p>
         </div>
       ) : (
-        <div className="overflow-hidden rounded-xl border border-neutral-800 bg-neutral-900/30">
+        <div className="overflow-hidden rounded-xl border border-border bg-surface/30">
           <div className="relative flex min-h-80 items-center justify-center bg-black p-4">
             <img src={previewUrl} alt="Selected artifact preview" className="max-h-[55vh] w-full object-contain" />
           </div>
-          <div className="flex flex-wrap items-center justify-between gap-4 border-t border-neutral-800 p-5">
+          <div className="flex flex-wrap items-center justify-between gap-4 border-t border-border p-5">
             <div className="min-w-0">
               <p className="truncate text-sm font-medium text-neutral-200">{file?.name}</p>
               <p className="mt-1 text-xs text-neutral-500">Ready for comparison</p>

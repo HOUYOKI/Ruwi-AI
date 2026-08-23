@@ -1,30 +1,34 @@
+//artifact card component for displaying artifact summary information in a card format
 import { Link } from "react-router-dom";
-import { resolveImageUrl } from "../api/client";
+import { resolveImageUrl } from "../api/apiClient";
+import { useCroppedArtifactImage } from "../hooks/useCroppedArtifactImage";
 import type { ArtifactSummary } from "../types/artifact";
 
-export default function ArtifactCard({ artifact }: { artifact: ArtifactSummary }) {
+export default function ArtifactCard({ artifact, priority = false }: { artifact: ArtifactSummary; priority?: boolean }) {
+  // Cropped to the artifact's real content first (see the hook's own comment on why -
+  // these PNGs carry large transparent margins), then object-contain rather than cover:
+  // a hard cover-crop into a tall tile would zoom past recognizable shape for anything
+  // that isn't already portrait-shaped (a landscape bone read as unrecognizable texture).
+  const { src } = useCroppedArtifactImage(resolveImageUrl(artifact.image_url));
+
   return (
     <Link
       to={`/artifacts/${artifact.id}`}
-      className="group flex flex-col overflow-hidden rounded-sm border border-neutral-800 bg-neutral-900/40 transition-colors hover:border-amber-400/40"
+      className="group relative block h-full w-full overflow-hidden"
+      style={{ background: "linear-gradient(180deg, color-mix(in srgb, var(--surface) 100%, white 5%), var(--surface))" }}
     >
-      <div className="relative aspect-square overflow-hidden bg-neutral-900">
-        {artifact.featured && (
-          <span className="absolute left-3 top-3 z-10 rounded-full border border-amber-300/30 bg-neutral-950/85 px-3 py-1 text-[10px] font-semibold tracking-[0.16em] text-amber-200 uppercase backdrop-blur-sm">
-            Ruwi Experience
-          </span>
-        )}
-        <img
-          src={resolveImageUrl(artifact.image_url)}
-          alt={artifact.name}
-          loading="lazy"
-          className="h-full w-full object-contain p-6 transition-transform duration-500 group-hover:scale-105"
-        />
-      </div>
-      <div className="border-t border-neutral-800 px-4 py-3">
-        <h3 className="truncate font-serif text-base text-neutral-100">{artifact.name}</h3>
-        <p className="mt-0.5 truncate text-xs text-neutral-500">{artifact.age}</p>
-      </div>
+      {artifact.featured && (
+        <span className="absolute start-3 top-3 z-10 rounded-full border border-gold/30 bg-surface/90 px-3 py-1 text-[10px] font-semibold tracking-[0.16em] text-gold uppercase backdrop-blur-sm">
+          Ruwi Experience
+        </span>
+      )}
+      <img
+        src={src}
+        alt={artifact.name}
+        loading={priority ? "eager" : "lazy"}
+        fetchPriority={priority ? "high" : "auto"}
+        className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-105"
+      />
     </Link>
   );
 }

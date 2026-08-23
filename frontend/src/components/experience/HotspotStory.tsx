@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { resolveImageUrl } from "../../api/client";
+import { resolveImageUrl } from "../../api/apiClient";
 import type { ExperienceArtifact, Hotspot } from "../../types/experience";
 
 export default function HotspotStory({
