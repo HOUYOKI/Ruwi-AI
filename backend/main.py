@@ -16,6 +16,9 @@ import config
 from agents.narrator.narrator import run_narrator_turn
 from prompts import OPTIONAL_TEXT_FIELDS
 from tts.speak_text import speak_text
+from experience.routes import create_experience_router
+from experience.repository import load_showcase_experiences
+from vision.routes import create_vision_router
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("ruwi")
@@ -68,11 +71,13 @@ def load_artifacts() -> dict[int, dict]:
 
 
 ARTIFACTS_BY_ID = load_artifacts()
+SHOWCASE_IDS = set(load_showcase_experiences())
 logger.info("Loaded %d artifacts from %s", len(ARTIFACTS_BY_ID), ARTIFACTS_JSON_PATH)
 
-if not config.NARRATOR_MODEL:
-    raise RuntimeError("NARRATOR_MODEL environment variable is not set")
-config.get_narrator_provider_credentials()  # fail fast at boot, not mid-request
+if not config.narrator_is_configured():
+    logger.warning("Narrator is not configured; collection and curated experiences remain available")
+if not config.vision_is_configured():
+    logger.warning("Vision is not configured; /identify will return a controlled configuration error")
 
 app = FastAPI(title="Ruwi API")
 
@@ -85,6 +90,8 @@ app.add_middleware(
 )
 
 app.mount("/static/audio", StaticFiles(directory=AUDIO_DIR), name="audio")
+app.include_router(create_experience_router(ARTIFACTS_BY_ID))
+app.include_router(create_vision_router(ARTIFACTS_BY_ID))
 
 
 def to_summary(artifact: dict) -> dict:
@@ -95,6 +102,7 @@ def to_summary(artifact: dict) -> dict:
         "location": artifact["location"],
         "material": artifact["material"],
         "image_url": f"/images/{artifact['id']}.png",
+        "featured": artifact["id"] in SHOWCASE_IDS,
     }
 
 
@@ -108,6 +116,11 @@ def to_detail(artifact: dict) -> dict:
 @app.get("/artifacts")
 def list_artifacts():
     return [to_summary(a) for a in ARTIFACTS_BY_ID.values()]
+
+
+@app.get("/health/config")
+def configuration_preflight():
+    return config.provider_preflight()
 
 
 @app.get("/artifacts/{artifact_id}")
@@ -159,6 +172,11 @@ def chat(payload: ChatRequest):
     artifact = ARTIFACTS_BY_ID.get(payload.artifact_id)
     if artifact is None:
         raise HTTPException(status_code=404, detail="Artifact not found")
+    if not config.narrator_is_configured():
+        raise HTTPException(
+            status_code=503,
+            detail="Ask Ruwi is not configured. The artifact experience remains available.",
+        )
 
     try:
         result = run_narrator_turn(
@@ -175,16 +193,17 @@ def chat(payload: ChatRequest):
         raise HTTPException(status_code=502, detail="Ruwi is temporarily unavailable. Please try again.") from exc
 
     audio_url = None
-    try:
-        audio_bytes = speak_text(result.text)
-        filename = f"{uuid.uuid4().hex}.mp3"
-        audio_path = (AUDIO_DIR / filename).resolve()
-        if AUDIO_DIR not in audio_path.parents:
-            raise RuntimeError("resolved audio path escaped AUDIO_DIR")
-        audio_path.write_bytes(audio_bytes)
-        audio_url = f"/static/audio/{filename}"
-    except Exception:  # noqa: BLE001 — TTS failure must never break the text response
-        logger.exception("TTS generation failed for artifact %s; returning text-only response", payload.artifact_id)
+    if config.tts_configuration_status()["configured"]:
+        try:
+            audio_bytes = speak_text(result.text)
+            filename = f"{uuid.uuid4().hex}.mp3"
+            audio_path = (AUDIO_DIR / filename).resolve()
+            if AUDIO_DIR not in audio_path.parents:
+                raise RuntimeError("resolved audio path escaped AUDIO_DIR")
+            audio_path.write_bytes(audio_bytes)
+            audio_url = f"/static/audio/{filename}"
+        except Exception:  # noqa: BLE001 — TTS failure must never break the text response
+            logger.exception("TTS generation failed for artifact %s; returning text-only response", payload.artifact_id)
 
     logger.debug("Narrator transcript for artifact %s: %s", payload.artifact_id, result.transcript)
     return ChatResponse(answer=result.text, hit_iteration_cap=result.hit_iteration_cap, audio_url=audio_url)

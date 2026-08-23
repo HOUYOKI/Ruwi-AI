@@ -15,6 +15,10 @@ NARRATOR_PROVIDER = os.getenv("NARRATOR_PROVIDER")
 NARRATOR_MODEL = os.getenv("NARRATOR_MODEL")
 NARRATOR_TEMPERATURE = float(os.getenv("NARRATOR_TEMPERATURE", "0.5"))
 NARRATOR_MAX_TOKENS = int(os.getenv("NARRATOR_MAX_TOKENS", "2048"))
+EXPERIENCE_LLM_ENABLED = os.getenv("EXPERIENCE_LLM_ENABLED", "false").lower() in {"1", "true", "yes"}
+VISION_PROVIDER = os.getenv("VISION_PROVIDER")
+VISION_MODEL = os.getenv("VISION_MODEL")
+VISION_TIMEOUT_SECONDS = float(os.getenv("VISION_TIMEOUT_SECONDS", "20"))
 TTS_STABILITY = float(os.getenv("TTS_STABILITY", "0.21"))
 TTS_STYLE = float(os.getenv("TTS_STYLE", "0.3"))
 TTS_SIMILARITY_BOOST = float(os.getenv("TTS_SIMILARITY_BOOST", "0.75"))
@@ -32,6 +36,27 @@ def get_narrator_provider_credentials() -> tuple[str, str]:
     if not base_url or not api_key:
         raise RuntimeError(
             f"NARRATOR_PROVIDER is '{NARRATOR_PROVIDER}' but missing "
+            f"{prefix}_BASE_URL and/or {prefix}_API_KEY"
+        )
+    return base_url, api_key
+
+
+def get_vision_provider_credentials() -> tuple[str, str]:
+    """Resolve vision credentials independently from the Narrator provider."""
+    base_url = os.getenv("VISION_BASE_URL")
+    api_key = os.getenv("VISION_API_KEY")
+    if base_url and api_key:
+        return base_url, api_key
+    if not VISION_PROVIDER:
+        raise RuntimeError(
+            "Vision is not configured. Set VISION_MODEL, VISION_BASE_URL, and VISION_API_KEY."
+        )
+    prefix = VISION_PROVIDER.upper()
+    base_url = os.getenv(f"{prefix}_BASE_URL")
+    api_key = os.getenv(f"{prefix}_API_KEY")
+    if not base_url or not api_key:
+        raise RuntimeError(
+            f"VISION_PROVIDER is '{VISION_PROVIDER}' but missing "
             f"{prefix}_BASE_URL and/or {prefix}_API_KEY"
         )
     return base_url, api_key
@@ -57,3 +82,39 @@ FRONTEND_ORIGIN = os.getenv("FRONTEND_ORIGIN", "http://localhost:5173")
 CHAT_QUESTION_MAX_LENGTH = 2000
 CLAUDE_REQUEST_TIMEOUT_SECONDS = 20.0
 CLAUDE_MAX_RETRIES = 1
+
+
+def narrator_is_configured() -> bool:
+    if not NARRATOR_PROVIDER or not NARRATOR_MODEL:
+        return False
+    prefix = NARRATOR_PROVIDER.upper()
+    return bool(os.getenv(f"{prefix}_BASE_URL") and os.getenv(f"{prefix}_API_KEY"))
+
+
+def vision_is_configured() -> bool:
+    if not VISION_MODEL:
+        return False
+    if os.getenv("VISION_BASE_URL") and os.getenv("VISION_API_KEY"):
+        return True
+    if not VISION_PROVIDER:
+        return False
+    prefix = VISION_PROVIDER.upper()
+    return bool(os.getenv(f"{prefix}_BASE_URL") and os.getenv(f"{prefix}_API_KEY"))
+
+
+def tts_configuration_status() -> dict[str, bool]:
+    return {
+        "configured": bool(os.getenv("ELEVENLABS_API_KEY")),
+        "english_voice": bool(os.getenv("ELEVENLABS_VOICE_ID_EN")),
+        "arabic_voice": bool(os.getenv("ELEVENLABS_VOICE_ID_AR")),
+    }
+
+
+def provider_preflight() -> dict:
+    """Return readiness booleans only; never expose credentials or provider URLs."""
+    return {
+        "core": {"collection": True, "curated_experiences": True},
+        "narrator": {"configured": narrator_is_configured()},
+        "vision": {"configured": vision_is_configured()},
+        "tts": tts_configuration_status(),
+    }

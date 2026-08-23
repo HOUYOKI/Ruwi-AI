@@ -1,11 +1,17 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 
 export default function ArtifactViewer3D({ imageUrl, alt }: { imageUrl: string; alt: string }) {
   const containerRef = useRef<HTMLDivElement>(null);
+  const [viewerFailed, setViewerFailed] = useState(false);
 
   useEffect(() => {
+    setViewerFailed(false);
+  }, [imageUrl]);
+
+  useEffect(() => {
+    if (viewerFailed) return;
     const container = containerRef.current;
     if (!container) return;
 
@@ -20,7 +26,14 @@ export default function ArtifactViewer3D({ imageUrl, alt }: { imageUrl: string; 
     );
     camera.position.set(0, 0, 3.2);
 
-    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    let renderer: THREE.WebGLRenderer;
+    try {
+      renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    } catch (error) {
+      console.error("Ruwi: WebGL is unavailable; using the artifact image", error);
+      setViewerFailed(true);
+      return;
+    }
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     renderer.setSize(container.clientWidth, container.clientHeight);
     container.appendChild(renderer.domElement);
@@ -57,23 +70,29 @@ export default function ArtifactViewer3D({ imageUrl, alt }: { imageUrl: string; 
       })
       .then((blob) => {
         objectUrl = URL.createObjectURL(blob);
-        new THREE.TextureLoader().load(objectUrl, (texture) => {
-          texture.colorSpace = THREE.SRGBColorSpace;
-          const aspect = texture.image.width / texture.image.height;
-          const height = 2.2;
-          const geometry = new THREE.PlaneGeometry(height * aspect, height);
-          const material = new THREE.MeshStandardMaterial({
-            map: texture,
-            transparent: true,
-            side: THREE.DoubleSide,
-          });
-          mesh = new THREE.Mesh(geometry, material);
-          scene.add(mesh);
-        });
+        new THREE.TextureLoader().load(
+          objectUrl,
+          (texture) => {
+            texture.colorSpace = THREE.SRGBColorSpace;
+            const aspect = texture.image.width / texture.image.height;
+            const height = 2.2;
+            const geometry = new THREE.PlaneGeometry(height * aspect, height);
+            const material = new THREE.MeshStandardMaterial({
+              map: texture,
+              transparent: true,
+              side: THREE.DoubleSide,
+            });
+            mesh = new THREE.Mesh(geometry, material);
+            scene.add(mesh);
+          },
+          undefined,
+          () => setViewerFailed(true),
+        );
       })
       .catch((err) => {
         if (err instanceof DOMException && err.name === "AbortError") return;
         console.error("Ruwi: failed to load artifact texture", err);
+        setViewerFailed(true);
       });
 
     let frameId: number;
@@ -110,14 +129,22 @@ export default function ArtifactViewer3D({ imageUrl, alt }: { imageUrl: string; 
         container.removeChild(renderer.domElement);
       }
     };
-  }, [imageUrl]);
+  }, [imageUrl, viewerFailed]);
 
   return (
     <div
       ref={containerRef}
       role="img"
       aria-label={alt}
-      className="aspect-square w-full overflow-hidden rounded-sm border border-neutral-800 bg-neutral-950"
-    />
+      className="relative aspect-square w-full overflow-hidden rounded-sm border border-neutral-800 bg-neutral-950"
+    >
+      {viewerFailed && (
+        <img
+          src={imageUrl}
+          alt={alt}
+          className="absolute inset-0 h-full w-full object-contain p-6"
+        />
+      )}
+    </div>
   );
 }

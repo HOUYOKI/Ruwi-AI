@@ -9,6 +9,11 @@ export default function ArtifactCard({ artifact }: { artifact: ArtifactSummary }
       className="group flex flex-col overflow-hidden rounded-sm border border-neutral-800 bg-neutral-900/40 transition-colors hover:border-amber-400/40"
     >
       <div className="relative aspect-square overflow-hidden bg-neutral-900">
+        {artifact.featured && (
+          <span className="absolute left-3 top-3 z-10 rounded-full border border-amber-300/30 bg-neutral-950/85 px-3 py-1 text-[10px] font-semibold tracking-[0.16em] text-amber-200 uppercase backdrop-blur-sm">
+            Ruwi Experience
+          </span>
+        )}
         <img
           src={resolveImageUrl(artifact.image_url)}
           alt={artifact.name}

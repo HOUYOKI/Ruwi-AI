@@ -1,0 +1,444 @@
+{
+  "46": {
+    "artifact_id": 46,
+    "featured": true,
+    "category": "funerary_object",
+    "preferred_template": "hotspot_story",
+    "language": "en",
+    "confidence": 1.0,
+    "title": "A Face Preserved in Gold",
+    "summary": "Explore how a thin sheet of gold became a carefully made funerary portrait—and what its smallest details reveal about burial at ancient Thaj.",
+    "narration": "This small gold face comes from the ancient city of Thaj and dates to the first century AD. Its eyes, brows, nose, and mouth were shaped in a thin sheet of gold. Four holes around its edge suggest that it was attached to a covering over the body. The mask was found among the rich burial objects of a girl about six years old. The museum record presents the care and wealth visible in her burial while leaving us mindful that this object belonged to a real child and family.",
+    "story_sections": [
+      {
+        "id": "crafted-face",
+        "title": "A portrait shaped from a thin sheet",
+        "body": "The maker worked delicate gold into a recognizable human face. Clearly formed eyebrows, eyes, nose, and mouth turn a precious material into an intimate image."
+      },
+      {
+        "id": "burial-context",
+        "title": "Made to accompany a child",
+        "body": "The mask was one of many luxury objects found with a girl about six years old at Thaj. The museum panel connects the quantity and richness of these objects with the wealth of her family and their care in following burial customs."
+      }
+    ],
+    "facts": [
+      { "label": "Date", "value": "1st century AD" },
+      { "label": "Findspot", "value": "Thaj Archaeological City, Eastern Province" },
+      { "label": "Material", "value": "Thin sheet gold" }
+    ],
+    "hotspots": [
+      {
+        "id": "attachment-holes",
+        "x": 0.326,
+        "y": 0.227,
+        "title": "Attachment holes",
+        "body": "Four small holes around the edge indicate that the mask was probably fastened to a burial shroud or another covering over the body."
+      },
+      {
+        "id": "facial-features",
+        "x": 0.326,
+        "y": 0.405,
+        "title": "A carefully formed face",
+        "body": "The eyes, eyebrows, nose, and mouth remain clearly visible despite the thinness of the gold sheet."
+      },
+      {
+        "id": "gold-sheet",
+        "x": 0.274,
+        "y": 0.48,
+        "title": "Precious, delicate material",
+        "body": "The face was fashioned from thin gold, one of the luxury objects that accompanied the child in her burial."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "mask-attachment",
+        "prompt": "What detail suggests how the mask was used in the burial?",
+        "choices": [
+          "Four holes around its edges",
+          "A handle beneath the chin",
+          "Writing across the forehead"
+        ],
+        "correct_index": 0,
+        "explanation": "The four edge holes suggest that the mask was attached to a shroud or similar covering."
+      },
+      {
+        "id": "mask-material",
+        "prompt": "What material was shaped to create the mask?",
+        "choices": ["Bronze", "Thin sheet gold", "Painted plaster"],
+        "correct_index": 1,
+        "explanation": "The museum record identifies the mask as a human face made from thin gold."
+      }
+    ],
+    "sources": [
+      {
+        "id": "national-museum-panel-46",
+        "title": "Small Funerary Mask museum panel",
+        "publisher": "National Museum of Saudi Arabia",
+        "url": "https://nationalmuseum.moc.gov.sa/style/images/art/_46-goldenface.jpg",
+        "source_type": "museum_panel"
+      }
+    ]
+  },
+  "14": {
+    "artifact_id": 14,
+    "featured": true,
+    "category": "ritual_object",
+    "preferred_template": "hotspot_story",
+    "language": "en",
+    "confidence": 1.0,
+    "title": "Symbols Meeting at Tayma",
+    "summary": "Read a sandstone altar as a carved record of ritual imagery and cultural exchange in ancient Tayma.",
+    "narration": "This large sandstone cube dates from the sixth to fourth century BC and comes from Tayma. Its carved ritual scenes include a bull's head with a solar disc between its horns and a full-bodied bull beneath a winged sun disc. Plant designs complete the carved surface. The museum record notes that these symbols recall religious designs from ancient Egypt and Mesopotamia, showing how Tayma participated in wider cultural and commercial connections.",
+    "story_sections": [
+      {
+        "id": "ritual-surface",
+        "title": "A ritual object made to be read",
+        "body": "The cube's surfaces carry scenes rather than simple decoration. Bulls, solar discs, and plant designs make the stone a layered visual object."
+      },
+      {
+        "id": "connected-oasis",
+        "title": "An oasis connected to wider worlds",
+        "body": "The museum record compares its imagery with ancient Egyptian and Mesopotamian religious designs, reflecting Tayma's role in cultural and commercial exchange."
+      }
+    ],
+    "facts": [
+      { "label": "Date", "value": "6th–4th century BC" },
+      { "label": "Findspot", "value": "Tayma, Tabuk Region" },
+      { "label": "Material", "value": "Sandstone" }
+    ],
+    "hotspots": [
+      {
+        "id": "winged-disc",
+        "x": 0.32,
+        "y": 0.39,
+        "title": "Winged sun disc",
+        "body": "A winged disc spreads across the upper scene, one of the ritual symbols highlighted by the museum record."
+      },
+      {
+        "id": "bull-scene",
+        "x": 0.31,
+        "y": 0.61,
+        "title": "The carved bull",
+        "body": "A full-bodied bull appears beneath the winged disc. Another face of the cube carries a bull's head with a solar disc between its horns."
+      },
+      {
+        "id": "upper-carving",
+        "x": 0.31,
+        "y": 0.29,
+        "title": "Carved bands and motifs",
+        "body": "Carved details extend across the stone, combining the main ritual figures with additional decorative designs."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "altar-material",
+        "prompt": "What material was used to make this ritual cube?",
+        "choices": ["Sandstone", "Bronze", "Alabaster"],
+        "correct_index": 0,
+        "explanation": "The altar was carved from sandstone."
+      },
+      {
+        "id": "altar-symbol",
+        "prompt": "Which animal appears in the altar's ritual scenes?",
+        "choices": ["Camel", "Bull", "Lion"],
+        "correct_index": 1,
+        "explanation": "The record describes both a bull's head and a full-bodied bull alongside solar imagery."
+      }
+    ],
+    "sources": [
+      {
+        "id": "national-museum-panel-14",
+        "title": "Ritual altar museum panel",
+        "publisher": "National Museum of Saudi Arabia",
+        "url": "https://nationalmuseum.moc.gov.sa/style/images/art/_14-bigcube.jpg",
+        "source_type": "museum_panel"
+      }
+    ]
+  },
+  "18": {
+    "artifact_id": 18,
+    "featured": true,
+    "category": "weapon_and_craft",
+    "preferred_template": "object_anatomy",
+    "language": "en",
+    "confidence": 1.0,
+    "title": "Crafting the Khanjar",
+    "summary": "Explore the handle, sheath, and materials of a nineteenth-century khanjar from the Asir region.",
+    "narration": "This khanjar comes from the Asir region and dates to the thirteenth century AH, or nineteenth century AD. Its silver handle and ornate silver sheath display detailed geometric engraving and fine metalwork. The complete object brings together silver, steel, and leather. The museum record describes khanjars as objects of personal defense and as visible signs of status, honor, and tribal identity.",
+    "story_sections": [
+      {
+        "id": "craft-and-identity",
+        "title": "Craft carried in public",
+        "body": "The khanjar combines a defensive object with highly visible silver craftsmanship. Its decoration made the sheath and handle as important to its appearance as the blade within."
+      }
+    ],
+    "facts": [
+      { "label": "Period", "value": "13th century AH / 19th century AD" },
+      { "label": "Region", "value": "Asir" },
+      { "label": "Materials", "value": "Silver, steel, and leather" }
+    ],
+    "hotspots": [
+      {
+        "id": "silver-hilt",
+        "x": 0.48,
+        "y": 0.31,
+        "title": "Silver handle",
+        "body": "The prominent handle is worked in silver and continues the object's dense geometric decoration."
+      },
+      {
+        "id": "sheath-body",
+        "x": 0.39,
+        "y": 0.52,
+        "title": "Ornate sheath",
+        "body": "The matching silver sheath protects the steel blade and carries intricate geometric engraving and fine metalwork."
+      },
+      {
+        "id": "curved-tip",
+        "x": 0.24,
+        "y": 0.70,
+        "title": "Curving lower form",
+        "body": "The sheath follows the blade's curved profile and ends in a strongly shaped, decorated tip."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "khanjar-region",
+        "prompt": "Which Saudi region is associated with this khanjar?",
+        "choices": ["Asir", "Tabuk", "Eastern Province"],
+        "correct_index": 0,
+        "explanation": "The museum record identifies the khanjar with the Asir region."
+      },
+      {
+        "id": "khanjar-materials",
+        "prompt": "Which group of materials forms the complete object?",
+        "choices": ["Gold and pottery", "Silver, steel, and leather", "Bronze and glass"],
+        "correct_index": 1,
+        "explanation": "Its handle and sheath use silver, while the complete object also includes steel and leather."
+      }
+    ],
+    "sources": [
+      {
+        "id": "national-museum-panel-18",
+        "title": "Silver-handled khanjar museum panel",
+        "publisher": "National Museum of Saudi Arabia",
+        "url": "https://nationalmuseum.moc.gov.sa/style/images/art/_18-khanjar.jpg",
+        "source_type": "museum_panel"
+      }
+    ]
+  },
+  "43": {
+    "artifact_id": 43,
+    "featured": true,
+    "category": "wall_painting",
+    "preferred_template": "hotspot_story",
+    "language": "en",
+    "confidence": 1.0,
+    "title": "A Banquet Survives in Fragments",
+    "summary": "Explore the figures, grapevine, and surviving inscription in a wall painting from Qaryat al-Faw.",
+    "narration": "This fragment of painted plaster comes from Qaryat al-Faw and dates to the first or second century AD. A man with thick curly hair and a thin mustache looks outward from the scene. Above him are two smaller servant figures and grapes growing on a vine. The museum record says the style recalls Graeco-Roman decoration and may represent a banquet. A short inscription on one side reads Zaki.",
+    "story_sections": [
+      {
+        "id": "surviving-scene",
+        "title": "A partial scene, still full of clues",
+        "body": "Although much of the wall painting is lost, the surviving face, smaller figures, vine, grapes, and inscription preserve the structure of a larger scene."
+      },
+      {
+        "id": "style-and-place",
+        "title": "Qaryat al-Faw in a connected visual world",
+        "body": "The museum panel compares the painting's style with Graeco-Roman decoration and cautiously interprets it as a possible banqueting scene."
+      }
+    ],
+    "facts": [
+      { "label": "Date", "value": "1st–2nd century AD" },
+      { "label": "Findspot", "value": "Qaryat al-Faw, Riyadh Region" },
+      { "label": "Material", "value": "Plaster and pigment" }
+    ],
+    "hotspots": [
+      {
+        "id": "main-figure",
+        "x": 0.25,
+        "y": 0.55,
+        "title": "The main figure",
+        "body": "The surviving man has thick curly hair, a thin mustache, and a prominent direct gaze."
+      },
+      {
+        "id": "grapevine",
+        "x": 0.29,
+        "y": 0.41,
+        "title": "Grapes on a vine",
+        "body": "A bunch of grapes and its vine contribute to the museum's cautious reading of the fragment as a possible banquet scene."
+      },
+      {
+        "id": "smaller-figure",
+        "x": 0.39,
+        "y": 0.52,
+        "title": "A smaller attendant",
+        "body": "Smaller servant figures appear above the main figure, preserving part of the scene's arrangement."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "painting-material",
+        "prompt": "What survives of this ancient scene?",
+        "choices": ["Paint on plaster", "A woven textile", "Carving on bronze"],
+        "correct_index": 0,
+        "explanation": "The artifact is a fragment of wall painting made with pigment on plaster."
+      },
+      {
+        "id": "painting-detail",
+        "prompt": "Which plant detail appears in the painting?",
+        "choices": ["Palm dates", "Grapes on a vine", "Wheat stalks"],
+        "correct_index": 1,
+        "explanation": "The panel describes a bunch of grapes on a vine above the main figure."
+      }
+    ],
+    "sources": [
+      {
+        "id": "national-museum-panel-43",
+        "title": "Qaryat al-Faw wall painting museum panel",
+        "publisher": "National Museum of Saudi Arabia",
+        "url": "https://nationalmuseum.moc.gov.sa/style/images/art/_43-wallmural.jpg",
+        "source_type": "museum_panel"
+      }
+    ]
+  },
+  "79": {
+    "artifact_id": 79,
+    "featured": true,
+    "category": "incense_burner",
+    "preferred_template": "object_anatomy",
+    "language": "en",
+    "confidence": 1.0,
+    "title": "Designed to Hang, Made to Fragrance",
+    "summary": "Examine how the linked parts of this 1784 copper mabkhara allowed incense smoke to rise from a suspended vessel.",
+    "narration": "This copper mabkhara was made in 1198 AH, or 1784 AD, and was designed to hang. Its spherical lower bowl held incense, while a matching domed lid helped regulate the release of aromatic smoke. Chains connect the upper and lower parts and allowed the vessel to be suspended. Across the copper surface, geometric and floral engraving turns a functional incense burner into an ornate object.",
+    "story_sections": [
+      {
+        "id": "suspended-design",
+        "title": "A vessel designed around suspension",
+        "body": "The long chains, covered upper section, and lower bowl form one connected object designed to disperse fragrance while hanging."
+      }
+    ],
+    "facts": [
+      { "label": "Date", "value": "1198 AH / 1784 AD" },
+      { "label": "Material", "value": "Copper" },
+      { "label": "Display", "value": "Hajj and the Two Holy Mosques Gallery" }
+    ],
+    "hotspots": [
+      {
+        "id": "domed-lid",
+        "x": 0.35,
+        "y": 0.45,
+        "title": "Domed upper cover",
+        "body": "The decorated dome forms the upper covered section and helped regulate the release of smoke."
+      },
+      {
+        "id": "suspension-chains",
+        "x": 0.39,
+        "y": 0.57,
+        "title": "Suspension chains",
+        "body": "Sturdy chains connect the sections and allowed the mabkhara to be hung."
+      },
+      {
+        "id": "incense-bowl",
+        "x": 0.35,
+        "y": 0.72,
+        "title": "Lower incense bowl",
+        "body": "The spherical lower bowl held the incense and carries geometric and floral engraving across its copper surface."
+      }
+    ],
+    "quiz": [
+      {
+        "id": "mabkhara-design",
+        "prompt": "What feature allowed this mabkhara to hang?",
+        "choices": ["Suspension chains", "A stone pedestal", "A wooden frame"],
+        "correct_index": 0,
+        "explanation": "Chains connect the vessel's sections and support its suspended design."
+      },
+      {
+        "id": "mabkhara-date",
+        "prompt": "When was this copper mabkhara made?",
+        "choices": ["1784 AD", "1437 AD", "1909 AD"],
+        "correct_index": 0,
+        "explanation": "The museum record dates it to 1198 AH, corresponding to 1784 AD."
+      }
+    ],
+    "sources": [
+      {
+        "id": "national-museum-panel-79",
+        "title": "Hanging copper mabkhara museum panel",
+        "publisher": "National Museum of Saudi Arabia",
+        "url": "https://nationalmuseum.moc.gov.sa/style/images/art/hajj/35-hang.jpg",
+        "source_type": "museum_panel"
+      }
+    ]
+  },
+  "6": {
+    "artifact_id": 6,
+    "featured": true,
+    "category": "natural_history",
+    "preferred_template": "story_timeline",
+    "language": "en",
+    "confidence": 1.0,
+    "title": "From the Sky to the Empty Quarter",
+    "summary": "Follow a 2.75-ton iron-and-nickel meteorite fragment from its estimated impact to its discovery and museum display.",
+    "narration": "This fragment is part of a large meteorite made mainly of iron and nickel. The museum record says the meteorite is believed to have struck Earth about four hundred years ago. This recovered piece weighs approximately 2.75 tons and was discovered in 1932 among the dunes of the Rub' al Khali. It is now displayed in the Man and the Universe Gallery.",
+    "story_sections": [
+      {
+        "id": "cosmic-object",
+        "title": "A celestial object on Earth",
+        "body": "Its rough metallic surface belongs to a fragment composed primarily of iron and nickel—a material record of a meteorite impact."
+      }
+    ],
+    "timeline": [
+      {
+        "id": "estimated-impact",
+        "label": "About 400 years ago",
+        "title": "Estimated impact",
+        "body": "The museum record says the meteorite is believed to have struck Earth approximately four centuries ago."
+      },
+      {
+        "id": "discovery",
+        "label": "1932",
+        "title": "Discovered in the Empty Quarter",
+        "body": "The fragment was found in the Rub' al Khali in Saudi Arabia."
+      },
+      {
+        "id": "museum-display",
+        "label": "Museum display",
+        "title": "A cosmic milestone on view",
+        "body": "The 2.75-ton fragment is displayed in the Man and the Universe Gallery."
+      }
+    ],
+    "facts": [
+      { "label": "Composition", "value": "Iron and nickel" },
+      { "label": "Weight", "value": "Approximately 2.75 tons" },
+      { "label": "Discovery", "value": "Rub' al Khali, 1932" }
+    ],
+    "quiz": [
+      {
+        "id": "meteorite-material",
+        "prompt": "What are the main materials in this meteorite fragment?",
+        "choices": ["Iron and nickel", "Copper and silver", "Stone and glass"],
+        "correct_index": 0,
+        "explanation": "The museum record identifies iron and nickel as its primary composition."
+      },
+      {
+        "id": "meteorite-discovery",
+        "prompt": "Where was the fragment discovered in 1932?",
+        "choices": ["Tayma", "Rub' al Khali", "Qaryat al-Faw"],
+        "correct_index": 1,
+        "explanation": "It was discovered among the dunes of the Rub' al Khali, the Empty Quarter."
+      }
+    ],
+    "sources": [
+      {
+        "id": "national-museum-panel-6",
+        "title": "Meteorite fragment museum panel",
+        "publisher": "National Museum of Saudi Arabia",
+        "url": "https://nationalmuseum.moc.gov.sa/style/images/art/6-Meteortie.jpg",
+        "source_type": "museum_panel"
+      }
+    ]
+  }
+}

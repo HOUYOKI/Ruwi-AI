@@ -50,7 +50,7 @@ Edit `.env` and set the variables below. Then run the server from `backend/`:
 uvicorn main:app --reload
 ```
 
-Backend serves on `http://localhost:8000`. It loads `data/artifacts.json` at startup and fails immediately (non-zero exit, clear error) if the file is missing, malformed, or if `NARRATOR_MODEL` / the Narrator provider credentials aren't set — check the terminal output if it won't start.
+Backend serves on `http://localhost:8000`. It loads `data/artifacts.json` at startup and fails immediately if the trusted local data is missing or malformed. External providers are optional at startup: the collection and curated experiences remain available without Narrator, Vision, or TTS credentials. Check `GET /health/config` for non-secret readiness booleans.
 
 ## Environment variables
 
@@ -58,8 +58,8 @@ All read by `backend/config.py`. Placeholders below, not real values.
 
 | Variable | Required | Notes |
 |---|---|---|
-| `NARRATOR_PROVIDER` | Yes | Names which `{PROVIDER}_BASE_URL`/`{PROVIDER}_API_KEY` pair to use, e.g. `glm` → `GLM_BASE_URL`/`GLM_API_KEY` |
-| `NARRATOR_MODEL` | Yes | Checked at boot — app won't start without it |
+| `NARRATOR_PROVIDER` | For Ask Ruwi | Names which `{PROVIDER}_BASE_URL`/`{PROVIDER}_API_KEY` pair to use, e.g. `glm` → `GLM_BASE_URL`/`GLM_API_KEY` |
+| `NARRATOR_MODEL` | For Ask Ruwi | If omitted, artifact browsing and curated experiences still work; `/chat` returns a controlled 503 |
 | `GLM_BASE_URL` / `GLM_API_KEY` (or whichever provider you named above) | Yes | e.g. `GLM_BASE_URL=https://api.z.ai/api/paas/v4`, `GLM_API_KEY=your_glm_api_key_here` |
 | `NARRATOR_TEMPERATURE` | No | Default `0.5` |
 | `NARRATOR_MAX_TOKENS` | No | Default `2048` |

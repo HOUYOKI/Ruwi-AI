@@ -1,4 +1,6 @@
 import type { ArtifactDetail, ArtifactSummary } from "../types/artifact";
+import type { ExperienceResponse } from "../types/experience";
+import type { IdentificationResponse } from "../types/identification";
 
 const API_BASE_URL: string = import.meta.env.VITE_API_BASE_URL ?? "http://localhost:8000";
 
@@ -44,6 +46,19 @@ export function fetchArtifacts(): Promise<ArtifactSummary[]> {
 
 export function fetchArtifact(id: string | number): Promise<ArtifactDetail> {
   return request<ArtifactDetail>(`/artifacts/${id}`);
+}
+
+export function fetchArtifactExperience(id: string | number): Promise<ExperienceResponse> {
+  return request<ExperienceResponse>(`/artifacts/${id}/experience`);
+}
+
+export function identifyArtifact(file: File): Promise<IdentificationResponse> {
+  const formData = new FormData();
+  formData.append("file", file);
+  return request<IdentificationResponse>("/identify", {
+    method: "POST",
+    body: formData,
+  });
 }
 
 export function askRuwi(artifactId: number, question: string): Promise<{ answer: string }> {
