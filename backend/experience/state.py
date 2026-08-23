@@ -11,8 +11,6 @@ class ExperienceState(TypedDict, total=False):
     curated_context: dict[str, Any]
     local_context: str
     match_status: Literal["matched", "unsupported"]
-    needs_external_context: bool
-    external_context: list[dict[str, Any]]
     template: str
     draft: dict[str, Any]
     experience: dict[str, Any]

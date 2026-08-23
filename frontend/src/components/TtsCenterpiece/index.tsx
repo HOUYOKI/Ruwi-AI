@@ -20,7 +20,7 @@ export default function TtsCenterpiece({
   onToggleShowText,
 }: TtsCenterpieceProps) {
   const { t } = useTranslation();
-  const { audioRef, coreRef, glowRef, isPlaying, needsManualPlay, canReplay, play, audioEventHandlers } =
+  const { audioRef, coreRef, glowRef, isPlaying, isPaused, needsManualPlay, canReplay, play, pause, audioEventHandlers } =
     useAudioVisualizer(audioUrl);
 
   useEffect(() => {
@@ -39,7 +39,7 @@ export default function TtsCenterpiece({
           {showIdlePrompt ? t("ttsCenterpiece.idlePrompt") : showText ? caption : ""}
         </p>
         <div className="flex items-center gap-3">
-          <PlayControls needsManualPlay={needsManualPlay} canReplay={canReplay} isPlaying={isPlaying} onPlay={play} />
+          <PlayControls needsManualPlay={needsManualPlay} canReplay={canReplay} isPlaying={isPlaying} isPaused={isPaused} onPlay={play} onPause={pause} />
           {hasAnswer && (
             <button
               type="button"

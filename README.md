@@ -1,96 +1,114 @@
-# Ruwi (رُوي) — MVP
+# Ruwi | رُوي
 
-Dark-themed, minimalist interactive artifact explorer for the Saudi National Museum. Pick an artifact, view it in 3D, and ask Ruwi — an AI narrator — how it connects across cultures and civilizations.
+Ruwi is an interactive museum-experience MVP for the Saudi National Museum. Visitors can browse 102 artifacts or upload a photo, open one of six curated showcase experiences, interact with structured story templates, and ask a grounded AI narrator questions with optional ElevenLabs audio.
 
-Ruwi's target design is three agents (Narrator, Connector, Reflection). Right now, only the Narrator is wired into the running app.
+## Current product
 
-## Structure
+- React, Vite, and TypeScript frontend
+- FastAPI backend
+- Arabic/English UI with RTL/LTR and light/dark themes
+- Touch-friendly carousel gallery with all 102 artifacts
+- Six Featured Experiences: `6, 14, 18, 43, 46, 79`
+- Structured Experience JSON rendered as hotspot stories, object anatomy, timelines, quizzes, and trusted sources
+- Small LangGraph experience workflow with validated curated offline fallback
+- Upload/mobile camera flow and constrained vision identification
+- Ask Ruwi narrator using a configurable OpenAI-compatible provider
+- Local-first Connector extension with trusted-domain filtering and an injectable retrieval provider
+- Lightweight deterministic Reflection metadata for narrator answers
+- ElevenLabs English/Arabic TTS with text fallback
+- Non-secret provider readiness at `GET /health/config`
 
+The Connector is wired into `/chat`, but its default external retrieval provider is intentionally unconfigured; it falls back to local museum context without failing the request. Reflection performs lightweight deterministic checks rather than a second LLM pass. True vector RAG, embeddings, and a vector database are not implemented. Vision supports only the six showcase candidates and requires a configured multimodal provider.
+
+The conversational path is: local-first Connector decision → optional trusted evidence → Narrator → Reflection metadata → existing TTS. Connector evidence is accepted only from the trusted-domain policy in `backend/agents/connector/tools.py`; a future provider can implement the `RetrievalProvider` interface without changing Narrator.
+
+## Repository layout
+
+```text
+backend/                 FastAPI, Narrator, Connector, Reflection, TTS, Experience, and Vision
+frontend/                React/Vite visitor interface
+data/artifacts.json      Grounded catalog data
+data/showcase_*.json     English and Arabic showcase experiences
+assets/clean_artifacts/  Artifact PNG images
+docs/BOOTH_CHECKLIST.md  Final manual booth QA
 ```
-backend/    FastAPI app (artifacts API, /chat via Narrator agent + TTS)
-frontend/   React + Vite + Three.js UI
-data/       artifacts.json (grounded artifact data)
-assets/     clean_artifacts/ (isolated PNG artifact images)
-```
 
-## Current scope
+## Backend startup
 
-**Works, wired into the running app:**
-- Narrator agent, Interpreter posture — ReAct loop (`backend/agents/narrator/`), answers directly, calls `get_artifact` to cross-reference another artifact, or declines in-character. Model is provider-agnostic (OpenAI-compatible chat-completions format), currently configured for GLM (Z.ai).
-- Text-to-speech (ElevenLabs) — fires once, automatically, after the Narrator's turn ends. Never model-invoked, never part of the reasoning loop. If TTS fails or isn't configured, the text answer is still returned (`audio_url: null`) — a voice outage never blocks the response.
+From the repository root:
 
-**Designed, not yet built:**
-- Connector agent (cross-cultural connections — the project's stated "moat")
-- Reflection agent (end-of-visit synthesis)
-- Visit Record (shared state across a visit)
-- Storyteller posture (one-time opening narration gate)
-
-> Two `requirements.txt` files currently exist: `backend/requirements.txt` (real, used below) and a root-level `requirements.txt` that appears corrupted/stray (wrong encoding, mismatched pin). Unresolved — flagging rather than silently picking one.
-
-## Backend setup
-
-```bash
+```powershell
 cd backend
 python -m venv venv
-venv\Scripts\activate        # Windows
-# source venv/bin/activate   # macOS/Linux
-pip install -r requirements.txt
+.\venv\Scripts\Activate.ps1
+python -m pip install -r requirements.txt
+Copy-Item ..\.env.example ..\.env
+uvicorn main:app --host 0.0.0.0 --port 8000
 ```
 
-Copy the example env file **at the repo root** (there is no `backend/.env.example` — `python-dotenv`'s `load_dotenv()` walks up from the working directory and finds the root `.env`):
+Use another port by changing `--port`. If the browser origin differs from `http://localhost:5173`, update `FRONTEND_ORIGIN` in the root `.env`.
 
-```bash
-copy ..\.env.example ..\.env       # Windows, run from backend/
-# cp ../.env.example ../.env       # macOS/Linux
-```
+External credentials are optional at startup. Without them, the collection and six curated experiences still work; `/chat` and `/identify` return controlled unavailable responses.
 
-Edit `.env` and set the variables below. Then run the server from `backend/`:
+## Frontend startup
 
-```bash
-uvicorn main:app --reload
-```
-
-Backend serves on `http://localhost:8000`. It loads `data/artifacts.json` at startup and fails immediately if the trusted local data is missing or malformed. External providers are optional at startup: the collection and curated experiences remain available without Narrator, Vision, or TTS credentials. Check `GET /health/config` for non-secret readiness booleans.
-
-## Environment variables
-
-All read by `backend/config.py`. Placeholders below, not real values.
-
-| Variable | Required | Notes |
-|---|---|---|
-| `NARRATOR_PROVIDER` | For Ask Ruwi | Names which `{PROVIDER}_BASE_URL`/`{PROVIDER}_API_KEY` pair to use, e.g. `glm` → `GLM_BASE_URL`/`GLM_API_KEY` |
-| `NARRATOR_MODEL` | For Ask Ruwi | If omitted, artifact browsing and curated experiences still work; `/chat` returns a controlled 503 |
-| `GLM_BASE_URL` / `GLM_API_KEY` (or whichever provider you named above) | Yes | e.g. `GLM_BASE_URL=https://api.z.ai/api/paas/v4`, `GLM_API_KEY=your_glm_api_key_here` |
-| `NARRATOR_TEMPERATURE` | No | Default `0.5` |
-| `NARRATOR_MAX_TOKENS` | No | Default `2048` |
-| `ELEVENLABS_API_KEY` | No | TTS is skipped (text-only response) if unset |
-| `ELEVENLABS_VOICE_ID_EN` / `ELEVENLABS_VOICE_ID_AR` | No | Voice ID per detected language; TTS is skipped for a language with no ID set |
-| `TTS_STABILITY` | No | Default `0.21` |
-| `TTS_STYLE` | No | Default `0.3` |
-| `TTS_SIMILARITY_BOOST` | No | Default `0.75` |
-| `ARTIFACTS_JSON_PATH` | No | Default `../data/artifacts.json` |
-| `ASSETS_DIR` | No | Default `../assets/clean_artifacts` |
-| `FRONTEND_ORIGIN` | No | Default `http://localhost:5173` |
-
-`ANTHROPIC_API_KEY` and `CLAUDE_MODEL` are also read by `config.py` but are orphaned — leftover from an earlier stage, not required, nothing in the current `/chat` flow uses them. The Anthropic API is explicitly excluded from this project's agents (see `CLAUDE.md`).
-
-## Frontend setup
-
-```bash
+```powershell
 cd frontend
 npm install
-copy .env.example .env       # Windows; `cp` on macOS/Linux
-npm run dev
+Set-Content .env 'VITE_API_BASE_URL=http://localhost:8000'
+npm run dev -- --host 0.0.0.0 --port 5173
 ```
 
-`frontend/.env` only needs `VITE_API_BASE_URL` (defaults to `http://localhost:8000`). Never put a backend secret in a `VITE_`-prefixed variable — anything with that prefix is bundled into browser-visible JS.
+`VITE_API_BASE_URL` must be reachable by the booth browser. Never place backend secrets in a `VITE_` variable because Vite exposes those values to browser code.
 
-Frontend serves on `http://localhost:5173`. Run the backend first — the gallery shows a real error state (not a blank page) if it can't be reached.
+Open `http://localhost:5173`.
 
-## API
+## Provider configuration
 
-- `GET /artifacts` — list all artifacts (summary fields)
-- `GET /artifacts/{id}` — full detail for one artifact, 404 if unknown
-- `GET /images/{id}.png` — the artifact's isolated PNG
-- `GET /static/audio/{filename}.mp3` — generated TTS audio, directly playable
-- `POST /chat` — `{ artifact_id, question }` → `{ answer, hit_iteration_cap, audio_url }`; `audio_url` is `null` if TTS wasn't configured or failed; 502 (no stack trace) if the Narrator call itself fails
+Copy `.env.example` to `.env` and replace placeholders only on the booth machine.
+
+- Narrator: `NARRATOR_PROVIDER`, `NARRATOR_MODEL`, and the named provider's `{PROVIDER}_BASE_URL` / `{PROVIDER}_API_KEY`.
+- Vision: `VISION_MODEL` plus either `VISION_PROVIDER` reusing a named provider pair or dedicated `VISION_BASE_URL` / `VISION_API_KEY`.
+- TTS: `ELEVENLABS_API_KEY`, `ELEVENLABS_VOICE_ID_EN`, and `ELEVENLABS_VOICE_ID_AR`.
+
+Connector currently has no live provider adapter or credential variables. Tests use its static provider, and production defaults to a controlled local-only fallback. Reflection is deterministic and requires no credentials.
+
+Do not commit `.env` or real keys.
+
+## Readiness check
+
+Open `http://localhost:8000/health/config`. It reports booleans only for:
+
+- core collection
+- curated experiences
+- narrator
+- vision
+- TTS and English/Arabic voices
+
+It never returns keys or provider URLs.
+
+## Main API routes
+
+- `GET /artifacts?lang=en|ar`
+- `GET /artifacts/{id}?lang=en|ar`
+- `GET /artifacts/{id}/experience?lang=en|ar`
+- `GET /images/{id}.png`
+- `POST /identify`
+- `POST /chat` (text/audio plus optional trusted `sources` and structured `reflection` metadata)
+- `GET /health/config`
+- `GET /static/audio/{filename}.mp3`
+
+## Validation
+
+```powershell
+cd backend
+.\venv\Scripts\python.exe -m unittest discover -s tests -v
+.\venv\Scripts\python.exe -m compileall -q -x "venv" .
+
+cd ..\frontend
+npm test -- --run
+npm run build
+npm run lint
+```
+
+Live provider calls and physical camera/audio behavior are covered by the booth checklist rather than automated tests.

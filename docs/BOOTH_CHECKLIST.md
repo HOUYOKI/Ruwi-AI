@@ -1,67 +1,55 @@
-# Ruwi Booth Smoke-Test Checklist
+# Final Ruwi Booth Checklist
 
-Run this checklist on the presentation computer, connected to the intended display and network.
+Run on the presentation computer, intended browser, display, and network. Record pass/fail and retest failures after any change.
 
-## Start-up
+## 1. Start and modes
 
-- [ ] Copy `.env.example` to `.env` and add only the services intended for the demo.
-- [ ] Start the backend from `backend/` with `uvicorn main:app --host 0.0.0.0 --port 8000`.
-- [ ] Open `http://localhost:8000/health/config` and confirm collection/experiences are `true`.
-- [ ] Confirm narrator, vision, and TTS readiness matches the services configured for the demo.
-- [ ] Start the frontend from `frontend/` with `npm run dev -- --host=0.0.0.0`.
-- [ ] Open the frontend in the booth browser and enter full-screen mode.
+- [ ] Start backend and frontend using the README; open full screen at the intended resolution and zoom.
+- [ ] `/health/config` reports collection and curated experiences ready; provider states match the configured booth services.
+- [ ] Check each mode: English Light, English Dark, Arabic Light, Arabic Dark.
+- [ ] Arabic uses RTL and English uses LTR; theme/language choices survive refresh.
+- [ ] Gallery contains Featured Experiences plus the full 102-artifact collection; active artifact name, age, and location are readable.
 
-## Gallery and navigation
+## 2. Featured matrix
 
-- [ ] The gallery loads all 102 artifacts without a blank state.
-- [ ] Featured Experiences shows exactly artifacts 6, 14, 18, 43, 46, and 79.
-- [ ] Featured cards have visible Ruwi Experience badges.
-- [ ] Scan / Upload Artifact is visible without scrolling on the opening screen.
-- [ ] Back to gallery returns reliably from an artifact and from the scan page.
+For every row, check image, localized details, experience cue/scroll, indicated template, quiz/reset, source link, Ask Ruwi, TTS play-pause-resume-replay, and back navigation.
 
-## Featured experiences
+| ID | Artifact | Template | EN | AR |
+|---:|---|---|:---:|:---:|
+| 6 | Meteorite Fragment | Timeline | [ ] | [ ] |
+| 14 | Sandstone Cube Altar | Hotspots | [ ] | [ ] |
+| 18 | Silver Khanjar | Anatomy | [ ] | [ ] |
+| 43 | Qaryat al-Faw Wall Painting | Hotspots | [ ] | [ ] |
+| 46 | Small Gold Mask | Hotspots | [ ] | [ ] |
+| 79 | Hanging Copper Mabkhara | Anatomy | [ ] | [ ] |
 
-Open each featured artifact and confirm the image, story, quiz, source, and Ask Ruwi area render:
+- [ ] Experience cue appears only on those six pages and reaches the experience section.
+- [ ] Ordinary artifact page works without a cue or structured experience.
 
-- [ ] 6 — Meteorite Fragment: select all three timeline events.
-- [ ] 14 — Sandstone Altar: select all three hotspots.
-- [ ] 18 — Silver Khanjar: select handle, sheath, and curved tip.
-- [ ] 43 — Wall Painting: select figure, grapevine, and attendant.
-- [ ] 46 — Gold Mask: select holes, facial features, and gold sheet.
-- [ ] 79 — Hanging Mabkhara: select dome, chains, and lower bowl.
-- [ ] Answer both quiz questions on each artifact; confirm scoring, explanations, and Try again.
-- [ ] Open each source link once before the presentation.
+## 3. Upload and camera
 
-## Scan and upload
+- [ ] Desktop drag/drop and file picker work for valid JPEG, PNG, and WebP images up to 8 MB.
+- [ ] Mobile Take Photo opens the rear camera and shows a correct preview.
+- [ ] Empty, wrong-type, spoofed, and oversized files show localized controlled errors.
+- [ ] Confident match opens the existing artifact page.
+- [ ] Partial match waits for candidate confirmation; unsupported offers retry.
+- [ ] Analyze cannot be submitted repeatedly; retry and return-to-collection work.
 
-- [ ] Select a JPEG, PNG, and WebP image within the 8 MB limit.
-- [ ] On a mobile device, confirm Take photo opens the rear-camera flow.
-- [ ] A confident match navigates to the existing artifact page.
-- [ ] A partial match waits for visitor confirmation.
-- [ ] An unsupported result offers retry and collection navigation.
-- [ ] Repeated taps while analyzing do not create duplicate requests.
+## 4. Provider and failure behavior
 
-## Ask Ruwi and narration
+- [ ] English and Arabic Ask Ruwi return text; TTS uses the intended voice.
+- [ ] Narrator unavailable: clear text error; artifact and curated experience remain usable.
+- [ ] Vision unavailable: localized controlled failure; browsing remains usable.
+- [ ] TTS unavailable: narrator text remains readable.
+- [ ] Live experience generation unavailable: validated curated fallback renders.
+- [ ] Backend unavailable: frontend shows a readable error rather than a blank page.
+- [ ] Network unavailable: local gallery/images and curated experiences continue to work as expected for the deployment setup.
 
-- [ ] Ask one English question and receive a textual answer.
-- [ ] Ask one Arabic question and receive a textual answer.
-- [ ] If frontend narration is merged, play, pause, and replay both languages.
-- [ ] If TTS is unavailable, textual answers still remain usable.
+## 5. Booth mechanics
 
-## Fallbacks
-
-- [ ] Start without external credentials: gallery and all six curated experiences still work.
-- [ ] `/chat` returns a clear unavailable message when narrator configuration is absent.
-- [ ] `/identify` returns a clear configuration message when vision is absent.
-- [ ] Disable network access and confirm curated experiences still render.
-- [ ] Confirm an ordinary non-showcase artifact still shows its normal detail page.
-- [ ] On a machine without WebGL, confirm the static artifact image appears.
-
-## Display check
-
-- [ ] Test at the actual screen resolution and browser zoom.
-- [ ] Text is readable from the expected viewing distance.
-- [ ] Hotspots align with their intended visual details.
-- [ ] Buttons are comfortably usable by touch.
-- [ ] No browser toolbars, debug consoles, secrets, or terminal windows are visible.
-- [ ] Refresh the page once on `/artifacts/46` to verify direct-route hosting fallback.
+- [ ] Carousel arrows, swipe, wheel, hotspots, quiz choices, upload controls, and audio controls are accurate by touch.
+- [ ] Refresh `/artifacts/46` and `/identify` directly to verify hosting fallback.
+- [ ] Open every showcase source link once on the booth network.
+- [ ] Leave the app idle, replay several answers, and navigate repeatedly; no stale audio or blocked controls remain.
+- [ ] No browser chrome, console, terminal, credentials, debug output, or personal data is visible.
+- [ ] Complete one final cold start and the two full visitor journeys: browse → experience → Ask Ruwi, and upload → match → experience → Ask Ruwi.

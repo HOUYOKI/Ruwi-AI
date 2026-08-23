@@ -25,6 +25,7 @@ export function useAudioVisualizer(audioUrl: string | null) {
   const initializedRef = useRef(false);
 
   const [isPlaying, setIsPlaying] = useState(false);
+  const [isPaused, setIsPaused] = useState(false);
   const [needsManualPlay, setNeedsManualPlay] = useState(false);
   const [canReplay, setCanReplay] = useState(false);
 
@@ -122,6 +123,7 @@ export function useAudioVisualizer(audioUrl: string | null) {
     if (!audioEl || !audioUrl) {
       setNeedsManualPlay(false);
       setCanReplay(false);
+      setIsPaused(false);
       return;
     }
 
@@ -130,6 +132,7 @@ export function useAudioVisualizer(audioUrl: string | null) {
     audioEl.load();
     setCanReplay(false);
     setNeedsManualPlay(false);
+    setIsPaused(false);
 
     audioCtxRef.current?.resume().catch(() => {});
     audioEl.play().catch(() => {
@@ -145,19 +148,30 @@ export function useAudioVisualizer(audioUrl: string | null) {
     audioEl.play().catch(() => {});
   }
 
+  function pause() {
+    audioRef.current?.pause();
+  }
+
   return {
     audioRef,
     coreRef,
     glowRef,
     isPlaying,
+    isPaused,
     needsManualPlay,
     canReplay,
     play,
+    pause,
     audioEventHandlers: {
-      onPlay: () => setIsPlaying(true),
-      onPause: () => setIsPlaying(false),
+      onPlay: () => { setIsPlaying(true); setIsPaused(false); setNeedsManualPlay(false); },
+      onPause: () => {
+        setIsPlaying(false);
+        const audio = audioRef.current;
+        setIsPaused(Boolean(audio && audio.currentTime > 0 && !audio.ended));
+      },
       onEnded: () => {
         setIsPlaying(false);
+        setIsPaused(false);
         setCanReplay(true);
       },
     },

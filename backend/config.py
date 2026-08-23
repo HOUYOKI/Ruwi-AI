@@ -5,9 +5,6 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY")
-CLAUDE_MODEL = os.getenv("CLAUDE_MODEL", "claude-sonnet-5")
-
 # Provider-agnostic Narrator config. NARRATOR_PROVIDER names which
 # {PROVIDER}_BASE_URL / {PROVIDER}_API_KEY pair to use (e.g. "glm" ->
 # GLM_BASE_URL / GLM_API_KEY). No provider is hardcoded or defaulted here.
@@ -80,10 +77,6 @@ ASSETS_DIR = os.getenv("ASSETS_DIR", "../assets/clean_artifacts")
 FRONTEND_ORIGIN = os.getenv("FRONTEND_ORIGIN", "http://localhost:5173")
 
 CHAT_QUESTION_MAX_LENGTH = 2000
-CLAUDE_REQUEST_TIMEOUT_SECONDS = 20.0
-CLAUDE_MAX_RETRIES = 1
-
-
 def narrator_is_configured() -> bool:
     if not NARRATOR_PROVIDER or not NARRATOR_MODEL:
         return False

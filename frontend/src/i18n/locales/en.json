@@ -72,7 +72,9 @@
   },
   "playControls": {
     "play": "Play",
-    "replay": "Replay"
+    "replay": "Replay",
+    "pause": "Pause",
+    "resume": "Resume"
   },
   "themeToggle": {
     "ariaLabel": "Toggle light and dark mode",

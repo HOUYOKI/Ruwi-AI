@@ -72,7 +72,9 @@
   },
   "playControls": {
     "play": "تشغيل",
-    "replay": "إعادة"
+    "replay": "إعادة",
+    "pause": "إيقاف مؤقت",
+    "resume": "متابعة"
   },
   "themeToggle": {
     "ariaLabel": "التبديل بين الوضع الفاتح والداكن",

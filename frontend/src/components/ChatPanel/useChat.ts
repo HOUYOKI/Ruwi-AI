@@ -14,8 +14,8 @@ export function useChat(artifactId: number) {
   // composer.
   const [isAudioPlaying, setIsAudioPlaying] = useState(false);
   // Hidden by default so the audio answer isn't accompanied by an always-on
-  // text dump — CLAUDE.md still requires text be reachable (never audio-only),
-  // so this is a one-click reveal next to the player, not a removal. Once
+  // text dump — text must remain reachable (never audio-only), so this is
+  // a one-click reveal next to the player, not a removal. Once
   // revealed it stays revealed for the rest of the visit, not per-question.
   const [showText, setShowText] = useState(false);
 

@@ -3,8 +3,6 @@ import json
 import logging
 import uuid
 from pathlib import Path
-from typing import Optional
-
 import openai
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
@@ -13,7 +11,9 @@ from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field, field_validator
 
 import config
+from agents.connector import ConnectorResult, create_connector
 from agents.narrator.narrator import run_narrator_turn
+from agents.reflection import ReflectionResult, evaluate_answer, unavailable_reflection
 from prompts import OPTIONAL_TEXT_FIELDS
 from tts.speak_text import speak_text
 from experience.routes import create_experience_router
@@ -72,6 +72,7 @@ def load_artifacts() -> dict[int, dict]:
 
 ARTIFACTS_BY_ID = load_artifacts()
 SHOWCASE_IDS = set(load_showcase_experiences())
+CONNECTOR = create_connector()
 logger.info("Loaded %d artifacts from %s", len(ARTIFACTS_BY_ID), ARTIFACTS_JSON_PATH)
 
 if not config.narrator_is_configured():
@@ -186,10 +187,18 @@ class ChatRequest(BaseModel):
         return stripped
 
 
+class ChatSource(BaseModel):
+    title: str
+    publisher: str
+    url: str
+
+
 class ChatResponse(BaseModel):
     answer: str
     hit_iteration_cap: bool = False
     audio_url: str | None = None
+    sources: list[ChatSource] = Field(default_factory=list)
+    reflection: ReflectionResult | None = None
 
 
 @app.post("/chat", response_model=ChatResponse)
@@ -204,11 +213,23 @@ def chat(payload: ChatRequest):
         )
 
     try:
+        connector_result = CONNECTOR.retrieve(payload.question, artifact)
+    except Exception as exc:  # noqa: BLE001 — injected providers must never block local narration
+        logger.warning("Connector failed for artifact %s: %s", payload.artifact_id, type(exc).__name__)
+        connector_result = ConnectorResult(
+            query=payload.question,
+            warnings=[f"Connector unavailable: {type(exc).__name__}"],
+        )
+    for warning in connector_result.warnings:
+        logger.warning("Connector for artifact %s: %s", payload.artifact_id, warning)
+
+    try:
         result = run_narrator_turn(
             question=payload.question,
             current_artifact=artifact,
             artifacts_by_id=ARTIFACTS_BY_ID,
             conversation_history=None,
+            supplemental_evidence=connector_result.evidence,
         )
     except openai.OpenAIError as exc:
         logger.error("Narrator API call failed for artifact %s: %s", payload.artifact_id, exc)
@@ -216,6 +237,20 @@ def chat(payload: ChatRequest):
     except Exception as exc:  # noqa: BLE001 — last-resort guard so no stack trace leaks to the client
         logger.exception("Unexpected error running Narrator for artifact %s", payload.artifact_id)
         raise HTTPException(status_code=502, detail="Ruwi is temporarily unavailable. Please try again.") from exc
+
+    try:
+        reflection = evaluate_answer(
+            question=payload.question,
+            answer=result.text,
+            artifact=artifact,
+            evidence=connector_result.evidence,
+            connector_used=connector_result.used,
+        )
+        reflection.warnings = [*connector_result.warnings, *reflection.warnings]
+        reflection.flagged_for_caution = reflection.flagged_for_caution or bool(connector_result.warnings)
+    except Exception as exc:  # noqa: BLE001 — diagnostics must never destroy the answer
+        logger.exception("Reflection failed for artifact %s; returning the Narrator answer", payload.artifact_id)
+        reflection = unavailable_reflection(exc)
 
     audio_url = None
     if config.tts_configuration_status()["configured"]:
@@ -231,4 +266,11 @@ def chat(payload: ChatRequest):
             logger.exception("TTS generation failed for artifact %s; returning text-only response", payload.artifact_id)
 
     logger.debug("Narrator transcript for artifact %s: %s", payload.artifact_id, result.transcript)
-    return ChatResponse(answer=result.text, hit_iteration_cap=result.hit_iteration_cap, audio_url=audio_url)
+    sources = [ChatSource(title=item.title, publisher=item.publisher, url=item.url) for item in connector_result.evidence]
+    return ChatResponse(
+        answer=result.text,
+        hit_iteration_cap=result.hit_iteration_cap,
+        audio_url=audio_url,
+        sources=sources,
+        reflection=reflection,
+    )

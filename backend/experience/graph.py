@@ -27,8 +27,6 @@ def build_experience_graph(artifacts_by_id: dict[int, dict]):
         return {
             "curated_context": curated,
             "local_context": build_artifact_context_block(state["artifact"]),
-            "needs_external_context": False,
-            "external_context": [],
         }
 
     def select_experience_template(state: ExperienceState):

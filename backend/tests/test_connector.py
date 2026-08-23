@@ -1,0 +1,74 @@
+import unittest
+
+from agents.connector import ConnectorAgent, EvidenceItem, StaticRetrievalProvider
+from agents.connector.tools import is_trusted_url, needs_connector
+
+
+def evidence(url: str = "https://www.metmuseum.org/art/collection") -> EvidenceItem:
+    return EvidenceItem(
+        title="Comparable objects",
+        publisher="The Metropolitan Museum of Art",
+        url=url,
+        supporting_text="Comparable stone objects were used in another cultural setting.",
+        relevance_score=0.9,
+        trust_score=0.95,
+    )
+
+
+class ConnectorTests(unittest.TestCase):
+    artifact = {"id": 46, "name": "Stone object"}
+
+    def test_local_question_does_not_retrieve(self):
+        class ProviderThatMustNotRun:
+            def search(self, query, artifact):
+                raise AssertionError("provider should not be called")
+
+        result = ConnectorAgent(ProviderThatMustNotRun()).retrieve("What is this made of?", self.artifact)
+        self.assertFalse(result.used)
+        self.assertEqual(result.evidence, [])
+
+    def test_comparison_question_requires_retrieval(self):
+        self.assertTrue(needs_connector("Were similar objects used elsewhere?", self.artifact))
+
+    def test_trusted_source_is_accepted(self):
+        result = ConnectorAgent(StaticRetrievalProvider([evidence()])).retrieve(
+            "Were similar objects used elsewhere?", self.artifact
+        )
+        self.assertTrue(result.used)
+        self.assertEqual(len(result.evidence), 1)
+
+    def test_untrusted_source_is_rejected(self):
+        result = ConnectorAgent(StaticRetrievalProvider([evidence("https://example-blog.test/post")])).retrieve(
+            "Compare this with another civilization", self.artifact
+        )
+        self.assertFalse(result.used)
+        self.assertEqual(result.evidence, [])
+        self.assertIn("Rejected 1", result.warnings[0])
+
+    def test_provider_unavailable_is_controlled(self):
+        result = ConnectorAgent().retrieve("What other cultures used this?", self.artifact)
+        self.assertFalse(result.used)
+        self.assertIn("Connector unavailable", result.warnings[0])
+
+    def test_provider_failure_is_controlled(self):
+        class FailingProvider:
+            def search(self, query, artifact):
+                raise TimeoutError("timeout")
+
+        result = ConnectorAgent(FailingProvider()).retrieve("What influenced this style?", self.artifact)
+        self.assertFalse(result.used)
+        self.assertIn("TimeoutError", result.warnings[0])
+
+    def test_empty_provider_result_is_valid(self):
+        result = ConnectorAgent(StaticRetrievalProvider([])).retrieve("Compare this object", self.artifact)
+        self.assertFalse(result.used)
+        self.assertEqual(result.warnings, [])
+
+    def test_trusted_policy_accepts_subdomains_and_rejects_lookalikes(self):
+        self.assertTrue(is_trusted_url("https://collection.britishmuseum.org/item"))
+        self.assertTrue(is_trusted_url("https://museum.example.edu/object"))
+        self.assertFalse(is_trusted_url("https://britishmuseum.org.example.test/item"))
+
+
+if __name__ == "__main__":
+    unittest.main()
