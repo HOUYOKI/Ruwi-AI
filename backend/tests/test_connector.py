@@ -120,6 +120,22 @@ class ConnectorTests(unittest.TestCase):
 
         self.assertEqual(len(result.evidence), 5)
 
+    def test_arabic_comparison_question_requires_retrieval(self):
+        self.assertTrue(
+            needs_connector(
+                "هل استُخدمت قطع مشابهة في حضارات أخرى؟",
+                self.artifact,
+            )
+        )
+
+    def test_arabic_local_question_does_not_retrieve(self):
+        self.assertFalse(
+            needs_connector(
+                "ما مادة هذه القطعة؟",
+                self.artifact,
+            )
+        )
+
 
 if __name__ == "__main__":
     unittest.main()

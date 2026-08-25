@@ -4,12 +4,46 @@ from urllib.parse import urlparse
 
 
 CONNECTOR_INTENT_TERMS = (
-    "another civilization", "other civilization", "other culture", "elsewhere",
-    "similar object", "similar objects", "influence", "influenced", "historical event",
-    "compare", "comparison", "connected to", "relationship to", "broader significance",
-    "حضارة أخرى", "حضارات أخرى", "ثقافة أخرى", "ثقافات أخرى", "أماكن أخرى",
-    "قطع مشابهة", "أشياء مشابهة", "تأثير", "تأثر", "حدث تاريخي", "قارن", "مقارنة", "ارتباط",
+    # English
+    "another civilization",
+    "other civilization",
+    "other culture",
+    "elsewhere",
+    "similar object",
+    "similar objects",
+    "influence",
+    "influenced",
+    "historical event",
+    "compare",
+    "comparison",
+    "connected to",
+    "relationship to",
+    "broader significance",
+
+    # Arabic
+    "حضارة أخرى",
+    "حضارات أخرى",
+    "ثقافة أخرى",
+    "ثقافات أخرى",
+    "أماكن أخرى",
+    "قطع مشابهة",
+    "أشياء مشابهة",
+    "تأثير",
+    "تأثر",
+    "حدث تاريخي",
+    "قارن",
+    "مقارنة",
+    "ارتباط بـ",
+    "ارتباط ب",
+    "مرتبط بـ",
+    "مرتبط ب",
+    "علاقة بـ",
+    "علاقة ب",
+    "ما علاقته",
+    "هل تأثر",
+    "هل تأثر بـ",
 )
+
 
 DEFAULT_TRUSTED_DOMAINS = {
     "nationalmuseum.moc.gov.sa",
@@ -40,9 +74,16 @@ def is_trusted_url(url: str, extra_domains: set[str] | None = None) -> bool:
         hostname = (urlparse(url).hostname or "").lower().rstrip(".")
     except ValueError:
         return False
+
     if not hostname or urlparse(url).scheme not in {"http", "https"}:
         return False
+
     domains = DEFAULT_TRUSTED_DOMAINS | (extra_domains or set())
-    if any(hostname == domain or hostname.endswith(f".{domain}") for domain in domains):
+
+    if any(
+        hostname == domain or hostname.endswith(f".{domain}")
+        for domain in domains
+    ):
         return True
+
     return hostname.endswith((".gov.sa", ".edu.sa", ".edu"))
