@@ -4,6 +4,7 @@ from unittest.mock import MagicMock, patch
 
 from agents.connector import EvidenceItem
 from agents.narrator.narrator import run_narrator_turn
+from agents.narrator.tools import execute_tool
 
 
 ARTIFACT = {
@@ -178,6 +179,44 @@ class NarratorConnectorTests(unittest.TestCase):
         self.assertEqual(result.tool_calls_made, 4)
         self.assertEqual(client.chat.completions.create.call_count, 5)
         self.assertIn("not able to find a good answer", result.text)
+
+    def test_get_artifact_returns_existing_artifact(self):
+        result = execute_tool(
+            "get_artifact",
+            {"artifact_id": "46"},
+            {46: ARTIFACT},
+        )
+
+        self.assertTrue(result["found"])
+        self.assertEqual(result["artifact"], ARTIFACT)
+
+    def test_get_artifact_returns_not_found_for_unknown_id(self):
+        result = execute_tool(
+            "get_artifact",
+            {"artifact_id": "999"},
+            {46: ARTIFACT},
+        )
+
+        self.assertFalse(result["found"])
+        self.assertEqual(result["artifact_id"], 999)
+
+    def test_get_artifact_handles_invalid_id(self):
+        result = execute_tool(
+            "get_artifact",
+            {"artifact_id": "not-a-number"},
+            {46: ARTIFACT},
+        )
+
+        self.assertFalse(result["found"])
+        self.assertEqual(result["artifact_id"], "not-a-number")
+
+    def test_unknown_tool_fails_loudly(self):
+        with self.assertRaises(NotImplementedError):
+            execute_tool(
+                "unknown_tool",
+                {},
+                {46: ARTIFACT},
+            )
 
 
 if __name__ == "__main__":
