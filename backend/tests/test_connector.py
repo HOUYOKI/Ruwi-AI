@@ -159,6 +159,30 @@ class ConnectorTests(unittest.TestCase):
             )
         )
 
+    def test_arabic_influence_question_requires_retrieval(self):
+        self.assertTrue(
+            needs_connector(
+                "هل تأثرت هذه القطعة بحضارة أخرى؟",
+                self.artifact,
+            )
+        )
+
+    def test_arabic_relationship_question_requires_retrieval(self):
+        self.assertTrue(
+            needs_connector(
+                "ما علاقتها بثقافات أخرى؟",
+                self.artifact,
+            )
+        )
+
+    def test_arabic_location_question_does_not_retrieve(self):
+        self.assertFalse(
+            needs_connector(
+                "أين عُثر على هذه القطعة؟",
+                self.artifact,
+            )
+        )
+
 
 if __name__ == "__main__":
     unittest.main()
