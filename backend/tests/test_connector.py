@@ -136,6 +136,29 @@ class ConnectorTests(unittest.TestCase):
             )
         )
 
+    def test_trusted_policy_rejects_http_lookalike_domain(self):
+        self.assertFalse(
+            is_trusted_url("https://metmuseum.org.example.com/item")
+        )
+
+    def test_trusted_policy_accepts_saudi_government_subdomain(self):
+        self.assertTrue(
+            is_trusted_url("https://example.moc.gov.sa/page")
+        )
+
+    def test_trusted_policy_rejects_invalid_scheme(self):
+        self.assertFalse(
+            is_trusted_url("ftp://www.metmuseum.org/item")
+        )
+
+    def test_trusted_policy_accepts_custom_trusted_domain(self):
+        self.assertTrue(
+            is_trusted_url(
+                "https://museum.example.com/item",
+                {"museum.example.com"},
+            )
+        )
+
 
 if __name__ == "__main__":
     unittest.main()
