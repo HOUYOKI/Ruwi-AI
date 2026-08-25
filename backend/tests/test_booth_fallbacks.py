@@ -260,6 +260,62 @@ class BoothFallbackTests(unittest.TestCase):
             [],
         )
 
+    def test_same_visit_keeps_history_when_switching_artifacts(self):
+        first_result = NarratorResult(text="Answer about artifact 46")
+        second_result = NarratorResult(text="Answer about another artifact")
+
+        with (
+            patch("main.config.narrator_is_configured", return_value=True),
+            patch("main.config.tts_configuration_status", return_value={"configured": False}),
+            patch(
+                "main.run_narrator_turn",
+                side_effect=[first_result, second_result],
+            ) as narrator,
+            patch(
+                "main.evaluate_answer",
+                return_value=main.ReflectionResult(
+                    grounded=True,
+                    relevance_score=1.0,
+                    grounding_score=1.0,
+                    source_coverage_score=1.0,
+                    flagged_for_caution=False,
+                ),
+            ),
+        ):
+            first_response = self.client.post(
+                "/chat",
+                json={
+                    "visit_id": "artifact-switch-test",
+                    "artifact_id": 46,
+                    "question": "Tell me about this artifact.",
+                },
+            )
+
+            second_response = self.client.post(
+                "/chat",
+                json={
+                    "visit_id": "artifact-switch-test",
+                    "artifact_id": 14,
+                    "question": "Now tell me about this one.",
+                },
+            )
+
+        self.assertEqual(first_response.status_code, 200)
+        self.assertEqual(second_response.status_code, 200)
+
+        self.assertEqual(
+            narrator.call_args_list[0].kwargs["conversation_history"],
+            [],
+        )
+
+        self.assertEqual(
+            narrator.call_args_list[1].kwargs["conversation_history"],
+            [
+                {"role": "user", "content": "Tell me about this artifact."},
+                {"role": "assistant", "content": "Answer about artifact 46"},
+            ],
+        )
+
 
 if __name__ == "__main__":
     unittest.main()
