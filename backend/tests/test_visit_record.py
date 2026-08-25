@@ -82,6 +82,35 @@ class VisitRecordTests(unittest.TestCase):
 
         self.assertEqual(turn.sources, sources)
 
+
+
+    def test_conversation_history_matches_narrator_format(self):
+        visit = VisitRecord()
+
+        visit.add_turn(
+            "What is this?",
+            "This is a stone vessel.",
+        )
+        visit.add_turn(
+            "Where was it found?",
+            "It was found in AlUla.",
+        )
+
+        history = visit.get_conversation_history()
+
+        self.assertEqual(
+            history,
+            [
+                {"role": "user", "content": "What is this?"},
+                {"role": "assistant", "content": "This is a stone vessel."},
+                {"role": "user", "content": "Where was it found?"},
+                {"role": "assistant", "content": "It was found in AlUla."},
+            ],
+        )
+    
+
+
+
     def test_clear_ends_visit(self):
         visit = VisitRecord()
 

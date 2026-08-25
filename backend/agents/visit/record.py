@@ -59,6 +59,17 @@ class VisitRecord:
             return []
         return list(self._turns[-limit:])
 
+    def get_conversation_history(self, limit: int = 5) -> list[dict[str, str]]:
+        """Return recent turns in the format expected by the Narrator."""
+        return [
+            message
+            for turn in self.get_recent_turns(limit)
+            for message in (
+                {"role": "user", "content": turn.user_message},
+                {"role": "assistant", "content": turn.assistant_message},
+            )
+        ]
+
     def clear(self) -> None:
         """End the current visit and remove its in-memory history."""
         self._turns.clear()
