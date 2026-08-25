@@ -47,6 +47,37 @@ class StaticRetrievalProvider:
         return self.evidence
 
 
+def _normalize_url(url: str) -> str:
+    return url.rstrip("/").lower()
+
+
+def _rank_evidence(
+    evidence: list[EvidenceItem],
+    max_items: int = 5,
+) -> list[EvidenceItem]:
+    """Deduplicate and rank evidence by trust and relevance."""
+    unique: dict[str, EvidenceItem] = {}
+
+    for item in evidence:
+        key = _normalize_url(item.url)
+
+        existing = unique.get(key)
+        if existing is None or (
+            item.trust_score,
+            item.relevance_score,
+        ) > (
+            existing.trust_score,
+            existing.relevance_score,
+        ):
+            unique[key] = item
+
+    return sorted(
+        unique.values(),
+        key=lambda item: (item.trust_score, item.relevance_score),
+        reverse=True,
+    )[:max_items]
+
+
 class ConnectorAgent:
     def __init__(self, provider: RetrievalProvider | None = None, trusted_domains: set[str] | None = None):
         self.provider = provider or UnavailableRetrievalProvider()
@@ -58,9 +89,13 @@ class ConnectorAgent:
         try:
             candidates = self.provider.search(question, artifact) or []
             accepted = [
-                item for item in candidates
-                if is_trusted_url(item.url, self.trusted_domains) and item.trust_score >= 0.7
+                item
+                for item in candidates
+                if is_trusted_url(item.url, self.trusted_domains)
+                and item.trust_score >= 0.7
             ]
+
+            accepted = _rank_evidence(accepted)
         except Exception as exc:  # retrieval can never block the Narrator
             return ConnectorResult(query=question, warnings=[f"Connector unavailable: {type(exc).__name__}"])
 

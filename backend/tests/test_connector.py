@@ -69,6 +69,57 @@ class ConnectorTests(unittest.TestCase):
         self.assertTrue(is_trusted_url("https://museum.example.edu/object"))
         self.assertFalse(is_trusted_url("https://britishmuseum.org.example.test/item"))
 
+    def test_evidence_is_deduplicated_and_ranked(self):
+        low = EvidenceItem(
+            title="Low quality",
+            publisher="The Metropolitan Museum of Art",
+            url="https://www.metmuseum.org/item/",
+            supporting_text="Low quality evidence.",
+            relevance_score=0.9,
+            trust_score=0.7,
+        )
+        high = EvidenceItem(
+            title="Better quality",
+            publisher="The Metropolitan Museum of Art",
+            url="https://www.metmuseum.org/item",
+            supporting_text="Better quality evidence.",
+            relevance_score=0.8,
+            trust_score=0.95,
+        )
+
+        result = ConnectorAgent(
+            StaticRetrievalProvider([low, high])
+        ).retrieve(
+            "Compare this with another civilization",
+            self.artifact,
+        )
+
+        self.assertTrue(result.used)
+        self.assertEqual(len(result.evidence), 1)
+        self.assertEqual(result.evidence[0].title, "Better quality")
+
+    def test_evidence_is_limited_to_five_sources(self):
+        evidence_items = [
+            EvidenceItem(
+                title=f"Source {index}",
+                publisher="The Metropolitan Museum of Art",
+                url=f"https://www.metmuseum.org/item/{index}",
+                supporting_text=f"Evidence {index}.",
+                relevance_score=0.5 + index / 20,
+                trust_score=0.7 + index / 20,
+            )
+            for index in range(7)
+        ]
+
+        result = ConnectorAgent(
+            StaticRetrievalProvider(evidence_items)
+        ).retrieve(
+            "Compare this with another civilization",
+            self.artifact,
+        )
+
+        self.assertEqual(len(result.evidence), 5)
+
 
 if __name__ == "__main__":
     unittest.main()
