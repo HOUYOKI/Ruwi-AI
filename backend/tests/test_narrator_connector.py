@@ -17,7 +17,7 @@ ARTIFACT = {
 }
 
 
-def run_with_mock(evidence=None):
+def run_with_mock(evidence=None, conversation_history=None):
     response = SimpleNamespace(
         choices=[SimpleNamespace(
             finish_reason="stop",
@@ -31,7 +31,13 @@ def run_with_mock(evidence=None):
         patch("agents.narrator.narrator.OpenAI", return_value=client),
         patch("agents.narrator.narrator.config.get_narrator_provider_credentials", return_value=("https://mock", "key")),
     ):
-        result = run_narrator_turn("Compare this object", ARTIFACT, {46: ARTIFACT}, supplemental_evidence=evidence)
+        result = run_narrator_turn(
+            "Compare this object",
+            ARTIFACT,
+            {46: ARTIFACT},
+            conversation_history=conversation_history,
+            supplemental_evidence=evidence,
+        )
     return result, client.chat.completions.create.call_args.kwargs["messages"]
 
 
@@ -217,6 +223,20 @@ class NarratorConnectorTests(unittest.TestCase):
                 {},
                 {46: ARTIFACT},
             )
+
+    def test_conversation_history_is_forwarded_to_narrator(self):
+        history = [
+            {"role": "user", "content": "What is this?"},
+            {"role": "assistant", "content": "This is a stone vessel."},
+        ]
+
+        _, messages = run_with_mock(
+            conversation_history=history,
+        )
+
+        self.assertEqual(messages[0]["role"], "system")
+        self.assertEqual(messages[1], history[0])
+        self.assertEqual(messages[2], history[1])
 
 
 if __name__ == "__main__":

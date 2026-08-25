@@ -3,6 +3,7 @@
 from .record import VisitRecord
 
 
+
 class VisitStore:
     """Keeps independent VisitRecord instances keyed by visit ID."""
 

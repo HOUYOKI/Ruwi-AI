@@ -19,7 +19,7 @@ class BoothFallbackTests(unittest.TestCase):
         with patch("main.config.narrator_is_configured", return_value=False):
             response = self.client.post(
                 "/chat",
-                json={"artifact_id": 46, "question": "What is this?"},
+                json={"visit_id": "test-visit", "artifact_id": 46, "question": "What is this?"},
             )
         self.assertEqual(response.status_code, 503)
         self.assertIn("artifact experience remains available", response.json()["detail"])
@@ -33,7 +33,7 @@ class BoothFallbackTests(unittest.TestCase):
         ):
             response = self.client.post(
                 "/chat",
-                json={"artifact_id": 46, "question": "What is this?"},
+                json={"visit_id": "test-visit", "artifact_id": 46, "question": "What is this?"},
             )
         self.assertEqual(response.status_code, 200)
         self.assertEqual(response.json()["answer"], "Grounded answer")
@@ -59,7 +59,7 @@ class BoothFallbackTests(unittest.TestCase):
         ):
             response = self.client.post(
                 "/chat",
-                json={"artifact_id": 46, "question": "Were similar objects used elsewhere?"},
+                json={"visit_id": "test-visit", "artifact_id": 46, "question": "Were similar objects used elsewhere?"},
             )
         self.assertEqual(response.status_code, 200)
         self.assertEqual(response.json()["sources"][0]["publisher"], "UNESCO")
@@ -79,7 +79,7 @@ class BoothFallbackTests(unittest.TestCase):
             ):
                 response = self.client.post(
                     "/chat",
-                    json={"artifact_id": 46, "question": "What is this made of?"},
+                    json={"visit_id": "test-visit", "artifact_id": 46, "question": "What is this made of?"},
                 )
                 self.assertTrue((audio_dir / "fixed.mp3").is_file())
         self.assertEqual(response.status_code, 200)
@@ -94,7 +94,7 @@ class BoothFallbackTests(unittest.TestCase):
         ):
             response = self.client.post(
                 "/chat",
-                json={"artifact_id": 46, "question": "What is this?"},
+                json={"visit_id": "test-visit", "artifact_id": 46, "question": "What is this?"},
             )
         self.assertEqual(response.status_code, 200)
         self.assertEqual(response.json()["answer"], "Usable answer")
@@ -143,7 +143,7 @@ class BoothFallbackTests(unittest.TestCase):
         ):
             response = self.client.post(
                 "/chat",
-                json={"artifact_id": 46, "question": "What is this?"},
+                json={"visit_id": "test-visit", "artifact_id": 46, "question": "What is this?"},
             )
 
         self.assertEqual(response.status_code, 200)
@@ -155,6 +155,112 @@ class BoothFallbackTests(unittest.TestCase):
         self.assertIn("correction_feedback", second_call.kwargs)
         self.assertTrue(second_call.kwargs["correction_feedback"])
 
+    def test_chat_reuses_visit_history_for_same_visit(self):
+        history = []
+
+        first_result = NarratorResult(text="First answer")
+        second_result = NarratorResult(text="Second answer")
+
+        with (
+            patch("main.config.narrator_is_configured", return_value=True),
+            patch("main.config.tts_configuration_status", return_value={"configured": False}),
+            patch("main.run_narrator_turn", side_effect=[first_result, second_result]) as narrator,
+            patch("main.evaluate_answer", return_value=main.ReflectionResult(
+                grounded=True,
+                relevance_score=1.0,
+                grounding_score=1.0,
+                source_coverage_score=1.0,
+                flagged_for_caution=False,
+            )),
+        ):
+            first_response = self.client.post(
+                "/chat",
+                json={
+                    "visit_id": "history-test",
+                    "artifact_id": 46,
+                    "question": "What is this?",
+                },
+            )
+
+            second_response = self.client.post(
+                "/chat",
+                json={
+                    "visit_id": "history-test",
+                    "artifact_id": 46,
+                    "question": "Tell me more.",
+                },
+            )
+
+        self.assertEqual(first_response.status_code, 200)
+        self.assertEqual(second_response.status_code, 200)
+        self.assertEqual(narrator.call_count, 2)
+
+        first_call = narrator.call_args_list[0]
+        second_call = narrator.call_args_list[1]
+
+        self.assertEqual(first_call.kwargs["conversation_history"], [])
+
+        self.assertEqual(
+            second_call.kwargs["conversation_history"],
+            [
+                {"role": "user", "content": "What is this?"},
+                {"role": "assistant", "content": "First answer"},
+            ],
+        )
+
+    def test_different_visits_do_not_share_history(self):
+        first_result = NarratorResult(text="Visit A answer")
+        second_result = NarratorResult(text="Visit B answer")
+
+        with (
+            patch("main.config.narrator_is_configured", return_value=True),
+            patch("main.config.tts_configuration_status", return_value={"configured": False}),
+            patch(
+                "main.run_narrator_turn",
+                side_effect=[first_result, second_result],
+            ) as narrator,
+            patch(
+                "main.evaluate_answer",
+                return_value=main.ReflectionResult(
+                    grounded=True,
+                    relevance_score=1.0,
+                    grounding_score=1.0,
+                    source_coverage_score=1.0,
+                    flagged_for_caution=False,
+                ),
+            ),
+        ):
+            first_response = self.client.post(
+                "/chat",
+                json={
+                    "visit_id": "visit-A",
+                    "artifact_id": 46,
+                    "question": "Question from A",
+                },
+            )
+
+            second_response = self.client.post(
+                "/chat",
+                json={
+                    "visit_id": "visit-B",
+                    "artifact_id": 46,
+                    "question": "Question from B",
+                },
+            )
+
+        self.assertEqual(first_response.status_code, 200)
+        self.assertEqual(second_response.status_code, 200)
+
+        self.assertEqual(
+            narrator.call_args_list[0].kwargs["conversation_history"],
+            [],
+        )
+        self.assertEqual(
+            narrator.call_args_list[1].kwargs["conversation_history"],
+            [],
+        )
+
 
 if __name__ == "__main__":
     unittest.main()
+

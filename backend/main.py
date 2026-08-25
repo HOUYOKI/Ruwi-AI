@@ -13,6 +13,8 @@ from pydantic import BaseModel, Field, field_validator
 import config
 from agents.connector import ConnectorResult, create_connector
 from agents.narrator.narrator import run_narrator_turn
+from agents.visit.store import VisitStore
+
 
 from agents.reflection import (
     ReflectionResult,
@@ -81,6 +83,7 @@ def load_artifacts() -> dict[int, dict]:
 ARTIFACTS_BY_ID = load_artifacts()
 SHOWCASE_IDS = set(load_showcase_experiences())
 CONNECTOR = create_connector()
+VISIT_STORE = VisitStore()
 logger.info("Loaded %d artifacts from %s", len(ARTIFACTS_BY_ID), ARTIFACTS_JSON_PATH)
 
 if not config.narrator_is_configured():
@@ -183,6 +186,7 @@ def get_artifact_image(artifact_id: int):
 
 
 class ChatRequest(BaseModel):
+    visit_id: str = Field(min_length=1, max_length=100)
     artifact_id: int
     question: str = Field(max_length=config.CHAT_QUESTION_MAX_LENGTH)
 
@@ -220,6 +224,9 @@ def chat(payload: ChatRequest):
             detail="Ask Ruwi is not configured. The artifact experience remains available.",
         )
 
+    visit = VISIT_STORE.get_or_create(payload.visit_id)
+    conversation_history = visit.get_conversation_history()
+
     try:
         connector_result = CONNECTOR.retrieve(payload.question, artifact)
     except Exception as exc:  # noqa: BLE001 — injected providers must never block local narration
@@ -236,7 +243,7 @@ def chat(payload: ChatRequest):
             question=payload.question,
             current_artifact=artifact,
             artifacts_by_id=ARTIFACTS_BY_ID,
-            conversation_history=None,
+            conversation_history=conversation_history,
             supplemental_evidence=connector_result.evidence,
         )
     except openai.OpenAIError as exc:
@@ -276,7 +283,7 @@ def chat(payload: ChatRequest):
                     question=payload.question,
                     current_artifact=artifact,
                     artifacts_by_id=ARTIFACTS_BY_ID,
-                    conversation_history=None,
+                    conversation_history=conversation_history,
                     supplemental_evidence=connector_result.evidence,
                     correction_feedback=correction_feedback,
                 )
@@ -306,6 +313,20 @@ def chat(payload: ChatRequest):
                     "Self-correction failed for artifact %s; keeping original answer",
                     payload.artifact_id,
                 )   
+
+    visit.add_turn(
+        user_message=payload.question,
+        assistant_message=result.text,
+        artifact_id=payload.artifact_id,
+        sources=[
+            {
+                "title": item.title,
+                "publisher": item.publisher,
+                "url": item.url,
+            }
+            for item in connector_result.evidence
+        ],
+    )
 
     audio_url = None
     if config.tts_configuration_status()["configured"]:
