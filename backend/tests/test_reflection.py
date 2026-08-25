@@ -1,7 +1,12 @@
 import unittest
 
 from agents.connector import EvidenceItem
-from agents.reflection import evaluate_answer, unavailable_reflection
+from agents.reflection import (
+    build_correction_feedback,
+    evaluate_answer,
+    needs_regeneration,
+    unavailable_reflection,
+)
 
 
 ARTIFACT = {
@@ -62,6 +67,65 @@ class ReflectionTests(unittest.TestCase):
         result = unavailable_reflection(RuntimeError("failed"))
         self.assertFalse(result.available)
         self.assertTrue(result.flagged_for_caution)
+
+        def test_good_answer_does_not_need_regeneration(self):
+            result = evaluate_answer(
+                "What is this made of?",
+                "This stone vessel is carved from sandstone.",
+                ARTIFACT,
+                [],
+                False,
+            )
+
+            self.assertFalse(needs_regeneration(result))
+
+        def test_ungrounded_answer_needs_regeneration(self):
+            result = evaluate_answer(
+                "What is this made of?",
+                "This object was created by a civilization from another continent.",
+                ARTIFACT,
+                [],
+                False,
+            )
+
+            self.assertTrue(needs_regeneration(result))
+
+        def test_missing_connector_evidence_needs_regeneration(self):
+            result = evaluate_answer(
+                "Compare this object with another civilization",
+                "This object has similar examples elsewhere.",
+                ARTIFACT,
+                [],
+                True,
+            )
+
+            self.assertTrue(needs_regeneration(result))
+
+        def test_correction_feedback_contains_actionable_guidance(self):
+            result = evaluate_answer(
+                "Compare this object",
+                "It has parallels elsewhere.",
+                ARTIFACT,
+                [],
+                True,
+            )
+
+            feedback = build_correction_feedback(result)
+
+            self.assertTrue(feedback)
+            self.assertIn("needs correction", feedback)
+            self.assertIn("Rewrite the answer", feedback)
+
+        def test_good_answer_has_no_correction_feedback(self):
+            result = evaluate_answer(
+                "What is this made of?",
+                "This stone vessel is carved from sandstone.",
+                ARTIFACT,
+                [],
+                False,
+            )
+
+            self.assertEqual(build_correction_feedback(result), "")
 
 
 if __name__ == "__main__":

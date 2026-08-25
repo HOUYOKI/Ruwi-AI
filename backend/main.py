@@ -13,7 +13,15 @@ from pydantic import BaseModel, Field, field_validator
 import config
 from agents.connector import ConnectorResult, create_connector
 from agents.narrator.narrator import run_narrator_turn
-from agents.reflection import ReflectionResult, evaluate_answer, unavailable_reflection
+
+from agents.reflection import (
+    ReflectionResult,
+    build_correction_feedback,
+    evaluate_answer,
+    needs_regeneration,
+    unavailable_reflection,
+)
+
 from prompts import OPTIONAL_TEXT_FIELDS
 from tts.speak_text import speak_text
 from experience.routes import create_experience_router
@@ -251,6 +259,53 @@ def chat(payload: ChatRequest):
     except Exception as exc:  # noqa: BLE001 — diagnostics must never destroy the answer
         logger.exception("Reflection failed for artifact %s; returning the Narrator answer", payload.artifact_id)
         reflection = unavailable_reflection(exc)
+
+     # One-shot self-correction: let Reflection feed actionable feedback
+    # back into the Narrator, but never loop indefinitely.
+    if reflection.available and needs_regeneration(reflection):
+        correction_feedback = build_correction_feedback(reflection)
+
+        if correction_feedback:
+            logger.info(
+                "Reflection requested self-correction for artifact %s",
+                payload.artifact_id,
+            )
+
+            try:
+                retry_result = run_narrator_turn(
+                    question=payload.question,
+                    current_artifact=artifact,
+                    artifacts_by_id=ARTIFACTS_BY_ID,
+                    conversation_history=None,
+                    supplemental_evidence=connector_result.evidence,
+                    correction_feedback=correction_feedback,
+                )
+
+                retry_reflection = evaluate_answer(
+                    question=payload.question,
+                    answer=retry_result.text,
+                    artifact=artifact,
+                    evidence=connector_result.evidence,
+                    connector_used=connector_result.used,
+                )
+
+                retry_reflection.warnings = [
+                    *connector_result.warnings,
+                    *retry_reflection.warnings,
+                ]
+                retry_reflection.flagged_for_caution = (
+                    retry_reflection.flagged_for_caution
+                    or bool(connector_result.warnings)
+                )
+
+                result = retry_result
+                reflection = retry_reflection
+
+            except Exception as exc:
+                logger.exception(
+                    "Self-correction failed for artifact %s; keeping original answer",
+                    payload.artifact_id,
+                )   
 
     audio_url = None
     if config.tts_configuration_status()["configured"]:

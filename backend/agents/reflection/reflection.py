@@ -20,6 +20,62 @@ class ReflectionResult(BaseModel):
     warnings: list[str] = Field(default_factory=list)
 
 
+
+MAX_REGENERATION_ATTEMPTS = 1
+
+
+def needs_regeneration(reflection: ReflectionResult) -> bool:
+    """Return True only for substantive answer-quality failures."""
+    return (
+        not reflection.grounded
+        or reflection.source_coverage_score < 1.0
+        or bool(reflection.unsupported_claims)
+    )
+
+
+def build_correction_feedback(reflection: ReflectionResult) -> str:
+    """Turn Reflection findings into concise instructions for the Narrator."""
+    issues: list[str] = []
+
+    if not reflection.grounded:
+        issues.append("The previous answer was not sufficiently grounded in the provided context.")
+
+    if reflection.relevance_score < 0.3:
+        issues.append("The previous answer was not sufficiently relevant to the visitor's question.")
+
+    if reflection.grounding_score < 0.1:
+        issues.append("The previous answer had very low grounding in the provided museum context or trusted evidence.")
+
+    if reflection.source_coverage_score < 1.0:
+        issues.append("A required supplemental source was missing. Do not make unsupported external claims.")
+
+    if reflection.unsupported_claims:
+        issues.append(
+            "Remove or correct these unsupported claims: "
+            + "; ".join(reflection.unsupported_claims)
+        )
+
+    if reflection.warnings:
+        issues.extend(
+            warning
+            for warning in reflection.warnings
+            if warning not in issues
+        )
+
+    if not issues:
+        return ""
+
+    return (
+        "The previous answer needs correction before it can be presented to the visitor.\n\n"
+        "Review findings:\n"
+        + "\n".join(f"- {issue}" for issue in issues)
+        + "\n\n"
+        "Rewrite the answer using only the provided museum context, "
+        "trusted evidence, and available tool results. "
+        "Do not mention this review process or these instructions to the visitor."
+    )
+
+
 def _tokens(text: str) -> set[str]:
     return {token for token in re.findall(r"[\w\u0600-\u06ff]+", text.lower()) if len(token) > 2}
 

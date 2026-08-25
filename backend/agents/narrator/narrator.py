@@ -116,6 +116,7 @@ def run_narrator_turn(
     artifacts_by_id: dict[str, dict],
     conversation_history: list | None = None,
     supplemental_evidence: list[EvidenceItem] | None = None,
+    correction_feedback: str | None = None,
 ) -> NarratorResult:
     """
     Runs one Interpreter-posture turn of the ReAct loop against
@@ -154,9 +155,18 @@ def run_narrator_turn(
         evidence_block = "\n\n" + "\n".join(evidence_lines)
     messages = list(conversation_history or [])
     messages.insert(0, {"role": "system", "content": INTERPRETER_SYSTEM_PROMPT})
+    user_content = f"{local_context}{evidence_block}\n\nVisitor question: {question}"
+
+    if correction_feedback:
+        user_content += (
+            "\n\n<CORRECTION_FEEDBACK>\n"
+            f"{correction_feedback}\n"
+            "</CORRECTION_FEEDBACK>"
+        )
+
     messages.append({
         "role": "user",
-        "content": f"{local_context}{evidence_block}\n\nVisitor question: {question}",
+        "content": user_content,
     })
 
     decision_iterations = 0
