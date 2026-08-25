@@ -98,6 +98,17 @@ class VisionNormalizationTests(unittest.TestCase):
         self.assertEqual(result.artifact_id, 46)
         self.assertEqual(result.alternatives[0].artifact_id, 43)
 
+    def test_invalid_alternative_artifact_id_is_rejected(self):
+        with self.assertRaises(VisionResponseError):
+            normalize_provider_result({
+                "artifact_id": 46,
+                "confidence": 0.9,
+                "reason": "Strong match.",
+                "alternatives": [
+                    {"artifact_id": 999, "confidence": 0.2}
+                ],
+            }, self.candidates)
+
 
 class VisionRouteValidationTests(unittest.TestCase):
     @classmethod
@@ -135,6 +146,8 @@ class VisionRouteValidationTests(unittest.TestCase):
         response = self.client.post("/identify", files={"file": ("mask.png", PNG_BYTES, "image/png")})
         self.assertEqual(response.status_code, 200)
         self.assertEqual(response.json()["artifact_id"], 46)
+
+        
 
 
 if __name__ == "__main__":
