@@ -40,7 +40,7 @@ def build_correction_feedback(reflection: ReflectionResult) -> str:
     if not reflection.grounded:
         issues.append("The previous answer was not sufficiently grounded in the provided context.")
 
-    if reflection.relevance_score < 0.3:
+    if reflection.relevance_score < 0.3 and not reflection.grounded:
         issues.append("The previous answer was not sufficiently relevant to the visitor's question.")
 
     if reflection.grounding_score < 0.1:
@@ -144,11 +144,34 @@ def evaluate_answer(
     grounding_context = f"{build_artifact_context_block(artifact)} {evidence_context}"
     relevance = _overlap_score(answer, question)
     grounding = _overlap_score(answer, grounding_context)
+
+    # Ignore generic words that can create false grounding.
+    meaningful_context_tokens = _tokens(grounding_context) - {
+        "object",
+        "artifact",
+        "piece",
+        "item",
+        "thing",
+        "stone",
+        "made",
+        "used",
+        "created",
+    }
+    meaningful_answer_tokens = _tokens(answer)
+
+    meaningful_overlap = (
+        len(meaningful_answer_tokens & meaningful_context_tokens)
+        / max(1, min(len(meaningful_answer_tokens), 20))
+    )
     source_coverage = 1.0 if not connector_used or evidence else 0.0
     if grounding < 0.1:
         warnings.append("Low lexical grounding overlap; manual review may be useful")
 
-    grounded = not unsupported_claims and source_coverage == 1.0
+    grounded = (
+        not unsupported_claims
+        and source_coverage == 1.0
+        and meaningful_overlap > 0
+    )
     flagged_for_caution = not grounded or bool(warnings)
     return ReflectionResult(
         grounded=grounded,
