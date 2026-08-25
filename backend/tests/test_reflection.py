@@ -44,6 +44,18 @@ class ReflectionTests(unittest.TestCase):
         self.assertTrue(result.flagged_for_caution)
         self.assertIn("without supporting evidence", result.warnings[0])
 
+    def test_correct_paraphrased_answer_is_not_rejected_for_low_overlap(self):
+        result = evaluate_answer(
+            "What is this made of?",
+            "The object was crafted using sandstone.",
+            ARTIFACT,
+            [],
+            False,
+        )
+        self.assertFalse(result.unsupported_claims)
+        self.assertEqual(result.source_coverage_score, 1.0)
+        self.assertTrue(result.grounded)
+
     def test_unsupported_url_is_flagged(self):
         result = evaluate_answer(
             "Compare this object",

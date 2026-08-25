@@ -148,7 +148,7 @@ def evaluate_answer(
     if grounding < 0.1:
         warnings.append("Low lexical grounding overlap; manual review may be useful")
 
-    grounded = not unsupported_claims and source_coverage == 1.0 and grounding > 0
+    grounded = not unsupported_claims and source_coverage == 1.0
     flagged_for_caution = not grounded or bool(warnings)
     return ReflectionResult(
         grounded=grounded,
