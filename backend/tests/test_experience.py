@@ -72,6 +72,32 @@ class ExperienceGraphTests(unittest.TestCase):
         self.assertFalse(experience.metadata.generated)
         self.assertTrue(experience.metadata.warnings)
 
+    def test_unknown_artifact_returns_not_found_error(self):
+        state = self.graph.invoke({
+            "requested_artifact_id": 999999,
+            "warnings": [],
+        })
+
+        self.assertEqual(state["match_status"], "unsupported")
+        self.assertEqual(state["error"], "Artifact not found")
+        self.assertNotIn("experience", state)
+
+    def test_live_generation_failure_preserves_curated_content(self):
+        with patch(
+            "experience.graph.generate_experience",
+            side_effect=RuntimeError("generation failed"),
+        ):
+            state = self.graph.invoke({
+                "requested_artifact_id": 46,
+                "warnings": [],
+            })
+
+        experience = ExperienceResponse.model_validate(state["experience"])
+
+        self.assertEqual(experience.artifact.id, 46)
+        self.assertFalse(experience.metadata.generated)
+        self.assertTrue(experience.metadata.warnings)
+
 
 if __name__ == "__main__":
     unittest.main()

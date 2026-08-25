@@ -11,6 +11,7 @@ from .repository import load_showcase_experiences
 from .state import ExperienceState
 from .validation import validate_experience
 
+
 logger = logging.getLogger("ruwi.experience")
 
 
@@ -19,7 +20,11 @@ def build_experience_graph(artifacts_by_id: dict[int, dict]):
         artifact_id = state["requested_artifact_id"]
         artifact = artifacts_by_id.get(artifact_id)
         if artifact is None:
-            return {"match_status": "unsupported", "error": "Artifact not found"}
+            return {
+                "artifact_id": artifact_id,
+                "match_status": "unsupported",
+                "error": "Artifact not found",
+            }
         return {"artifact_id": artifact_id, "artifact": artifact, "match_status": "matched"}
 
     def retrieve_local_context(state: ExperienceState):
@@ -63,16 +68,32 @@ def build_experience_graph(artifacts_by_id: dict[int, dict]):
             experience.metadata.warnings = state.get("warnings", [])
         return {"experience": experience.model_dump(mode="json")}
 
+    def route_after_resolve(state: ExperienceState):
+            if state.get("match_status") == "unsupported":
+                return END
+            return "retrieve_local_context"
+
     graph = StateGraph(ExperienceState)
     graph.add_node("resolve_artifact", resolve_artifact)
     graph.add_node("retrieve_local_context", retrieve_local_context)
     graph.add_node("select_template", select_experience_template)
     graph.add_node("generate_experience", generate)
     graph.add_node("validate_experience", validate)
+
     graph.add_edge(START, "resolve_artifact")
-    graph.add_edge("resolve_artifact", "retrieve_local_context")
+
+    graph.add_conditional_edges(
+        "resolve_artifact",
+        route_after_resolve,
+        {
+            END: END,
+            "retrieve_local_context": "retrieve_local_context",
+        },
+    )
+
     graph.add_edge("retrieve_local_context", "select_template")
     graph.add_edge("select_template", "generate_experience")
     graph.add_edge("generate_experience", "validate_experience")
     graph.add_edge("validate_experience", END)
+
     return graph.compile()
