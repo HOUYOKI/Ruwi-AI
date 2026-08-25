@@ -4,7 +4,7 @@ import { ApiError } from "../../api/apiClient";
 import { askRuwi } from "../../api/chatApi";
 import type { Exchange } from "../../types/chat";
 
-export function useChat(artifactId: number) {
+export function useChat(artifactId: number, visitId: string) {
   const [question, setQuestion] = useState("");
   const [exchanges, setExchanges] = useState<Exchange[]>([]);
   const [pending, setPending] = useState(false);
@@ -29,7 +29,7 @@ export function useChat(artifactId: number) {
     setPending(true);
     setError(null);
     try {
-      const response = await askRuwi(artifactId, trimmed);
+      const response = await askRuwi(visitId, artifactId, trimmed);
       setExchanges((prev) => [
         ...prev,
         {

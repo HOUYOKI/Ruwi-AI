@@ -13,7 +13,7 @@ import type { ExperienceResponse } from "../types/experience";
 
 type LoadState = { status: "loading" } | { status: "not-found" } | { status: "error"; message: string } | { status: "ready"; artifact: ArtifactDetailType };
 
-export default function ArtifactPage() {
+export default function ArtifactPage({ visitId }: { visitId: string }) {
   const { t, i18n } = useTranslation();
   const { id } = useParams<{ id: string }>();
   const [state, setState] = useState<LoadState>({ status: "loading" });
@@ -49,7 +49,7 @@ export default function ArtifactPage() {
           </dl></div>
           <div className="grid grid-cols-1 gap-10 lg:grid-cols-[45%_55%] lg:items-start">
             <div className="flex min-w-0 flex-col gap-8"><ArtifactImageViewer imageUrl={`${resolveImageUrl(state.artifact.image_url)}?v=${state.artifact.id}`} alt={state.artifact.name} /><ArtifactDetail artifact={state.artifact} /></div>
-            <div className="flex min-w-0 flex-col lg:border-s lg:border-border lg:ps-6"><ChatPanel artifactId={state.artifact.id} /></div>
+            <div className="flex min-w-0 flex-col lg:border-s lg:border-border lg:ps-6"><ChatPanel artifactId={state.artifact.id} visitId={visitId} /></div>
           </div>
           {(experience || experienceStatus !== "idle") && <div className="border-t border-border pt-6 text-center">
             {experience && <a href="#interactive-experience" className="inline-flex min-h-12 items-center gap-2 text-sm font-medium text-gold hover:underline">{t("artifactPage.experienceCue")} <span aria-hidden="true">↓</span></a>}

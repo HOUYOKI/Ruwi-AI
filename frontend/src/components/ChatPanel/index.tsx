@@ -3,7 +3,13 @@ import { useChat } from "./useChat";
 import TtsCenterpiece from "../TtsCenterpiece";
 import QuestionComposer from "../QuestionComposer";
 
-export default function ChatPanel({ artifactId }: { artifactId: number }) {
+export default function ChatPanel({
+  artifactId,
+  visitId,
+}: {
+  artifactId: number;
+  visitId: string;
+}) {
   const { t } = useTranslation();
   const {
     question,
@@ -17,7 +23,7 @@ export default function ChatPanel({ artifactId }: { artifactId: number }) {
     setIsAudioPlaying,
     showText,
     toggleShowText,
-  } = useChat(artifactId);
+  } = useChat(artifactId, visitId);
 
   return (
     <div className="flex flex-col gap-3">
