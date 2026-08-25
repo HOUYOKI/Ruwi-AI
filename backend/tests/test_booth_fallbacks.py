@@ -101,5 +101,60 @@ class BoothFallbackTests(unittest.TestCase):
         self.assertFalse(response.json()["reflection"]["available"])
 
 
+    def test_self_correction_retries_narrator_once(self):
+        bad_reflection = main.ReflectionResult(
+            grounded=False,
+            relevance_score=0.2,
+            grounding_score=0.0,
+            source_coverage_score=1.0,
+            flagged_for_caution=True,
+            unsupported_claims=["Unsupported historical claim"],
+            warnings=["Answer was not sufficiently grounded"],
+        )
+
+        good_reflection = main.ReflectionResult(
+            grounded=True,
+            relevance_score=0.9,
+            grounding_score=0.8,
+            source_coverage_score=1.0,
+            flagged_for_caution=False,
+        )
+
+        narrator_results = [
+            NarratorResult(text="First answer with an unsupported claim"),
+            NarratorResult(text="Corrected grounded answer"),
+        ]
+
+        with (
+            patch("main.config.narrator_is_configured", return_value=True),
+            patch("main.config.tts_configuration_status", return_value={"configured": False}),
+            patch(
+                "main.run_narrator_turn",
+                side_effect=narrator_results,
+            ) as narrator,
+            patch(
+                "main.evaluate_answer",
+                side_effect=[bad_reflection, good_reflection],
+            ),
+            patch(
+                "main.needs_regeneration",
+                side_effect=[True, False],
+            ),
+        ):
+            response = self.client.post(
+                "/chat",
+                json={"artifact_id": 46, "question": "What is this?"},
+            )
+
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.json()["answer"], "Corrected grounded answer")
+        self.assertTrue(response.json()["reflection"]["grounded"])
+        self.assertEqual(narrator.call_count, 2)
+
+        second_call = narrator.call_args_list[1]
+        self.assertIn("correction_feedback", second_call.kwargs)
+        self.assertTrue(second_call.kwargs["correction_feedback"])
+
+
 if __name__ == "__main__":
     unittest.main()
