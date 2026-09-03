@@ -112,3 +112,19 @@ npm run lint
 ```
 
 Live provider calls and physical camera/audio behavior are covered by the booth checklist rather than automated tests.
+
+## Free public deployment
+
+The repository includes a Render Blueprint that builds the Vite frontend and
+serves it from the FastAPI process, keeping the UI and API on one public origin.
+
+1. In Render, create a new Blueprint from this repository and select the branch
+   you want to publish.
+2. Keep the `Free` instance type selected.
+3. Add the narrator, vision, and ElevenLabs values from `.env.example` as secret
+   environment variables. Never commit their values.
+4. Deploy and verify `/health/config` on the generated `onrender.com` URL.
+
+The collection and curated experiences work without external credentials. Ask
+Ruwi, image identification, and generated audio become available when their
+corresponding provider settings are configured.

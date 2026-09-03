@@ -21,7 +21,7 @@ export default function IdentifyPage() {
           {t("identify.subtitle")}
         </p>
       </header>
-      <ArtifactUpload onMatched={(artifactId) => navigate(`/artifacts/${artifactId}`)} />
+      <ArtifactUpload onMatched={(artifactId) => navigate(`/experience/${artifactId}`)} />
       <div className="mt-8 text-center">
         <Link to="/" className="inline-flex min-h-12 items-center rounded-md px-5 text-sm text-text-muted hover:text-gold">
           {t("identify.browseInstead")}

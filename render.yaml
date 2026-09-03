@@ -1,0 +1,34 @@
+services:
+  - type: web
+    name: ruwi-ai
+    runtime: python
+    plan: free
+    buildCommand: npm ci --prefix frontend && npm run build --prefix frontend && pip install -r backend/requirements.txt
+    startCommand: cd backend && uvicorn main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health/config
+    autoDeployTrigger: commit
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.8
+      - key: FRONTEND_ORIGIN
+        value: https://ruwi-ai.onrender.com
+      - key: EXPERIENCE_LLM_ENABLED
+        value: "false"
+      - key: NARRATOR_PROVIDER
+        sync: false
+      - key: NARRATOR_MODEL
+        sync: false
+      - key: GLM_BASE_URL
+        sync: false
+      - key: GLM_API_KEY
+        sync: false
+      - key: VISION_PROVIDER
+        sync: false
+      - key: VISION_MODEL
+        sync: false
+      - key: ELEVENLABS_API_KEY
+        sync: false
+      - key: ELEVENLABS_VOICE_ID_EN
+        sync: false
+      - key: ELEVENLABS_VOICE_ID_AR
+        sync: false

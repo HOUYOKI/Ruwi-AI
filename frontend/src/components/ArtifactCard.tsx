@@ -15,7 +15,7 @@ export default function ArtifactCard({ artifact, priority = false }: { artifact:
 
   return (
     <Link
-      to={`/artifacts/${artifact.id}`}
+      to={`/experience/${artifact.id}`}
       className="group relative block h-full w-full overflow-hidden"
       style={{ background: "linear-gradient(180deg, color-mix(in srgb, var(--surface) 100%, white 5%), var(--surface))" }}
     >

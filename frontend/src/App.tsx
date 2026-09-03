@@ -19,7 +19,7 @@ function App() {
         <Routes>
           <Route path="/" element={<GalleryPage />} />
           <Route
-            path="/artifacts/:id"
+            path="/experience/:id"
             element={<ArtifactPage visitId={visitId} />}
           />
           <Route path="/identify" element={<IdentifyPage />} />

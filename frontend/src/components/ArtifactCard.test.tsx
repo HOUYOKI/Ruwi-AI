@@ -27,7 +27,7 @@ describe("ArtifactCard", () => {
     expect(screen.queryByText(artifact.name)).not.toBeInTheDocument();
     expect(screen.queryByText(artifact.age)).not.toBeInTheDocument();
     expect(screen.getByRole("img", { name: artifact.name })).toBeInTheDocument();
-    expect(screen.getByRole("link")).toHaveAttribute("href", "/artifacts/1");
+    expect(screen.getByRole("link")).toHaveAttribute("href", "/experience/1");
   });
 
   it("loads eagerly at high priority only when asked (the carousel's center slot)", () => {

@@ -2,7 +2,10 @@ import type { ExperienceResponse } from "../types/experience";
 import type { IdentificationResponse } from "../types/identification";
 import i18next from "../i18n";
 
-const API_BASE_URL: string = import.meta.env.VITE_API_BASE_URL ?? "http://localhost:8000";
+// In production the FastAPI service hosts the built frontend as well, so API
+// requests stay on the current origin. Local Vite development can still point
+// at the backend explicitly with VITE_API_BASE_URL=http://localhost:8000.
+const API_BASE_URL: string = import.meta.env.VITE_API_BASE_URL ?? "";
 
 export class ApiError extends Error {
   status: number;

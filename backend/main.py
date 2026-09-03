@@ -37,6 +37,7 @@ BASE_DIR = Path(__file__).resolve().parent
 ARTIFACTS_JSON_PATH = (BASE_DIR / config.ARTIFACTS_JSON_PATH).resolve()
 ASSETS_DIR = (BASE_DIR / config.ASSETS_DIR).resolve()
 AUDIO_DIR = (BASE_DIR / "static" / "audio").resolve()
+FRONTEND_DIST_DIR = (BASE_DIR / ".." / "frontend" / "dist").resolve()
 AUDIO_DIR.mkdir(parents=True, exist_ok=True)
 
 # Structural fields: without these the artifact can't be displayed or served at
@@ -350,3 +351,19 @@ def chat(payload: ChatRequest):
         sources=sources,
         reflection=reflection,
     )
+
+
+# Production uses one public service: FastAPI serves the Vite build after all
+# API routes. The catch-all returns index.html for React Router deep links while
+# still serving fingerprinted assets directly.
+if FRONTEND_DIST_DIR.is_dir():
+    @app.get("/{frontend_path:path}", include_in_schema=False)
+    def serve_frontend(frontend_path: str):
+        requested_path = (FRONTEND_DIST_DIR / frontend_path).resolve()
+        if (
+            frontend_path
+            and FRONTEND_DIST_DIR in requested_path.parents
+            and requested_path.is_file()
+        ):
+            return FileResponse(requested_path)
+        return FileResponse(FRONTEND_DIST_DIR / "index.html")
