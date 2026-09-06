@@ -10,7 +10,20 @@ TTS-only, per current scope. Visitor still types questions (STS is a
 separate, deliberately deferred design decision, not part of this).
 """
 
+import socket
 import requests
+from requests.adapters import HTTPAdapter
+from urllib3.util.connection import allowed_gai_family
+
+
+_original_allowed_gai_family = allowed_gai_family
+
+
+def _force_ipv4():
+    return socket.AF_INET
+
+
+requests.packages.urllib3.util.connection.allowed_gai_family = _force_ipv4
 
 import config
 
