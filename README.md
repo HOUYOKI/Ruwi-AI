@@ -1,7 +1,11 @@
 # 🏛️ Ruwi | رُوي
 
 <p align="center">
-  <img src="docs/images/ruwi-overview.webp" alt="Ruwi — Saudi National Museum Experience" width="100%">
+  <img src="docs/images/Ruwi_Hero_Image.png" alt="Ruwi — AI-Powered Interactive Museum Experience" width="100%">
+</p>
+
+<p align="center">
+  <img src="docs/images/ruwi_logo.png" alt="Ruwi Logo" width="180">
 </p>
 
 <p align="center">
@@ -16,15 +20,87 @@
 
 ## 📖 Overview
 
-**Ruwi (رُوي)** is an AI-powered interactive museum experience designed as an MVP for the **Saudi National Museum**.
+**Ruwi (رُوي)** is an AI-powered interactive museum experience developed as a working MVP for exploring Saudi cultural heritage.
 
-Ruwi transforms traditional artifact exploration into an interactive digital experience where visitors can discover museum artifacts, explore curated stories, interact with educational content, identify supported artifacts through image upload, ask questions, and listen to narrated responses.
+Ruwi transforms traditional artifact exploration into an interactive digital experience where visitors can discover artifacts, explore curated stories, interact with educational content, identify supported artifacts through image upload, ask questions, and listen to narrated responses.
 
 The platform combines structured museum content with AI-powered interaction, constrained vision identification, conversational narration, interactive experiences, reflection metadata, trusted-source retrieval, and optional voice narration.
 
 The name **Ruwi (رُوي)** is inspired by the Arabic verb **"روى"**, meaning *to narrate* or *to tell a story*.
 
 > **Every artifact has a story. Ruwi brings it to life.**
+
+---
+
+# 📸 Ruwi in Action
+
+The following visuals showcase the main Ruwi experience and selected interactive museum features.
+
+## 🏠 Home Experience
+
+<p align="center">
+  <img src="docs/images/ruwi_home.png" alt="Ruwi Home Screen" width="90%">
+</p>
+
+The Ruwi home experience provides visitors with a simple entry point to explore the museum collection and begin an interactive journey.
+
+---
+
+## 👁️ AI Artifact Identification
+
+<p align="center">
+  <img src="docs/images/Ruwi_Object_Recognition.png" alt="Ruwi AI Artifact Identification" width="90%">
+</p>
+
+Visitors can upload or capture an artifact image and use the Vision AI experience to identify supported artifacts.
+
+The MVP uses **constrained artifact identification**, meaning the system matches the uploaded image against supported museum artifact candidates rather than attempting unrestricted recognition of every possible object.
+
+---
+
+## 🔍 Explore Its Parts
+
+<p align="center">
+  <img src="docs/images/Ruwi_Explore_Its_Parts.png" alt="Ruwi Explore Its Parts" width="90%">
+</p>
+
+The interactive artifact experience allows visitors to explore specific parts and details of an artifact.
+
+---
+
+## 🕰️ Historical Timeline
+
+<p align="center">
+  <img src="docs/images/Ruwi_Timeline.png" alt="Ruwi Historical Timeline" width="90%">
+</p>
+
+The timeline experience presents historical events chronologically to provide additional context around an artifact.
+
+---
+
+## 🧪 Test Resources
+
+<p align="center">
+  <img src="docs/images/ruwi_test_resources.png" alt="Ruwi Test Resources" width="90%">
+</p>
+
+Ruwi includes structured resources that support testing and validation of the interactive museum experience.
+
+---
+
+# 🌍 Ruwi at LEAP 2026
+
+Ruwi was demonstrated as a working prototype at **LEAP 2026**, providing an opportunity to showcase the interactive museum experience and demonstrate the concept in an exhibition environment.
+
+<p align="center">
+  <img src="docs/images/Ruwi_LEAP_2026_Booth.jpg" alt="Ruwi at LEAP 2026 Booth" width="90%">
+</p>
+
+<p align="center">
+  <img src="docs/images/Ruwi_LEAP_2026_Demo.jpg" alt="Ruwi Demo at LEAP 2026" width="90%">
+</p>
+
+The demonstration focused on the visitor experience, interactive artifact exploration, AI-assisted interaction, and the potential of Ruwi as a future museum technology experience.
 
 ---
 
@@ -70,49 +146,46 @@ Visitors can:
 
 ---
 
-# ⚙️ How Ruwi Works
+# 🧭 Visitor Journey
 
-The visitor journey is designed around a simple flow:
+The Ruwi visitor journey is designed around a simple and intuitive flow:
 
 ```text
-                    Visitor
-                       │
-                       ▼
-             Browse / Capture Artifact
-                       │
-              ┌────────┴────────┐
-              │                 │
-              ▼                 ▼
-        Artifact Gallery    Image Upload
-              │                 │
-              │                 ▼
-              │         Vision Identification
-              │                 │
-              └────────┬────────┘
-                       ▼
-                Artifact Context
-                       │
-                       ▼
-             Curated Experience
-                       │
-        ┌──────────────┼──────────────┐
-        │              │              │
-        ▼              ▼              ▼
-      Story         Timeline       Hotspots
-        │              │              │
-        └──────────────┼──────────────┘
-                       │
-                       ▼
-                     Quiz
-                       │
-                       ▼
-                 AI Narrator
-                       │
-                       ▼
-                Reflection Layer
-                       │
-                       ▼
-              Optional Voice Output
+Visitor
+   │
+   ▼
+Browse / Capture Artifact
+   │
+   ├───────────────┐
+   ▼               ▼
+Artifact Gallery   Image Upload
+   │               │
+   │               ▼
+   │        Vision Identification
+   │               │
+   └───────┬───────┘
+           ▼
+    Artifact Context
+           │
+           ▼
+   Curated Experience
+           │
+    ┌──────┼──────┐
+    ▼      ▼      ▼
+  Story  Timeline Hotspots
+    │      │      │
+    └──────┼──────┘
+           ▼
+          Quiz
+           │
+           ▼
+      AI Narrator
+           │
+           ▼
+    Reflection Layer
+           │
+           ▼
+ Optional Voice Output
 ```
 
 ---
@@ -129,6 +202,7 @@ Relevant implementation:
 
 ```text
 backend/vision/
+
 ├── identify.py
 ├── routes.py
 └── schemas.py
@@ -148,35 +222,37 @@ Relevant implementation:
 
 ```text
 backend/agents/narrator/
+
 ├── narrator.py
 ├── tools.py
 └── test_run.py
 ```
 
-The narrator can work with the artifact context and available tools to produce visitor-facing responses.
+The narrator can work with artifact context and available tools to produce visitor-facing responses.
 
-The project also includes configurable AI provider support through the backend configuration layer.
+The backend also supports configurable AI provider settings.
 
 ---
 
 ## 3. 🔍 Reflection Layer
 
-Ruwi includes a Reflection component that produces structured reflection metadata around the visitor interaction.
+Ruwi includes a Reflection component that produces structured reflection metadata around visitor interactions.
 
 Relevant implementation:
 
 ```text
 backend/agents/reflection/
+
 └── reflection.py
 ```
 
 The current implementation uses deterministic reflection metadata rather than requiring a second independent LLM call for every interaction.
 
-This allows the experience to maintain structured interaction information while keeping the MVP lightweight.
+This keeps the MVP lightweight while maintaining structured interaction information.
 
 ---
 
-## 4. 🌐 Connector
+## 4. 🌐 Trusted-Source Connector
 
 The Connector layer provides controlled access to trusted external information sources when configured.
 
@@ -184,6 +260,7 @@ Relevant implementation:
 
 ```text
 backend/agents/connector/
+
 ├── connector.py
 ├── tools.py
 └── test_run.py
@@ -197,12 +274,13 @@ External retrieval is optional and can remain unconfigured for a local-first dep
 
 ## 5. 🧾 Visit Records
 
-Ruwi contains a lightweight visit/interaction storage layer.
+Ruwi contains a lightweight visit and interaction storage layer.
 
 Relevant implementation:
 
 ```text
 backend/agents/visit/
+
 ├── record.py
 └── store.py
 ```
@@ -241,6 +319,7 @@ These experiences are rendered through the frontend experience system:
 
 ```text
 frontend/src/components/experience/
+
 ├── ExperienceRenderer.tsx
 ├── HotspotStory.tsx
 ├── ObjectAnatomy.tsx
@@ -253,7 +332,7 @@ frontend/src/components/experience/
 
 # ⭐ Featured Experiences
 
-Ruwi currently includes a set of curated showcase experiences built around selected artifacts.
+Ruwi includes curated showcase experiences built around selected artifacts.
 
 The showcase experience data is stored in:
 
@@ -268,7 +347,9 @@ The artifact collection itself is stored in:
 data/artifacts.json
 ```
 
-The current dataset contains **102 artifacts**.
+The current dataset contains:
+
+**102 artifacts**
 
 ---
 
@@ -283,11 +364,12 @@ Localization files are maintained in:
 
 ```text
 frontend/src/i18n/locales/
+
 ├── ar.json
 └── en.json
 ```
 
-The interface supports both:
+The interface supports:
 
 - RTL for Arabic
 - LTR for English
@@ -296,14 +378,15 @@ Language switching is implemented through the frontend language system.
 
 ---
 
-# 🔊 Text-to-Speech
+# 🔊 AI Voice Narration
 
-Ruwi includes optional voice narration using **ElevenLabs**.
+Ruwi includes optional voice narration using **ElevenLabs Text-to-Speech**.
 
 Relevant implementation:
 
 ```text
 backend/tts/
+
 ├── list_voices.py
 ├── speak_text.py
 └── test_speak.py
@@ -321,6 +404,7 @@ The frontend provides an interactive audio experience through:
 
 ```text
 frontend/src/components/TtsCenterpiece/
+
 ├── index.tsx
 ├── PlayControls.tsx
 └── PulseVisualizer.tsx
@@ -328,7 +412,7 @@ frontend/src/components/TtsCenterpiece/
 
 ### Environment configuration
 
-The root `.env` file can contain the required ElevenLabs configuration:
+The root `.env` file can contain:
 
 ```env
 ELEVENLABS_API_KEY=your_api_key
@@ -395,7 +479,6 @@ Ruwi-AI/
 │       └── 102.png
 │
 ├── backend/
-│   │
 │   ├── agents/
 │   │   ├── connector/
 │   │   │   ├── connector.py
@@ -447,17 +530,6 @@ Ruwi-AI/
 │   │   └── audio/
 │   │
 │   ├── tests/
-│   │   ├── test_booth_fallbacks.py
-│   │   ├── test_config.py
-│   │   ├── test_connector.py
-│   │   ├── test_experience.py
-│   │   ├── test_narrator_connector.py
-│   │   ├── test_reflection.py
-│   │   ├── test_tts.py
-│   │   ├── test_vision.py
-│   │   ├── test_visit_record.py
-│   │   └── test_visit_store.py
-│   │
 │   ├── config.py
 │   ├── main.py
 │   ├── prompts.py
@@ -472,42 +544,26 @@ Ruwi-AI/
 ├── docs/
 │   ├── BOOTH_CHECKLIST.md
 │   └── images/
-│       └── ruwi-overview.webp
+│       ├── Ruwi_Explore_Its_Parts.png
+│       ├── Ruwi_Hero_Image.png
+│       ├── Ruwi_LEAP_2026_Booth.jpg
+│       ├── Ruwi_LEAP_2026_Demo.jpg
+│       ├── ruwi_home.png
+│       ├── ruwi_logo.png
+│       ├── Ruwi_Object_Recognition.png
+│       ├── ruwi_test_resources.png
+│       └── Ruwi_Timeline.png
 │
 ├── frontend/
-│   │
 │   ├── public/
 │   │   └── favicon.svg
 │   │
 │   ├── src/
 │   │   ├── api/
-│   │   │   ├── apiClient.ts
-│   │   │   ├── artifactApi.ts
-│   │   │   └── chatApi.ts
-│   │   │
 │   │   ├── components/
-│   │   │   ├── ArtifactCard.tsx
-│   │   │   ├── ArtifactDetail.tsx
-│   │   │   ├── ArtifactGrid.tsx
-│   │   │   ├── ArtifactImageViewer.tsx
-│   │   │   ├── ArtifactUpload.tsx
-│   │   │   ├── LanguageToggle.tsx
-│   │   │   ├── QuestionComposer.tsx
-│   │   │   ├── StatusView.tsx
-│   │   │   ├── ThemeToggle.tsx
-│   │   │   │
-│   │   │   ├── ArtifactCarousel/
-│   │   │   ├── ChatPanel/
-│   │   │   ├── experience/
-│   │   │   └── TtsCenterpiece/
-│   │   │
 │   │   ├── hooks/
 │   │   ├── i18n/
 │   │   ├── pages/
-│   │   │   ├── ArtifactPage.tsx
-│   │   │   ├── GalleryPage.tsx
-│   │   │   └── IdentifyPage.tsx
-│   │   │
 │   │   ├── types/
 │   │   ├── utils/
 │   │   ├── App.tsx
@@ -539,13 +595,13 @@ Before running Ruwi locally, make sure the following are installed:
 - npm
 - Git
 
-The backend dependencies are defined in:
+Backend dependencies:
 
 ```text
 backend/requirements.txt
 ```
 
-The frontend dependencies are defined in:
+Frontend dependencies:
 
 ```text
 frontend/package.json
@@ -566,7 +622,7 @@ cd Ruwi-AI
 
 # 🔐 Environment Configuration
 
-Create the environment file from the provided example:
+Create the environment file:
 
 ```powershell
 Copy-Item .env.example .env
@@ -620,13 +676,13 @@ Start the FastAPI server:
 uvicorn main:app --host 0.0.0.0 --port 8000
 ```
 
-The backend will be available at:
+Backend:
 
 ```text
 http://localhost:8000
 ```
 
-FastAPI documentation is available at:
+FastAPI documentation:
 
 ```text
 http://localhost:8000/docs
@@ -662,7 +718,7 @@ Start the Vite development server:
 npm run dev -- --host 0.0.0.0 --port 5173
 ```
 
-The frontend will normally be available at:
+Frontend:
 
 ```text
 http://localhost:5173
@@ -699,88 +755,42 @@ http://localhost:5173
 
 # 🧪 Testing
 
-## Backend Tests
-
-From the `backend` directory:
+Backend tests can be executed using:
 
 ```powershell
-.\venv\Scripts\python.exe -m unittest discover -s tests -v
+cd backend
+pytest
 ```
 
-The backend test suite covers areas including:
+The project includes tests covering areas such as:
 
-- Configuration
-- Connector
-- Experience generation
-- Narrator/Connector interaction
+- Vision identification
+- AI experience generation
+- Narrator and Connector interaction
 - Reflection
 - Text-to-Speech
-- Vision identification
 - Visit records
-- Visit storage
+- Configuration
 - Booth fallbacks
 
 ---
 
-## Backend Compilation Check
+# 🔌 API Overview
 
-To check Python compilation:
+The backend exposes structured API routes for the main Ruwi capabilities.
 
-```powershell
-.\venv\Scripts\python.exe -m compileall -q -x "venv" .
+Core areas include:
+
+```text
+Artifacts
+Vision Identification
+Conversational AI
+Interactive Experiences
+Text-to-Speech
+Visit / Interaction Records
 ```
 
----
-
-## Frontend Tests
-
-From the `frontend` directory:
-
-```powershell
-npm test -- --run
-```
-
----
-
-## Frontend Build
-
-Create a production build:
-
-```powershell
-npm run build
-```
-
----
-
-## Frontend Lint
-
-Run the frontend linter:
-
-```powershell
-npm run lint
-```
-
----
-
-# 🔌 API
-
-The backend exposes API functionality for artifacts, experiences, identification, chat, configuration, and audio.
-
-Important routes include:
-
-| Method | Endpoint | Purpose |
-|---|---|---|
-| GET | `/artifacts?lang=en` | Retrieve the artifact collection |
-| GET | `/artifacts?lang=ar` | Retrieve the Arabic artifact collection |
-| GET | `/artifacts/{id}?lang=en` | Retrieve an artifact |
-| GET | `/artifacts/{id}/experience?lang=en` | Retrieve an artifact experience |
-| GET | `/images/{id}.png` | Retrieve an artifact image |
-| POST | `/identify` | Identify a supported artifact from an uploaded image |
-| POST | `/chat` | Send a conversational request |
-| GET | `/health/config` | Check backend configuration |
-| GET | `/static/audio/{filename}.mp3` | Serve generated narration audio |
-
-API documentation can be explored through FastAPI Swagger:
+FastAPI automatically provides interactive API documentation at:
 
 ```text
 http://localhost:8000/docs
@@ -788,339 +798,177 @@ http://localhost:8000/docs
 
 ---
 
-# 📸 Artifact Identification
-
-The identification interface is available through:
-
-```text
-frontend/src/pages/IdentifyPage.tsx
-```
-
-The backend implementation is located in:
-
-```text
-backend/vision/
-```
-
-The visitor can upload or capture an artifact image.
-
-The system then processes the image and attempts to match it against the currently supported artifact candidates.
-
-The current MVP intentionally uses **constrained identification** rather than claiming universal museum-object recognition.
-
----
-
-# 💬 Conversational Experience
-
-The frontend chat functionality is implemented through:
-
-```text
-frontend/src/components/ChatPanel/
-```
-
-with API communication handled through:
-
-```text
-frontend/src/api/chatApi.ts
-```
-
-The backend exposes the conversational endpoint:
-
-```text
-POST /chat
-```
-
-The conversation can use available artifact context and the configured AI components to produce an interactive response.
-
----
-
-# 🧩 Experience Generation
-
-The backend experience system is located in:
-
-```text
-backend/experience/
-```
-
-It includes:
-
-- Experience generator
-- Experience planner
-- Graph workflow
-- Repository
-- State management
-- Schemas
-- Validation
-- Routes
-
-The experience renderer on the frontend converts the structured experience into interactive UI elements such as:
-
-- Story
-- Timeline
-- Hotspots
-- Quiz
-- Sources
-
----
-
-# 🎨 User Interface
+# 🎨 User Experience
 
 Ruwi is designed for an interactive museum environment.
 
-The interface includes:
+The interface supports:
 
-- Artifact gallery
-- Artifact detail views
-- Image viewer
-- Image identification
-- Conversational chat
+- Arabic and English
+- RTL and LTR layouts
+- Light and dark themes
+- Touch-friendly controls
+- Artifact browsing
+- Artifact details
+- Image upload
+- AI interaction
 - Interactive experiences
-- Language switching
-- Theme switching
 - Audio narration
-- Touch-friendly interactions
-
-Main frontend pages:
-
-```text
-GalleryPage
-ArtifactPage
-IdentifyPage
-```
 
 ---
 
-# 🌙 Theme Support
+# 🏛️ Museum Experience
 
-Ruwi provides both:
+Ruwi is designed to complement the physical museum environment rather than replace the physical artifact.
 
-- Light mode
-- Dark mode
+The experience can be adapted for:
 
-Theme logic is implemented through:
+- Museum touch displays
+- Interactive exhibition stations
+- Visitor exploration kiosks
+- Guided digital experiences
+- Educational museum activities
 
-```text
-frontend/src/hooks/useTheme.ts
-frontend/src/components/ThemeToggle.tsx
-```
-
----
-
-# 📱 Touch Interaction
-
-The frontend contains interaction utilities designed for touch-based museum interfaces, including:
-
-```text
-useDragSwipe.ts
-useCarouselNavigation.ts
-useCroppedArtifactImage.ts
-```
-
-This supports a more natural interaction model for touchscreen installations.
+The current project is a working prototype and provides a foundation for future museum pilots and controlled deployment environments.
 
 ---
 
-# 🏛️ Museum Booth Readiness
+# 🔒 Security & Configuration
 
-A dedicated booth checklist is available at:
+The project is designed to keep sensitive configuration outside the source code.
 
-```text
-docs/BOOTH_CHECKLIST.md
-```
-
-This can be used to validate the application before a physical museum or exhibition deployment.
-
-Before a live booth deployment, verify:
-
-- Backend availability
-- Frontend availability
-- Network connectivity
-- AI provider configuration
-- ElevenLabs configuration
-- Audio playback
-- Artifact images
-- Arabic interface
-- English interface
-- Image identification
-- Chat interaction
-- Touch interactions
-- Display resolution
-- Browser configuration
-
----
-
-# 🔒 Security Notes
-
-Ruwi uses environment variables for sensitive configuration.
+API keys and private configuration values should be stored in `.env`.
 
 Never commit:
 
 ```text
 .env
+API keys
+Private credentials
+Secrets
 ```
 
-or any file containing:
-
-- API keys
-- Access tokens
-- Private credentials
-- Secret configuration
-
-Use:
-
-```text
-.env.example
-```
-
-as the safe template for required configuration.
+External information retrieval can remain disabled when a local-first deployment is preferred.
 
 ---
 
 # 📌 Current AI Scope
 
-The current version of Ruwi is an **MVP**, and its AI capabilities are intentionally scoped.
+The current MVP focuses on controlled and supported museum experiences.
 
-### Currently implemented
+The Vision component performs constrained artifact identification against supported candidates.
 
-- AI-powered conversational narration
-- Structured artifact context
-- Curated interactive experiences
-- Constrained image identification
-- Reflection metadata
-- Trusted-source Connector architecture
-- Optional ElevenLabs narration
-- Arabic and English interaction
-- Experience planning and validation
+The conversational experience uses the available artifact context and configured AI services.
 
-### Current limitations
-
-The current MVP does not claim:
-
-- Universal artifact recognition
-- Unlimited open-domain visual recognition
-- A fully autonomous museum knowledge system
-- Guaranteed live external retrieval without provider configuration
-- Fully open-ended artifact discovery beyond the supported dataset
-
-These boundaries keep the current experience controlled, predictable, and suitable for an MVP demonstration.
+The platform is therefore designed around **controlled museum content and supported artifact experiences**, rather than unrestricted AI recognition or unrestricted factual generation.
 
 ---
 
-# 🔮 Future Development
+# 🚧 Future Development
 
-Potential future extensions include:
+Potential future development directions include:
 
-- Expanded museum artifact recognition
-- Larger museum knowledge sources
-- Advanced semantic retrieval
-- Vector-based RAG
-- More personalized visitor journeys
-- Visitor profiles and long-term preferences
-- Additional museum collections
-- More interactive 3D artifact experiences
-- Advanced multilingual narration
-- Analytics dashboards
-- Cloud deployment
-- Production authentication
-- Museum staff administration tools
-- Deeper integration with museum digital infrastructure
+- Integration with selected museum environments
+- Expansion of supported artifact collections
+- Additional interactive experiences
+- Improved visitor personalization
+- Expanded trusted-source retrieval
+- More advanced multilingual narration
+- Additional accessibility features
+- Museum analytics and interaction insights
+- Production deployment
+- Integration with approved museum content systems
+
+These represent future development directions and are not presented as current deployments.
 
 ---
 
-# 🏗️ Deployment Direction
+# 🌱 Deployment Direction
 
-The current repository is structured for local development and demonstration.
-
-A production deployment can separate the system into:
+A potential museum deployment pathway could follow a controlled approach:
 
 ```text
-                    ┌─────────────────────┐
-                    │   Museum Interface  │
-                    │ React / TypeScript  │
-                    └──────────┬──────────┘
-                               │
-                               ▼
-                    ┌─────────────────────┐
-                    │      FastAPI        │
-                    │      Backend        │
-                    └──────────┬──────────┘
-                               │
-             ┌─────────────────┼─────────────────┐
-             │                 │                 │
-             ▼                 ▼                 ▼
-       AI / Narrator       Vision          Experience
-             │                 │                 │
-             └─────────────────┼─────────────────┘
-                               │
-                               ▼
-                    Museum Knowledge Layer
-                               │
-                               ▼
-                       Optional TTS
+Prototype
+   │
+   ▼
+Museum / Stakeholder Review
+   │
+   ▼
+Select Pilot Environment
+   │
+   ▼
+Select Approved Artifacts
+   │
+   ▼
+Align Content & Sources
+   │
+   ▼
+Limited Pilot
+   │
+   ▼
+Evaluate Visitor Experience
+   │
+   ▼
+Improve & Validate
+   │
+   ▼
+Potential Scale-Up
 ```
+
+Any future deployment would require alignment with the relevant museum, content owners, technical requirements, privacy requirements, and approved sources.
 
 ---
 
 # 📊 Project Status
 
-| Area | Status |
-|---|---|
-| Museum artifact dataset | ✅ Implemented |
-| 102 artifacts | ✅ Implemented |
-| Artifact gallery | ✅ Implemented |
-| Artifact details | ✅ Implemented |
-| Interactive experiences | ✅ Implemented |
-| Story | ✅ Implemented |
-| Timeline | ✅ Implemented |
-| Hotspots | ✅ Implemented |
-| Quiz | ✅ Implemented |
-| Arabic | ✅ Implemented |
-| English | ✅ Implemented |
-| Light / Dark theme | ✅ Implemented |
-| Image identification | ✅ Implemented — constrained scope |
-| AI Narrator | ✅ Implemented |
-| Reflection layer | ✅ Implemented |
-| Connector architecture | ✅ Implemented |
-| ElevenLabs TTS | ✅ Implemented |
-| Backend tests | ✅ Implemented |
-| Frontend tests | ✅ Implemented |
-| Production deployment | 🔄 Future |
-| Open-ended visual recognition | 🔄 Future |
-| Advanced vector RAG | 🔄 Future |
+**Status: Working Prototype / MVP**
+
+Ruwi has been demonstrated at **LEAP 2026** as an interactive AI-powered museum experience.
+
+The current implementation includes:
+
+- 102 artifacts
+- Interactive artifact exploration
+- Vision-based artifact identification
+- Conversational AI
+- Story experiences
+- Timelines
+- Hotspots
+- Educational quizzes
+- Arabic and English support
+- AI voice narration
+- Reflection metadata
+- Trusted-source Connector
+- Visit interaction storage
+- Automated testing
 
 ---
 
 # 👥 Team
 
-## Ruwi | رُوي
+Ruwi was developed collaboratively by:
 
-Built by:
-
-- **Maysam Abduljalil**
 - **Abdulaziz Fadul**
+- **Maysam Abduljalil**
 - **Ohoud Ibn Alshaykh**
 - **Nedaa Bajaber**
 
-### Saudi National Museum Interactive Experience
-
-Ruwi was created as a collaborative project focused on combining **AI, interactive technology, and Saudi cultural heritage** to create a more engaging museum experience.
+The team worked collaboratively across the project idea, design, development, AI experience, user interaction, testing, iteration, and presentation.
 
 ---
 
-# 📚 Repository
+# 🔗 Repository
 
-**GitHub Repository**
+GitHub:
 
-```text
 https://github.com/HOUYOKI/Ruwi-AI
-```
 
 ---
 
-# ❤️ Ruwi
-
-> **Every artifact has a story. Ruwi brings it to life.**
-
-Ruwi aims to bridge the gap between cultural heritage and emerging technology by giving visitors a more interactive way to discover, understand, and connect with Saudi history.
-
----
+<p align="center">
+  <strong>Ruwi | رُوي</strong>
+  <br>
+  Every Artifact Has a Story.
+  <br>
+  Ruwi Brings It to Life.
+</p>
